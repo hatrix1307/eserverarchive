@@ -14,6 +14,14 @@
     <style>
         #dynamic-server-container { min-height: 50vh; }
         .loading-text { color: #fff; text-align: center; padding: 20px; font-size: 1.2rem; }
+        
+        /* Helper to ensure SVGs inside buttons change color correctly */
+        button:not([disabled]) svg {
+            color: #fb8464 !important; /* Active Color */
+        }
+        button[disabled] svg {
+            color: rgb(170, 170, 170) !important; /* Disabled Color */
+        }
     </style>
 </head>
 <body style="background-color: #111; color: #fff;">
@@ -58,7 +66,7 @@
                             <div style="margin: 10px 0px;">
                                 <div class="ServerSearchBox_inputContainer__0saWA">
                                     <div class="ServerSearchBox_inputStartIcon__zJ0pa">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"></path></svg>
+                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"></path></svg>
                                     </div>
                                     <form class="ServerSearchBox_searchInput__PlQsd" onsubmit="return false;">
                                         <input type="text" placeholder="Search" value="">
@@ -74,18 +82,27 @@
                             </div>
 
                             <div class="Home_pages__jwp2L" style="margin-top: 20px;">
-                                <button id="btn-prev" class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-yfi1n3" type="button" disabled>
+                                
+                                <button id="btn-prev" class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-yfi1n3" tabindex="-1" type="button" disabled="">
                                     <span class="MuiButton-icon MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>
+                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                        </svg>
                                     </span>
                                     Previous Page
                                 </button>
+
                                 <button id="btn-next" class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-yfi1n3" type="button">
                                     Next Page
                                     <span class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeMedium css-1n4a93h">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
+                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                        </svg>
                                     </span>
                                 </button>
+
                             </div>
 
                         </div>
@@ -105,42 +122,39 @@
     </div>
 
     <script>
-        let allPages = [];      // Stores array of arrays (server lists)
-        let currentPage = 0;    // Tracks current page index
+        let allPages = [];      
+        let currentPage = 0;    
 
         async function init() {
             try {
-                // 1. Fetch file
+                // Fetch and parse data
                 const response = await fetch('./serverlistjson.txt');
                 const rawText = await response.text();
 
-                // 2. Split file into pages using the "}{" boundary
+                // Split by JSON object boundaries
                 const pageStrings = rawText.split(/}\s*{/).map((str, i, arr) => {
                     if (i === 0) return str + "}";
                     if (i === arr.length - 1) return "{" + str;
                     return "{" + str + "}";
                 });
 
-                // 3. Parse JSON for each page
                 pageStrings.forEach(jsonStr => {
                     try {
                         const parsed = JSON.parse(jsonStr);
                         if (parsed.success && Array.isArray(parsed.data)) {
                             allPages.push(parsed.data);
                         }
-                    } catch (e) {
-                        console.warn("Skipped malformed page");
-                    }
+                    } catch (e) { console.warn("Skipped malformed page"); }
                 });
 
-                // 4. Initial Render
+                // Render first page
                 if (allPages.length > 0) {
                     renderPage(0);
                 } else {
                     document.getElementById('dynamic-server-container').innerHTML = '<p class="loading-text">No servers found.</p>';
                 }
 
-                // 5. Setup Button Listeners
+                // Add click events
                 document.getElementById('btn-prev').addEventListener('click', () => changePage(-1));
                 document.getElementById('btn-next').addEventListener('click', () => changePage(1));
 
@@ -155,7 +169,7 @@
             if (newPage >= 0 && newPage < allPages.length) {
                 currentPage = newPage;
                 renderPage(currentPage);
-                window.scrollTo(0, 0); // Scroll to top on page change
+                window.scrollTo(0, 0); 
             }
         }
 
@@ -164,10 +178,9 @@
             container.innerHTML = ''; 
 
             const servers = allPages[pageIndex];
-
             servers.forEach(server => {
                 const card = document.createElement('div');
-                card.className = "Server_box__TMsXv"; // Original card class
+                card.className = "Server_box__TMsXv"; 
 
                 const statusColor = server.online ? 'rgb(70, 227, 147)' : 'rgb(255, 101, 101)';
                 const statusBg = server.online ? '#4caf50' : '#f44336';
@@ -204,21 +217,26 @@
             const prevBtn = document.getElementById('btn-prev');
             const nextBtn = document.getElementById('btn-next');
 
-            // Toggle 'Mui-disabled' class and disabled attribute
+            // --- Handle Previous Button ---
             if (currentPage === 0) {
                 prevBtn.setAttribute('disabled', 'true');
                 prevBtn.classList.add('Mui-disabled');
+                prevBtn.setAttribute('tabindex', '-1');
             } else {
                 prevBtn.removeAttribute('disabled');
                 prevBtn.classList.remove('Mui-disabled');
+                prevBtn.removeAttribute('tabindex');
             }
 
+            // --- Handle Next Button ---
             if (currentPage === allPages.length - 1) {
                 nextBtn.setAttribute('disabled', 'true');
                 nextBtn.classList.add('Mui-disabled');
+                nextBtn.setAttribute('tabindex', '-1');
             } else {
                 nextBtn.removeAttribute('disabled');
                 nextBtn.classList.remove('Mui-disabled');
+                nextBtn.removeAttribute('tabindex');
             }
         }
 
