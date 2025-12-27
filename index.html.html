@@ -14,32 +14,17 @@
     <style>
         #dynamic-server-container { min-height: 50vh; }
         .loading-text { color: #fff; text-align: center; padding: 20px; font-size: 1.2rem; }
-        
-        /* Helper to ensure SVGs inside buttons change color correctly */
-        button:not([disabled]) svg {
-            color: #fb8464 !important; /* Active Color */
-        }
-        button[disabled] svg {
-            color: rgb(170, 170, 170) !important; /* Disabled Color */
-        }
+        button:not([disabled]) svg { color: #fb8464 !important; }
+        button[disabled] svg { color: rgb(170, 170, 170) !important; }
+        .player-count { font-weight: bold; color: rgb(70, 227, 147); }
     </style>
 </head>
 <body style="background-color: #111; color: #fff;">
     <div id="__next">
         <div>
             <main class="__className_cc80f9">
-                <div class="Notification_notificationWrapper__8XfQo"></div>
                 <main class="Home_appContainer__0oIwU" style="opacity: 1;">
                     <div>
-                        <nav class="Navbar_mobileRoot__uUZ_C">
-                            <img src="./Eagler Server List _ Home_files/cdn_object_usage_collection.png" style="width: 1px; height: 1px;">
-                            <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding-top: 12px;">
-                                <div class="Navbar_logo__eioWt">
-                                    <img src="./Eagler Server List _ Home_files/eagler.png" alt="Logo">
-                                    <h1>Eagler Server List</h1>
-                                </div>
-                            </div>
-                        </nav>
                         <nav class="Navbar_root__hs6un">
                             <div class="Navbar_logo__eioWt">
                                 <img src="./Eagler Server List _ Home_files/eagler.png" alt="Logo">
@@ -47,75 +32,28 @@
                             </div>
                             <div class="Navbar_spacer__t53No"></div>
                             <ul class="Navbar_navElements__a5nON">
-                                <li class="Navbar_active__OcRhr">
-                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" color="#fb8464" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(251, 132, 100);"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
-                                    <a href="#">Home</a>
-                                </li>
+                                <li class="Navbar_active__OcRhr"><a href="#">Home</a></li>
                             </ul>
-                            <div style="margin: 0px 30px 0px 0px;">
-                                <button class="Button_button__0wJmc" style="background-color: rgb(88, 101, 242);">
-                                    <div style="color: rgb(255, 255, 255);">Login with Discord</div>
-                                </button>
-                            </div>
                         </nav>
 
                         <div class="Home_homeRoot__D6YiM">
                             <h1>Servers</h1>
-                            <p>View a list of available servers.</p>
+                            <p>Live status updates every 20 seconds.</p>
                             
-                            <div style="margin: 10px 0px;">
-                                <div class="ServerSearchBox_inputContainer__0saWA">
-                                    <div class="ServerSearchBox_inputStartIcon__zJ0pa">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M480 160H32c-17.673 0-32-14.327-32-32V64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm112 248H32c-17.673 0-32-14.327-32-32v-64c0-17.673 14.327-32 32-32h448c17.673 0 32 14.327 32 32v64c0 17.673-14.327 32-32 32zm-48-88c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24zm-64 0c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24z"></path></svg>
-                                    </div>
-                                    <form class="ServerSearchBox_searchInput__PlQsd" onsubmit="return false;">
-                                        <input type="text" placeholder="Search" value="">
-                                        <button class="ServerSearchBox_button__x3Qrj" type="submit">
-                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" color="#fb8464" height="15" width="15" xmlns="http://www.w3.org/2000/svg" style="color: rgb(251, 132, 100);"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-
                             <div id="dynamic-server-container">
                                 <p class="loading-text">Loading servers...</p>
                             </div>
 
                             <div class="Home_pages__jwp2L" style="margin-top: 20px;">
-                                
-                                <button id="btn-prev" class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-yfi1n3" tabindex="-1" type="button" disabled="">
-                                    <span class="MuiButton-icon MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill="none" d="M0 0h24v24H0z"></path>
-                                            <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
-                                        </svg>
-                                    </span>
-                                    Previous Page
+                                <button id="btn-prev" class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary Mui-disabled css-yfi1n3" type="button" disabled>
+                                    <span class="MuiButton-icon MuiButton-startIcon"><svg viewBox="0 0 24 24" height="1em" width="1em"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg></span>Previous Page
                                 </button>
-
                                 <button id="btn-next" class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-yfi1n3" type="button">
-                                    Next Page
-                                    <span class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeMedium css-1n4a93h">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill="none" d="M0 0h24v24H0z"></path>
-                                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                                        </svg>
-                                    </span>
+                                    Next Page<span class="MuiButton-icon MuiButton-endIcon"><svg viewBox="0 0 24 24" height="1em" width="1em"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></span>
                                 </button>
-
                             </div>
-
                         </div>
                     </div>
-
-                    <footer class="Footer_footer__yUjxG">
-                        <p>Copyright © Eagler Server List 2025</p><br>
-                        <ul>
-                            <li><a href="#"><span><b>Privacy Policy</b></span></a></li>
-                            <li><a href="#"><span><b>Terms of Service</b></span></a></li>
-                            <li><a href="#"><span><b>Discord Server</b></span></a></li>
-                        </ul>
-                    </footer>
                 </main>
             </main>
         </div>
@@ -123,15 +61,13 @@
 
     <script>
         let allPages = [];      
-        let currentPage = 0;    
+        let currentPage = 0;
+        let refreshInterval = null;
 
         async function init() {
             try {
-                // Fetch and parse data
                 const response = await fetch('./serverlistjson.txt');
                 const rawText = await response.text();
-
-                // Split by JSON object boundaries
                 const pageStrings = rawText.split(/}\s*{/).map((str, i, arr) => {
                     if (i === 0) return str + "}";
                     if (i === arr.length - 1) return "{" + str;
@@ -141,26 +77,20 @@
                 pageStrings.forEach(jsonStr => {
                     try {
                         const parsed = JSON.parse(jsonStr);
-                        if (parsed.success && Array.isArray(parsed.data)) {
-                            allPages.push(parsed.data);
-                        }
-                    } catch (e) { console.warn("Skipped malformed page"); }
+                        if (parsed.success && Array.isArray(parsed.data)) allPages.push(parsed.data);
+                    } catch (e) {}
                 });
 
-                // Render first page
-                if (allPages.length > 0) {
-                    renderPage(0);
-                } else {
-                    document.getElementById('dynamic-server-container').innerHTML = '<p class="loading-text">No servers found.</p>';
-                }
+                if (allPages.length > 0) renderPage(0);
 
-                // Add click events
                 document.getElementById('btn-prev').addEventListener('click', () => changePage(-1));
                 document.getElementById('btn-next').addEventListener('click', () => changePage(1));
 
+                // Set up the 20-second global refresh
+                setInterval(() => refreshCurrentPageStatus(), 20000);
+
             } catch (err) {
                 console.error(err);
-                document.getElementById('dynamic-server-container').innerHTML = `<p class="loading-text" style="color:red">Error: ${err.message}</p>`;
             }
         }
 
@@ -176,68 +106,65 @@
         function renderPage(pageIndex) {
             const container = document.getElementById('dynamic-server-container');
             container.innerHTML = ''; 
-
             const servers = allPages[pageIndex];
+
             servers.forEach(server => {
                 const card = document.createElement('div');
-                card.className = "Server_box__TMsXv"; 
-
-                const statusColor = server.online ? 'rgb(70, 227, 147)' : 'rgb(255, 101, 101)';
-                const statusBg = server.online ? '#4caf50' : '#f44336';
-
-                const tagsHtml = server.tags.map(tag => 
-                    `<div class="Badge_inlineBadge__h8Mo1" style="color: ${statusColor}; border: 1px solid ${statusColor}; padding: 2px 8px; border-radius: 12px; font-size: 0.8em;">${tag}</div>`
-                ).join('');
+                card.className = "Server_box__TMsXv";
+                card.setAttribute('data-address', server.address);
 
                 card.innerHTML = `
-                    <h2 style="overflow: hidden; display: flex; justify-content: space-between; align-items: center;">
+                    <h2 style="display: flex; justify-content: space-between; align-items: center;">
                         ${server.name} 
-                        <div class="StatusIndicator_status__pidlp" style="background-color: ${statusBg}; width: 12px; height: 12px; border-radius: 50%;"></div>
+                        <div class="status-dot" style="background-color: #555; width: 12px; height: 12px; border-radius: 50%;"></div>
                     </h2>
-                    <h3 style="color: rgb(170, 170, 170); margin: 5px 0;">
-                        Votes: <span style="color: rgb(70, 227, 147);">${server.votes}</span>
-                    </h3>
+                    <h3 style="color: rgb(170, 170, 170); margin: 5px 0;">Votes: <span style="color: rgb(70, 227, 147);">${server.votes}</span></h3>
                     <div class="Server_tagListContainer__tAO2z" style="display: flex; gap: 5px; flex-wrap: wrap; margin: 10px 0;">
-                        ${tagsHtml}
+                        ${server.tags.map(tag => `<div class="Badge_inlineBadge__h8Mo1" style="color: #fb8464; border: 1px solid #fb8464; padding: 2px 8px; border-radius: 12px; font-size: 0.8em;">${tag}</div>`).join('')}
                     </div>
-                    <h3>
-                        IP: <span style="font-weight: 600; cursor: pointer; color: #fb8464; font-family: monospace;">${server.address}</span>
-                    </h3>
-                    <div style="font-size: 0.8em; color: #888; margin-top: 10px; border-top: 1px solid #333; padding-top: 5px;">
-                        ${server.online ? 'Online: ' + (server.motd?.online || 0) : 'Offline'} | Owner: ${server.user.username}
+                    <h3>IP: <span style="color: #fb8464; font-family: monospace;">${server.address}</span></h3>
+                    <div class="status-meta" style="font-size: 0.8em; color: #888; margin-top: 10px; border-top: 1px solid #333; padding-top: 5px;">
+                        Checking status...
                     </div>
                 `;
                 container.appendChild(card);
             });
 
             updateButtons();
+            refreshCurrentPageStatus(); // Initial status check for this page
+        }
+
+        async function refreshCurrentPageStatus() {
+            const serverCards = document.querySelectorAll('.Server_box__TMsXv');
+            serverCards.forEach(async (card) => {
+                const address = card.getAttribute('data-address');
+                const dot = card.querySelector('.status-dot');
+                const meta = card.querySelector('.status-meta');
+
+                try {
+                    const res = await fetch(`https://topeaglerservers.com/api/status/${encodeURIComponent(address)}`);
+                    const status = await res.json();
+
+                    if (status.online) {
+                        dot.style.backgroundColor = '#4caf50'; // Green
+                        meta.innerHTML = `Online Players: <span class="player-count">${status.motd.online}</span>`;
+                    } else {
+                        dot.style.backgroundColor = '#f44336'; // Red
+                        meta.innerHTML = `Offline`;
+                    }
+                } catch (err) {
+                    meta.innerHTML = `<span style="color:orange">Status Unavailable</span>`;
+                }
+            });
         }
 
         function updateButtons() {
             const prevBtn = document.getElementById('btn-prev');
             const nextBtn = document.getElementById('btn-next');
-
-            // --- Handle Previous Button ---
-            if (currentPage === 0) {
-                prevBtn.setAttribute('disabled', 'true');
-                prevBtn.classList.add('Mui-disabled');
-                prevBtn.setAttribute('tabindex', '-1');
-            } else {
-                prevBtn.removeAttribute('disabled');
-                prevBtn.classList.remove('Mui-disabled');
-                prevBtn.removeAttribute('tabindex');
-            }
-
-            // --- Handle Next Button ---
-            if (currentPage === allPages.length - 1) {
-                nextBtn.setAttribute('disabled', 'true');
-                nextBtn.classList.add('Mui-disabled');
-                nextBtn.setAttribute('tabindex', '-1');
-            } else {
-                nextBtn.removeAttribute('disabled');
-                nextBtn.classList.remove('Mui-disabled');
-                nextBtn.removeAttribute('tabindex');
-            }
+            prevBtn.disabled = (currentPage === 0);
+            currentPage === 0 ? prevBtn.classList.add('Mui-disabled') : prevBtn.classList.remove('Mui-disabled');
+            nextBtn.disabled = (currentPage === allPages.length - 1);
+            currentPage === allPages.length - 1 ? nextBtn.classList.add('Mui-disabled') : nextBtn.classList.remove('Mui-disabled');
         }
 
         document.addEventListener('DOMContentLoaded', init);
