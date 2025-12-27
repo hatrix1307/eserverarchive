@@ -17,6 +17,7 @@
         button:not([disabled]) svg { color: #fb8464 !important; }
         button[disabled] svg { color: rgb(170, 170, 170) !important; }
         .player-count { font-weight: bold; color: rgb(70, 227, 147); }
+        .status-dot { transition: background-color 0.3s ease; }
     </style>
 </head>
 <body style="background-color: #111; color: #fff;">
@@ -38,10 +39,10 @@
 
                         <div class="Home_homeRoot__D6YiM">
                             <h1>Servers</h1>
-                            <p>Live status updates every 20 seconds.</p>
+                            <p>Live status updates every 20 seconds. (API: topeaglerservers.com)</p>
                             
                             <div id="dynamic-server-container">
-                                <p class="loading-text">Loading servers...</p>
+                                <p class="loading-text">Loading servers from JSON...</p>
                             </div>
 
                             <div class="Home_pages__jwp2L" style="margin-top: 20px;">
@@ -62,12 +63,19 @@
     <script>
         let allPages = [];      
         let currentPage = 0;
-        let refreshInterval = null;
+
+        // Helper to ensure address starts with wss://
+        function formatAddress(addr) {
+            if (!addr) return "";
+            return addr.startsWith("wss://") ? addr : "wss://" + addr;
+        }
 
         async function init() {
             try {
                 const response = await fetch('./serverlistjson.txt');
                 const rawText = await response.text();
+                
+                // Split file into chunks
                 const pageStrings = rawText.split(/}\s*{/).map((str, i, arr) => {
                     if (i === 0) return str + "}";
                     if (i === arr.length - 1) return "{" + str;
@@ -86,11 +94,11 @@
                 document.getElementById('btn-prev').addEventListener('click', () => changePage(-1));
                 document.getElementById('btn-next').addEventListener('click', () => changePage(1));
 
-                // Set up the 20-second global refresh
+                // Auto-refresh loop
                 setInterval(() => refreshCurrentPageStatus(), 20000);
 
             } catch (err) {
-                console.error(err);
+                console.error("Initialization error:", err);
             }
         }
 
@@ -109,51 +117,56 @@
             const servers = allPages[pageIndex];
 
             servers.forEach(server => {
+                const displayIP = formatAddress(server.address);
                 const card = document.createElement('div');
                 card.className = "Server_box__TMsXv";
-                card.setAttribute('data-address', server.address);
+                // We use the raw address for the API call as per your example (tuff.ws)
+                card.setAttribute('data-api-address', server.address.replace("wss://", ""));
 
                 card.innerHTML = `
                     <h2 style="display: flex; justify-content: space-between; align-items: center;">
                         ${server.name} 
-                        <div class="status-dot" style="background-color: #555; width: 12px; height: 12px; border-radius: 50%;"></div>
+                        <div class="status-dot" style="background-color: #555; width: 14px; height: 14px; border-radius: 50%; border: 2px solid #222;"></div>
                     </h2>
                     <h3 style="color: rgb(170, 170, 170); margin: 5px 0;">Votes: <span style="color: rgb(70, 227, 147);">${server.votes}</span></h3>
                     <div class="Server_tagListContainer__tAO2z" style="display: flex; gap: 5px; flex-wrap: wrap; margin: 10px 0;">
                         ${server.tags.map(tag => `<div class="Badge_inlineBadge__h8Mo1" style="color: #fb8464; border: 1px solid #fb8464; padding: 2px 8px; border-radius: 12px; font-size: 0.8em;">${tag}</div>`).join('')}
                     </div>
-                    <h3>IP: <span style="color: #fb8464; font-family: monospace;">${server.address}</span></h3>
+                    <h3>IP: <span style="color: #fb8464; font-family: monospace;">${displayIP}</span></h3>
                     <div class="status-meta" style="font-size: 0.8em; color: #888; margin-top: 10px; border-top: 1px solid #333; padding-top: 5px;">
-                        Checking status...
+                        Pinging API...
                     </div>
                 `;
                 container.appendChild(card);
             });
 
             updateButtons();
-            refreshCurrentPageStatus(); // Initial status check for this page
+            refreshCurrentPageStatus(); 
         }
 
         async function refreshCurrentPageStatus() {
             const serverCards = document.querySelectorAll('.Server_box__TMsXv');
+            
             serverCards.forEach(async (card) => {
-                const address = card.getAttribute('data-address');
+                const apiAddr = card.getAttribute('data-api-address');
                 const dot = card.querySelector('.status-dot');
                 const meta = card.querySelector('.status-meta');
 
                 try {
-                    const res = await fetch(`https://topeaglerservers.com/api/status/${encodeURIComponent(address)}`);
-                    const status = await res.json();
+                    const res = await fetch(`https://topeaglerservers.com/api/status/${encodeURIComponent(apiAddr)}`);
+                    const data = await res.json();
 
-                    if (status.online) {
-                        dot.style.backgroundColor = '#4caf50'; // Green
-                        meta.innerHTML = `Online Players: <span class="player-count">${status.motd.online}</span>`;
+                    // Using the schema: data.server.online and data.server.players.online
+                    if (data.success && data.server && data.server.online) {
+                        dot.style.backgroundColor = '#4caf50'; // Bright Green
+                        meta.innerHTML = `Online Players: <span class="player-count">${data.server.players.online}</span> / ${data.server.players.max}`;
                     } else {
                         dot.style.backgroundColor = '#f44336'; // Red
-                        meta.innerHTML = `Offline`;
+                        meta.innerHTML = `<span style="color: #f44336;">Offline</span>`;
                     }
                 } catch (err) {
-                    meta.innerHTML = `<span style="color:orange">Status Unavailable</span>`;
+                    dot.style.backgroundColor = '#555';
+                    meta.innerHTML = `<span style="color:orange">Status Timeout</span>`;
                 }
             });
         }
