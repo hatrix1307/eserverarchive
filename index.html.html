@@ -130,9 +130,11 @@ function renderPage(idx) {
     `;
 
     // Make the entire card clickable
-    card.addEventListener('click', () => {
-      window.location.href = `/servers/${server.uuid}.html`;
-    });
+// Make the entire card clickable
+card.addEventListener('click', () => {
+  window.location.href = `/server.html?id=${server.uuid}`;
+});
+
 
     container.appendChild(card);
   });
