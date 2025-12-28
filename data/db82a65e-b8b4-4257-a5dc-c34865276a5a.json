@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "682494d3-19dc-43bd-b61c-34ff230bf837",
+      "id": 617,
+      "username": "pov 2 comptia certifications",
+      "avatar": "https://cdn.discordapp.com/avatars/336721178813267969/9cfbac98bbefb780f722a4cad0ec7874.png"
+    },
+    "uuid": "db82a65e-b8b4-4257-a5dc-c34865276a5a",
+    "name": "AsianF4rmer",
+    "description": "AsianF4rmer Network values creativity, individuality, and community engagement. With gamemodes designed to uphold these values, we hope you will take the time to play through the AsianF4rmer experience. AsianF4rmer also upholds the value of hard work. Because of this, we are strictly a non-P2W server, unlike many others. More information about gamemodes, clients, and links to use can be found in our Discord.\n- Eagler/Java Support\n- 99% Uptime (Average from past year)\n- Minecraft 1.8 (Higher version compatibility is restricted for some gamemodes)\n- DBD-Based Rules (Dont Be Dumb! i.e: Scamming is not punished, but be intelligent when tp'ing to some random person's base)\n- 1,000+ Discord Members\n- ",
+    "address": "wss://asianfarmer.lol",
+    "discord": "x8ecMrMx2W",
+    "createdAt": "2024-06-20T23:03:30.297Z",
+    "updatedAt": "2024-06-21T21:11:30.620Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:46:09.141Z",
+    "tags": [
+      "PVP",
+      "PVE",
+      "SURVIVAL",
+      "CREATIVE",
+      "SKYBLOCK",
+      "PRISON",
+      "RPG",
+      "MISCELLANEOUS"
+    ],
+    "votes": 3,
+    "votifier": false
+  }
+}

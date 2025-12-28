@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "82e4db5c-84ab-4a8f-b3e7-64889d47bdba",
+      "id": 2052,
+      "username": "Rubdump",
+      "avatar": "https://cdn.discordapp.com/avatars/1141197802811179009/98da9cab9451aec20ab889e07a36971c.png"
+    },
+    "uuid": "5d92e225-8c9d-4b16-9dd6-79028959dc8f",
+    "name": "Lost At Brandor",
+    "description": "The Eagler RPG of madness. Survive with friends, upgrade your gear, kill custom enemies in this mysterious world...",
+    "address": "wss://31066.ddnod.es",
+    "discord": "U5MdePhGFh",
+    "createdAt": "2025-10-24T22:11:16.996Z",
+    "updatedAt": "2025-10-31T02:21:17.985Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:47:21.605Z",
+    "tags": [
+      "PVE",
+      "MINIGAMES",
+      "RPG",
+      "MISCELLANEOUS"
+    ],
+    "votes": 1,
+    "votifier": false
+  }
+}

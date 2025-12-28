@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "2942a027-9a3b-45f2-a93e-c7c238fd6058",
+      "id": 5108,
+      "username": "Verxus",
+      "avatar": "https://cdn.discordapp.com/avatars/1073726054314815528/495d61f1371ee3bff45b8ae3475dbfb7.png"
+    },
+    "uuid": "292a2e11-feb2-48f4-a3ab-72256e5e573f",
+    "name": "AkaziMC",
+    "description": "\ud83d\udd25 AkaziMC \u2013 The Ultimate Minecraft Survival Experience!\nLooking for an EagerCraft server that's more than just survival? AkaziMC brings together Java Edition and Eaglercraft players in a dynamic, fun, and competitive world!\n\n\ud83c\udf0d Why AkaziMC?\nCross-Platform Support: Play on Java Edition or Eaglercraft without missing a beat\nSurvival Mode: Classic survival with custom tweaks\nPvP Arenas: Test your combat skills in fair, challenging battles\nDaily Rewards: Log in every day for bonuses and exclusive items\nEconomy System: Earn, trade, and manage your wealth\nTeam Play: Form or join teams to strategize and dominate\n\n\ud83d\udca1 Community Perks\nActive, friendly community\nBalanced gameplay for fair competition\nRegular events and challenges\n\n\ud83c\udf10 Connection Info\nJava Edition: akazimc.eagler.host\n\nEaglercraft: wss://akazimc.eagler.host or wss://akazimc.xx.kg\n\nSupports: 1.8 and 1.12\n\n\u2728 Step into AkaziMC today \u2013 build, fight, and explore with players from around the world!",
+    "address": "wss://akazimc.eagler.host",
+    "discord": "7PSThGbPab",
+    "createdAt": "2025-11-18T02:41:16.320Z",
+    "updatedAt": "2025-12-14T16:14:58.091Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:46:14.915Z",
+    "tags": [
+      "PVP",
+      "SURVIVAL",
+      "FACTIONS"
+    ],
+    "votes": 14,
+    "votifier": true
+  }
+}

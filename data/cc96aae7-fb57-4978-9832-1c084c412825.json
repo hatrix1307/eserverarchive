@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "792b3f1c-58e3-4e12-90be-59a445533664",
+      "id": 17758,
+      "username": "KXII_",
+      "avatar": "https://cdn.discordapp.com/avatars/1313798318777958427/null.png"
+    },
+    "uuid": "cc96aae7-fb57-4978-9832-1c084c412825",
+    "name": "NovaNetwork",
+    "description": "\ud83c\udf0c NovaNetwork\ud83c\udf0c\n Looking for a fresh survival experience with an active, friendly community? NovaNetwork is the place to be. We offer exciting features, balanced gameplay, and a vibe that keeps you coming back. Build, battle, trade, and make new friends \u2014 join us and be part of something epic!",
+    "address": "wss://mc.novanetwork.lol",
+    "discord": "hhkeWHgUNC",
+    "createdAt": "2025-05-24T12:47:01.280Z",
+    "updatedAt": "2025-07-10T13:04:15.205Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:48:24.727Z",
+    "tags": [
+      "SURVIVAL"
+    ],
+    "votes": 0,
+    "votifier": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "77bf1b53-830d-4bd3-831f-9758d244180d",
+      "id": 32818,
+      "username": "NOOROMC",
+      "avatar": "https://cdn.discordapp.com/avatars/1274881247105126442/710e39d5b5598d81aa61df9a863cf356.png"
+    },
+    "uuid": "72d4139d-9111-4f89-a96f-4adbab1a5c9c",
+    "name": "toxide",
+    "description": " a server with no heavy rules and economoney",
+    "address": "wss://toxide.eagler.host",
+    "discord": "qXZ9Vwd6Ga",
+    "createdAt": "2025-12-13T12:54:51.998Z",
+    "updatedAt": "2025-12-13T12:54:51.998Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:44:00.881Z",
+    "tags": [
+      "SURVIVAL",
+      "PVP"
+    ],
+    "votes": 1,
+    "votifier": false
+  }
+}

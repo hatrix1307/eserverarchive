@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "e2d0acc4-e1ab-4dae-84dd-80d983bc9b04",
+      "id": 42106,
+      "username": "uhh",
+      "avatar": "https://cdn.discordapp.com/avatars/696794614178513077/27696bf3c23feb076ceaf1c990371184.png"
+    },
+    "uuid": "cd6e1a59-932a-4204-a658-33ab2c965bcb",
+    "name": "WegCraft",
+    "description": "The Official Survival World For Wegans. Join a small community and make a difference. Do anything from raiding houses to making that dream house on top of that hill.\n\nThe server is still in beta, and we are constantly adding new features and mods. ",
+    "address": "wss://craft.slaysisters.website",
+    "discord": "QW8ndDxgQu",
+    "createdAt": "2025-10-29T04:26:02.591Z",
+    "updatedAt": "2025-10-29T04:27:57.245Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:45:06.921Z",
+    "tags": [
+      "PVP",
+      "SURVIVAL",
+      "MISCELLANEOUS"
+    ],
+    "votes": 0,
+    "votifier": false
+  }
+}

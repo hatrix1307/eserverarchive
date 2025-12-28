@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "ea88f8be-816b-4134-ab42-c652dc57f748",
+      "id": 10,
+      "username": "Myth",
+      "avatar": "https://cdn.discordapp.com/avatars/741763420315189299/null.png"
+    },
+    "uuid": "6de9289d-1437-4e9b-9762-f33023ec1476",
+    "name": "Options",
+    "description": "This server is more of an experiment than anything.\nIt is an empty 1.5 server with 1.8 support that does not use plugins at all.\nBasically, there is not a single rule on this server and anything can be done except for of course, illegal stuff.",
+    "address": "wss://options.theludos.com/",
+    "discord": null,
+    "createdAt": "2024-10-20T16:56:53.647Z",
+    "updatedAt": "2024-10-20T16:56:53.647Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:43:57.024Z",
+    "tags": [
+      "SURVIVAL",
+      "PVE",
+      "PVP",
+      "FACTIONS",
+      "MISCELLANEOUS"
+    ],
+    "votes": 0,
+    "votifier": false
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "7779723d-1417-47ff-820c-384dc101858e",
+      "id": 14,
+      "username": "dauts",
+      "avatar": "https://cdn.discordapp.com/avatars/378292233515958274/be03aa0e74c722276aaf4ec2505e0c15.png"
+    },
+    "uuid": "ed613a31-3fb7-4ff3-9487-a758f59248af",
+    "name": "Zentic Network \u26a1 \u200b\u200b\ud83c\udde9\u200b\u200b\ud83c\uddfa\u200b\u200b\ud83c\uddea\u200b\u200b\ud83c\uddf1\u200b\u200b\ud83c\uddf8\u200b \ufe62 \u200b\ud83c\uddf8\u200b\u200b\ud83c\uddf0\u200b\u200b\ud83c\uddfe\u200b\u200b\ud83c\uddfc\u200b\u200b\ud83c\udde6\u200b\u200b\ud83c\uddf7\u200b\u200b\ud83c\uddf8\u200b \ufe62 \u200b\ud83c\udde7\u200b\u200b\ud83c\uddea\u200b\u200b\ud83c\udde9\u200b\u200b\ud83c\uddfc\u200b\u200b\ud83c\udde6\u200b\u200b\ud83c\uddf7\u200b\u200b\ud83c\uddf8\u200b",
+    "description": "Zentic is a Minecraft server network which has gamemodes such as Practice, Duels, Skywars, Bedwars, and Crystal FFA.\nZentic runs on dedicated hardware to ensure a lag free experience for you. Climb our leaderboard on our practice game mode and become the best player! Unlock special kill effects and participate in exciting events!\nSkywars offers fun kits to duel in the sky! Climb leaderboard and unlock unique rewards and kits. Bedwars offers stat tracking, exciting maps, and leveling for a classic experience. Enjoy crystal duels brought to 1.8 with \nkillstreak rewards. Join zentic using our IP, zentic.cc! \n\n\ud83d\udecf\ufe0f  BEDWARS:\n\ud83d\udcc8 Leveling\n\ud83c\udf0e Popular Maps\n\ud83c\udfdf\ufe0f  Stat Tracking\n\n\ud83c\udfdd\ufe0f SKYWARS:\n\ud83c\udfc6 Leaderboards\n\u26d1\ufe0f Balanced Kits & Loot\n\ud83d\udd25 Cosmetics\n\ud83d\udcc8 Leveling\n\n\u2694\ufe0f  Practice:\n\ud83d\udccd Many Duel Arenas\n\ud83c\udfc6 Leaderboards & Stats\n\ud83e\udd16 Bot fights, solo training\n\ud83c\udf9f\ufe0f  Unique Duels (Boxing, MLG Rush, Webfight & MORE)\n\n\ud83d\udca0 Crystal FFA\nFeaturing:\n\ud83e\udde8 Killstreak Rewards\n\ud83d\udd25  Lightning Rods, Instant TNT, & NUKES\n\n\u26a1 Powerful Hardware\n\ud83e\uddea New Content Coming Soon!\n\n\ud835\udde3\ud835\uddff\ud835\uddf6\ud835\uddfa\ud835\uddee\ud835\uddff\ud835\ude06 \ud835\udddc\ud835\udde3: zentic.cc\n\ud835\uddd4\ud835\uddf9\ud835\ude01\ud835\uddf2\ud835\uddff\ud835\uddfb\ud835\uddee\ud835\ude01\ud835\uddf6\ud835\ude03\ud835\uddf2 \ud835\udddc\ud835\udde3: cobaltcraft.net\n\u2728 Supports Java & Web",
+    "address": "wss://zentic.cc",
+    "discord": "kxGx93c8ST",
+    "createdAt": "2024-06-04T04:30:02.309Z",
+    "updatedAt": "2024-06-25T04:24:42.120Z",
+    "disabled": false,
+    "approved": true,
+    "verified": true,
+    "motd": "{\"name\":\"Zentic Network\",\"hasIcon\":true,\"motd\":[\"\u00a75\u00a7lZentic\",\"\u00a7d\u00a7lBEDWARS \u00a77+ \u00a7d\u00a7lPRACTICE \u00a77+ \u00a7d\u00a7lSKYWARS \u00a77+ \u00a7d\u00a7lCRYSTAL FFA\"],\"players\":[],\"online\":30,\"max\":-1,\"ping\":903,\"iconURI\":\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAACwklEQVR4nO2aP2gUQRSHv4kxoImKEkSJCIkRqwi5RbCwUAhYmiqgdhbptTCpbPVqQdDaShsFsYl2YpUzoKCIXopA/IMhwQgxUczP4u4Y423I7d7szV1uPlgYbnbevH2/2TdzMwuBQCAQCAQC7YZ0E6mvw7cfHpkDfvl2IhBoGaQjSItIrxM1iyRFcsIFSZSuEVeP1Zng3gVgDFittYGGNADAqTSuVTNji7NuLCYJgDGrwLOE1ksB6E/sVyxz1hdnAch2GjTlAPTVb+qHLS7Vb82SbQDEfgB66jf11hYL9VuzJMkBaSiwziRrDDJD39duepd62Bt34/FlBnbATgaArur6R7b4MEuHvaBhjSiSlI/P/vM2+xdd990cS2HDBACj8dW3bTHfII8ah0/1aYoRENT3pz61zgKKdA7o3aS6aArmVarem0B9U8tNOqE9dG0SrC7WTMGsJO1YwxqhgynGgOvV9Z/s+mkWY44ltd/0KKcpRZLexw//STv8x3376pxmePcr+JkFDLcAuBhfvb0zf07jiiTd968+DfgvUE0l85+Pr85Mfemsl+fd4EOTqd9wFKmoSNK3dsz8HtVXpEuubaZxoqT+h/LVturPS3oT3v02VT9k/qB+UL911JdGkR4gHU3VvOXVlw4hRUi7UjVvafXrZCv139mHn/btayZspX4Wx9xpqWlPMAnKaRzDXa4Cl6vrV4DnQOc6v/u/xB9zL3az/H0fC9MwfwM+AgWMSXYy7YvN9vr+lId+EvJ2pExk5a/7LbHKkfiBjT//BK4576x+stgTLAXgv1OEbuBpQkMvbdHpkfi/OA2AhlT6HiDVysEPbkdAJxEAp92Ye1wpVBKg1IM0jfTETQ+thrS7vDq949uVwHbBUFq5nQEOp2j/2RTMC/duBQKBQGB7oZzuaVhXfPvhDZ3UQQ0q9jPZQMAffwFvPjl4cZGmlQAAAABJRU5ErkJggg==\"}",
+    "online": true,
+    "lastPinged": "2025-12-28T16:47:17.036Z",
+    "tags": [
+      "PVP",
+      "PVE",
+      "MINIGAMES",
+      "SURVIVAL",
+      "MISCELLANEOUS"
+    ],
+    "votes": 2,
+    "votifier": false
+  }
+}

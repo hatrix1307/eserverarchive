@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "92edb2d2-dd0e-4487-88dc-98f9c653ea34",
+      "id": 47470,
+      "username": "Godpvpexe",
+      "avatar": "https://cdn.discordapp.com/avatars/1433909595511722058/6a4cce76b62ae7cf8ebe3275a3aa3158.png"
+    },
+    "uuid": "b296dc98-a6a4-4ab3-b3fd-5991f776302e",
+    "name": "LMafia",
+    "description": "Eaglercraft 1.12 anarchy server with no rules and no resets.\nGriefing, PvP, and chaos are allowed.\nNo admin abuse, play how you want.\nJoin the Discord for updates and community discussion.\n",
+    "address": "wss://lamafia.eagler.host",
+    "discord": "ytwCc2Hj",
+    "createdAt": "2025-12-13T07:20:19.143Z",
+    "updatedAt": "2025-12-13T07:20:19.143Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:47:21.510Z",
+    "tags": [
+      "PVP",
+      "SURVIVAL",
+      "FACTIONS"
+    ],
+    "votes": 1,
+    "votifier": false
+  }
+}

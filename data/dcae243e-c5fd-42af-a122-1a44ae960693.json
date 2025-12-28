@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "2860cf59-1b84-4b5e-81e5-7ee3720f4c15",
+      "id": 30906,
+      "username": "\ud835\udcdc\ud835\udcfb_\ud835\udcdf\ud835\udcfb\ud835\udd02\ud835\udcea\ud835\udcf7\ud835\udcfc",
+      "avatar": "https://cdn.discordapp.com/avatars/1298751796071764081/f579a6fc5e6bbcb3e2cc9450659cf59b.png"
+    },
+    "uuid": "dcae243e-c5fd-42af-a122-1a44ae960693",
+    "name": "GODS NATION ",
+    "description": "Eaglecraft server \nSURVIVAL \nTNT RUN \nMORE MINIGAMES WILL BE ADDED SOON.....\n\nBEST SERVER IF YOU PLAY IN A LAGGY DEVICE BECAUSE WE MAKE SURE EVERYTHING WE DO DOESN'T MAKE YOUR GAME LAGGY \n\nOUR LOBBY/MAPS IS MADE OF LEAST ANIMATED BLOCKS TO GIVE YOU A NON LAGGY GAMEPLAY",
+    "address": "wss://gods.modernnations.xyz",
+    "discord": null,
+    "createdAt": "2025-07-22T04:55:40.358Z",
+    "updatedAt": "2025-07-22T04:55:40.358Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": "{\"name\":\"EaglercraftXServer\",\"hasIcon\":true,\"motd\":[\"Hosting Haven Network\",\"Double click to connect.\"],\"players\":[],\"online\":0,\"max\":500,\"ping\":969,\"iconURI\":\"data:image/png;base64,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\"}",
+    "online": true,
+    "lastPinged": "2025-12-28T16:46:09.128Z",
+    "tags": [
+      "PVP",
+      "MINIGAMES",
+      "SURVIVAL",
+      "MISCELLANEOUS"
+    ],
+    "votes": 2,
+    "votifier": false
+  }
+}

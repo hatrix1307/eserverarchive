@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "eab5e32e-e39e-445d-ae30-698c3ed614d5",
+      "id": 604,
+      "username": "LostV2",
+      "avatar": "https://cdn.discordapp.com/avatars/1153791667137171477/09c22a6b73474bfe15768e5015dd910d.png"
+    },
+    "uuid": "d2169cac-7936-494d-b734-5b5f9305b5e9",
+    "name": "XenosMC",
+    "description": "XenosMC is a server in NA East.\nWe currently have one gamemode. Survival\n\nSurvival \nSurvival is a server with custome armor that can be obtained by crates or crafting.",
+    "address": "wss://xenosmc.org",
+    "discord": "mdw5eez48R",
+    "createdAt": "2025-03-21T18:08:14.905Z",
+    "updatedAt": "2025-03-21T18:08:14.905Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:46:10.822Z",
+    "tags": [
+      "PVP",
+      "PVE",
+      "FACTIONS",
+      "SURVIVAL",
+      "RPG"
+    ],
+    "votes": 0,
+    "votifier": true
+  }
+}

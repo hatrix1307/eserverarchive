@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "41e7f2f1-74dd-4711-917e-148aef9a16ad",
+      "id": 122,
+      "username": "Jakob",
+      "avatar": "https://cdn.discordapp.com/avatars/675770201811320832/1b468b1ac1f38b93d70a0afc943c914d.png"
+    },
+    "uuid": "b76a1977-897e-4df6-9e84-e13c1ff22a8d",
+    "name": "Asspixel (revived)",
+    "description": "# Server Info\nThis is a revival of the original Asspixel. The server is online infrequently. The only available gamemode right now is BedWars.\nAll your data from Asspixel is also available here.\n**OneblockX is not available.**\n\n---\n\n## Old description\nOriginally founded, developed and ran by FrenchToast. Asspixel is a Hypixel-like alternative for Eaglercraft. We make as good of an experience as we possibly can for our players.",
+    "address": "wss://pixelclient.xyz/mc",
+    "discord": "8jHhmvaKtc",
+    "createdAt": "2025-06-07T18:14:12.145Z",
+    "updatedAt": "2025-09-27T19:32:01.443Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:47:17.959Z",
+    "tags": [
+      "PVP",
+      "MINIGAMES"
+    ],
+    "votes": 0,
+    "votifier": false
+  }
+}

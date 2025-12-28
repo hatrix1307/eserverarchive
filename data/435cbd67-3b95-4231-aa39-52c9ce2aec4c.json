@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "648ea295-e7f8-446e-9cda-4842a48705fd",
+      "id": 43316,
+      "username": "vivgamer",
+      "avatar": "https://cdn.discordapp.com/avatars/1310867133265084418/null.png"
+    },
+    "uuid": "435cbd67-3b95-4231-aa39-52c9ce2aec4c",
+    "name": "GalaxyMC Server",
+    "description": "\ud83c\udf0c Unique Features of GalaxyMC\n\n\u2728 Smooth & Lag-Free Gameplay\nOptimized performance for a smooth Minecraft experience, even with many players online.\n\n\ud83d\udee1\ufe0f Active Staff & Fair Play\nFriendly and active staff keep the server safe, hacker-free, and enjoyable for everyone.\n\n\ud83c\udfae Fun Commands & Systems\nEasy-to-use game and Discord commands to enhance gameplay and interaction.\n\n\ud83c\udff0 Creative & Survival Friendly\nBuild freely, explore worlds, and enjoy survival with balanced mechanics.\n\n\ud83c\udf89 Regular Events & Giveaways\nExciting events, competitions, and rewards coming regularly to keep things fun.\n\n\ud83d\udc1e Quick Bug Fix System\nDedicated bug-report channel ensures fast fixes and continuous improvement.\n\n\ud83d\udcac Chill & Fun Community\nMemes, screenshots, trash-talk, and chats \u2014 a place to relax and enjoy.\n\n\ud83e\udd16 Smart Discord Integration\nInvite tracking, welcome system, reports, and bot features fully integrated.\n\n\ud83c\udf0d Beginner Friendly\nNew players are always welcome with guidance and support.\n\n\ud83d\ude80 Always Improving\nGalaxyMC is constantly updating with new ideas, features, and content.",
+    "address": "wss://galaxymc.eagler.host",
+    "discord": "RUwDmtZr",
+    "createdAt": "2025-12-22T13:34:38.406Z",
+    "updatedAt": "2025-12-24T07:33:28.515Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:48:28.554Z",
+    "tags": [
+      "SURVIVAL",
+      "CREATIVE"
+    ],
+    "votes": 0,
+    "votifier": false
+  }
+}

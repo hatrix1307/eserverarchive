@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "5398c620-64c6-4e83-9a7e-99c77df72422",
+      "id": 2538,
+      "username": "Tommy",
+      "avatar": "https://cdn.discordapp.com/avatars/1207909535935762503/f530fd8078fd6054a8b985d59902fbf4.png"
+    },
+    "uuid": "2299e8b5-8ecf-49d1-b68b-255c2ff57e4d",
+    "name": "Contrabell | LIFESTEAL SEASON 1",
+    "description": "Made by Titanic_jar \n\nA small server with pvp and miscellaneous games - enjoy (=\n\n*hosted by Tommy, but this is Titanic_jar's server*",
+    "address": "wss://contrabell.bytommy.uk",
+    "discord": "1234pp",
+    "createdAt": "2024-11-21T00:22:31.851Z",
+    "updatedAt": "2025-05-05T16:47:59.418Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": "{\"name\":\"EaglercraftXVelocity Server\",\"hasIcon\":true,\"motd\":[\"\u00a7fGuess what?!?\\n\u00a7mchiken bu\u00a7f We have lifesteal!!\"],\"players\":[],\"online\":0,\"max\":60,\"ping\":1071,\"iconURI\":\"data:image/png;base64,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\"}",
+    "online": true,
+    "lastPinged": "2025-12-28T16:48:23.143Z",
+    "tags": [
+      "MINIGAMES",
+      "MISCELLANEOUS",
+      "PVP"
+    ],
+    "votes": 1,
+    "votifier": false
+  }
+}

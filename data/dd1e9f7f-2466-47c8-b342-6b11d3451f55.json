@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "648ea295-e7f8-446e-9cda-4842a48705fd",
+      "id": 43316,
+      "username": "vivgamer",
+      "avatar": "https://cdn.discordapp.com/avatars/1310867133265084418/null.png"
+    },
+    "uuid": "dd1e9f7f-2466-47c8-b342-6b11d3451f55",
+    "name": "GALA SERVER",
+    "description": "BEST SERVER",
+    "address": "wss://gala.eagler.host",
+    "discord": "bJX3CPCS",
+    "createdAt": "2025-12-23T09:49:12.359Z",
+    "updatedAt": "2025-12-23T09:49:12.359Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:44:00.887Z",
+    "tags": [
+      "SURVIVAL",
+      "PVP",
+      "PVE",
+      "MISCELLANEOUS",
+      "SKYBLOCK",
+      "MINIGAMES"
+    ],
+    "votes": 1,
+    "votifier": false
+  }
+}

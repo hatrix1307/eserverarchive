@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "df6d7a71-4088-4218-8e28-41230558da8a",
+      "id": 32132,
+      "username": "prince ace.",
+      "avatar": "https://cdn.discordapp.com/avatars/1385067999949492256/57aa466f94188650d3e7a8011e1d0d4e.png"
+    },
+    "uuid": "e3048f3f-0418-4933-8858-2b49cc8f44c3",
+    "name": "Spadalia HCSMP",
+    "description": "SpadaliaSMP",
+    "address": "wss://spadalia-wsmp.eagler.host",
+    "discord": "fWE6Y3ZZWH",
+    "createdAt": "2025-12-14T20:29:47.411Z",
+    "updatedAt": "2025-12-14T21:14:35.131Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:46:14.902Z",
+    "tags": [
+      "SURVIVAL",
+      "PVP"
+    ],
+    "votes": 1,
+    "votifier": false
+  }
+}

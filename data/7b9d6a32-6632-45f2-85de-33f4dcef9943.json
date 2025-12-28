@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "27bc966d-dc32-4da2-b789-55660f15a89b",
+      "id": 44728,
+      "username": "ts_gamer",
+      "avatar": "https://cdn.discordapp.com/avatars/1202979767125671966/cd03f3c5113859b22aabedba75c52e6b.png"
+    },
+    "uuid": "7b9d6a32-6632-45f2-85de-33f4dcef9943",
+    "name": "TS_Gamer Craft",
+    "description": "A Skyblock and Survival server, more gamemodes coming soon!\n\nUse /island to make your island or teleport to it if you already made one, use /spawn or /warp spawn to go to the spawn!\nUse /warp survival to play in the survival server\nUse /kit tools to get stone tools!",
+    "address": "wss://tsgamercraft.eagler.host",
+    "discord": "9YknnXDTsN",
+    "createdAt": "2025-12-21T20:05:15.082Z",
+    "updatedAt": "2025-12-22T11:56:24.510Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:45:07.814Z",
+    "tags": [
+      "SKYBLOCK",
+      "MINIGAMES",
+      "SURVIVAL"
+    ],
+    "votes": 1,
+    "votifier": false
+  }
+}

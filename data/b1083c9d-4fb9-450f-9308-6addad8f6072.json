@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "1e285e1e-3178-4563-8e5a-1a0f19a5fc48",
+      "id": 18068,
+      "username": "Stringcheese272ALT",
+      "avatar": "https://cdn.discordapp.com/avatars/1334966538448535777/adbd8fe65b4a5620339124f51f40cf5a.png"
+    },
+    "uuid": "b1083c9d-4fb9-450f-9308-6addad8f6072",
+    "name": "CastersMC",
+    "description": "# \ud83c\udff4\u200d\u2620\ufe0fWelcome to CastersMC\ud83c\udff4\u200d\u2620\ufe0f\nLooking for a server packed with fun and adventures that is Java, Bedrock, And EaglercraftX compatible? CastersMC is the perfect place to come to. Our server is playable on 1.8-1.21\n------------------------------------------------------------------------------\n# \u2764\ufe0fSurvival\u2764\ufe0f\nSurvive and climb the ranks in our CrystalPVP Survival gamemode.\n------------------------------------------------------------------------------\n# \ud83c\udf5eDuels\ud83c\udf5e\nJoin many games inside of this gamemode.\n------------------------------------------------------------------------------\n# \u2764\ufe0fLifesteal Anarchy\u2764\ufe0f\nSurvive in a lifesteal anarchy server and steal hearts from that one vampire movie\ud83e\udd37\u200d\u2642\ufe0f \n------------------------------------------------------------------------------\n\n\ud83e\udd73We have more game modes to come along the way.\ud83e\udd73\n\n\ud83c\udf0aCome be apart of our server today\ud83c\udf0a\nIp And Links:\nJava And Bedrock IP:\n`play.castersmc.org`\nBedrock Port: `19131`\nEaglercraftX IP:\n`wss://mc.castersmc.org`\nWebstore:\nhttps://store.castersmc.org\nDiscord:\n https://discord.gg/UDYns9sEtY",
+    "address": "wss://mc.castersmc.org",
+    "discord": "UDYns9sEtY",
+    "createdAt": "2025-05-15T05:14:17.268Z",
+    "updatedAt": "2025-05-15T05:14:17.268Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:47:16.568Z",
+    "tags": [
+      "FACTIONS",
+      "MINIGAMES",
+      "SURVIVAL",
+      "MISCELLANEOUS",
+      "PVE",
+      "PVP"
+    ],
+    "votes": 0,
+    "votifier": true
+  }
+}

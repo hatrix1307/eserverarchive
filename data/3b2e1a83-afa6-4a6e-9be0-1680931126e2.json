@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "f1204465-f57c-4250-ada5-99766c18cb80",
+      "id": 12,
+      "username": "FrenchToast",
+      "avatar": "https://cdn.discordapp.com/avatars/989192488818442290/0295997ab9fd9c3349bf722640e64b3f.png"
+    },
+    "uuid": "3b2e1a83-afa6-4a6e-9be0-1680931126e2",
+    "name": "Asspixel Network",
+    "description": "Founded, Developed and Ran by FrenchToast. A Young 16 year old developer from the US, Asspixel is a Hypixel-like alternative for eaglercraft.  We make as good of an experience as we possibly can for our players.",
+    "address": "wss://mc.asspixel.net",
+    "discord": "rarZSQpZje",
+    "createdAt": "2024-06-04T01:17:39.678Z",
+    "updatedAt": "2024-08-05T20:11:56.535Z",
+    "disabled": false,
+    "approved": true,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:45:07.858Z",
+    "tags": [
+      "PVP",
+      "PVE",
+      "MINIGAMES",
+      "SKYBLOCK"
+    ],
+    "votes": 0,
+    "votifier": true
+  }
+}

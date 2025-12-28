@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "a59b0cc8-7568-4a73-92c0-3da886ce9449",
+      "id": 20250,
+      "username": "\ud83e\udd40 \ud835\udca5\ud835\udc52\ud835\udcc8\ud835\udcc8\ud835\udcbe\ud835\udc52 \ud83e\udd40",
+      "avatar": "https://cdn.discordapp.com/avatars/1347046044818739311/1546bed5f3ae0f8dc4c1cc691581af37.png"
+    },
+    "uuid": "d7ea457e-cd50-47ad-bda7-e0eace43bc07",
+    "name": "Vortexium Network",
+    "description": "Welcome to Vortexium Network! \n\nA new Minecraft and Eaglercraft era is rising, Vortexium Network brand new server working to take CrackedPVPs place, We are here trying to create a super Enjoyable, Kind and Fair Community.\n\nJust so you know this server is going to be a tiny bit \"pay to win\" because we need the money to be able to our own vps and hopfully make the server even better.\n\nServer Features\n\ud83c\udf69 DonutSMP-A DonutSMP copy made from scratch expect from luckperms and maps.\nVortexiumSMP*-A SMP made just for Vortexium Networks theme with custom made plugins, custom made generations!\nBoxPVP-Mine, Grind, Upgrade!\n\nBoxpvp released\nWhy players Should join Vortexium:\n\nA friendly, active community\n\nCustom features and Weekly fun events**\n\nHop on and join the fun!\n:java~1:30086.ddnod.es\n:eagler: wss://30086.ddnod.es\nDiscord: https://discord.gg/TpvrwsdcuW If the invite expires please DM me\n\nYour next Minecraft adventure is waiting\u2014see you in-game!",
+    "address": "wss://30086.ddnod.es",
+    "discord": "2w2bbzYXfE",
+    "createdAt": "2025-09-19T12:58:51.202Z",
+    "updatedAt": "2025-09-21T11:43:11.946Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:46:14.952Z",
+    "tags": [
+      "PVP",
+      "SURVIVAL",
+      "FACTIONS"
+    ],
+    "votes": 2,
+    "votifier": false
+  }
+}

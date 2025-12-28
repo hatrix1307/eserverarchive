@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "65885c1e-25ae-41f1-b229-62a025490885",
+      "id": 9040,
+      "username": "Velcroft",
+      "avatar": "https://cdn.discordapp.com/avatars/1163926249681465465/a_79f7e7dbaabfdb17b8a3ddf31426c32c.png"
+    },
+    "uuid": "15ab1cd5-1e20-4e25-baa7-7b7c19892a8d",
+    "name": "VelcroftSMP",
+    "description": "Velcroft SMP is Finally LIVE! \n\n \ud83d\udce3  We're excited to announce that Velcroft SMP is officially up and running! For the past week, we have been working tirelessly to make this server as cool as possible for every one of y'all!\n\nFeaturesss:\n \u2764\ufe0f Lifesteal \u2013 if you dont know what that is basically its like where when u kill someone you get one of their hearts and when they kill u its vice versa!,\n \ud83d\udcac like a million different commands, pretty much any command u can think of  like /spawn, /tpa, /home (after doing /sethome first ofc) and wayyyyyy more!,\n \ud83c\udfea   There are also really cool sections in /shop and theres other plugins to help you build rly cool stuff, also u can earn money/materials by afking in the AFK pool,\n\ud83e\udd85  We are proud to announce Eagler support! You can now join from Eaglercraft 1.8.8!\n\n \ud83d\udcbb  IP: velcroftsmp.xyz\n\nJOIN NOWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW!",
+    "address": "wss://mc.velcroftnetwork.xyz",
+    "discord": "Q9gMRuh8Cc",
+    "createdAt": "2025-06-03T22:15:21.243Z",
+    "updatedAt": "2025-07-26T18:49:32.306Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:46:10.934Z",
+    "tags": [
+      "PVP",
+      "MINIGAMES",
+      "SURVIVAL",
+      "PVE"
+    ],
+    "votes": 0,
+    "votifier": false
+  }
+}

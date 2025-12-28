@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "a16c509c-af38-47a0-8ba1-2013e0c2c46f",
+      "id": 2197,
+      "username": "Pnut22craced",
+      "avatar": "https://cdn.discordapp.com/avatars/1131263729305141329/2f2d2fd1a1bfe081a7e44eeab87d817d.png"
+    },
+    "uuid": "a18d15fe-a4c8-498b-899c-730400782fa1",
+    "name": "Pnut22 And Colbster937 smp",
+    "description": "fun Smp",
+    "address": "wss://pnutserver.colbster937.dev",
+    "discord": null,
+    "createdAt": "2024-07-18T03:44:33.964Z",
+    "updatedAt": "2024-07-18T03:44:33.964Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:45:04.144Z",
+    "tags": [
+      "SURVIVAL"
+    ],
+    "votes": 0,
+    "votifier": false
+  }
+}

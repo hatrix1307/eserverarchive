@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "e4e264ef-8e7a-40d2-9757-46ddf8d49e01",
+      "id": 45886,
+      "username": "TheAllMightyTrain",
+      "avatar": "https://cdn.discordapp.com/avatars/1394821249221394444/f1488a7f3dec853b6f351b3f8aa674c8.png"
+    },
+    "uuid": "103139aa-517c-4890-ba71-c4270221f7a2",
+    "name": "SkyFrameSMP",
+    "description": "Rule the sky on Eaglercraft! Play Survival and Lifesteal, with a custom economy and crates. Enjoy unblocked Minecraft 1.8\u20131.12.2 on this unique Eaglercraft server \u2014 check the list!",
+    "address": "wss://minecraft.emortron.me",
+    "discord": "GFsrYZqEGh",
+    "createdAt": "2025-12-21T04:28:37.974Z",
+    "updatedAt": "2025-12-21T04:28:37.974Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": "{\"name\":\"EaglercraftXServer\",\"hasIcon\":true,\"motd\":[\"   \u00a7d\u00a7l\u0455\u1d0b\u028f\ua730\u0280\u1d00\u1d0d\u1d07\u00a75\u00a7l\u0455\u1d0d\u1d18 \u00a77\u00a7k|\u00a7r \u00a7f1.8-1.12 \u00a77\u00a7k|\u00a7r \u00a7d\u00a7l\u0274\u1d07\u1d21 \u1d1c\u1d18\u1d05\u1d00\u1d1b\u1d07 \",\"\u00a7a\u0455\u1d1c\u0280\u1d20\u026a\u1d20\u1d00\u029f \u00a7b(\u0274\u1d07\u1d21 \u0455\u1d07\u1d00\u0455\u1d0f\u0274!) \u00a74\u029f\u026a\ua730\u1d07\u0455\u1d1b\u1d07\u1d00\u029f \u00a72(\u1d0f\u0274\u029f\u026a\u0274\u1d07!)\"],\"players\":[],\"online\":1,\"max\":60,\"ping\":702,\"iconURI\":\"data:image/png;base64,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\"}",
+    "online": true,
+    "lastPinged": "2025-12-28T16:43:55.954Z",
+    "tags": [
+      "SURVIVAL",
+      "PVP",
+      "MISCELLANEOUS"
+    ],
+    "votes": 0,
+    "votifier": true
+  }
+}

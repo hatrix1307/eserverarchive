@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "be73ebd7-14ef-4889-958d-e1e86e7f7d63",
+      "id": 2455,
+      "username": "frogiee1",
+      "avatar": "https://cdn.discordapp.com/avatars/863178429213179984/a168c931035b203e177f6a3ec1ca6847.png"
+    },
+    "uuid": "8c4b9da0-a91f-4ca8-8a69-5df6956f8cc6",
+    "name": "xenaMC",
+    "description": "xenaMC is a server filled with gamemodes and minigames!\n\n\nsurvival - its in the name bro\n\nskywars - get the best loot possible and get to the middle to defeat every single player to win!\n\nskyblock - choose from 1 of 3 island types and use your survival skills to build and expand your island!\n\nbedwars - defend your bed and destroy other teams beds. be the last team standing to win!\n\nPit PVP - hop into a pit to fight other players, grind levels and gold and upgrade to beat more players! upgrades are fair for all players.",
+    "address": "wss://xena.wtf",
+    "discord": "unblockedgames",
+    "createdAt": "2024-07-26T00:51:42.568Z",
+    "updatedAt": "2025-09-13T20:11:18.568Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:43:57.692Z",
+    "tags": [
+      "SURVIVAL",
+      "PVP",
+      "PVE",
+      "MINIGAMES",
+      "MISCELLANEOUS",
+      "FACTIONS",
+      "SKYBLOCK"
+    ],
+    "votes": 48,
+    "votifier": true
+  }
+}

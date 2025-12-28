@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "5020a535-ce1f-474f-9214-9af1f6fec618",
+      "id": 36196,
+      "username": "KuklincYT",
+      "avatar": "https://cdn.discordapp.com/avatars/1202928069795516496/bcc4380307dd9de51a312c01f310b7dd.png"
+    },
+    "uuid": "7fa01085-552b-4a30-a670-f72a69ca4da4",
+    "name": "Kuklinc Server",
+    "description": "Minecraft Java/Bedrock server s podporou eagleru.\nKuklinc na n\u011bm po\u0159\u00e1d\u00e1 eventy, server nabz\u00ed hern\u00ed mod survial a PVP.\nK event\u016fm tak sou v\u0161echny eventy pr\u00e1v\u011b na tomto serveru.\nJinak na tomto serveru se taky hraje Kuklinc SMP.\nT\u011b\u0161\u00edm se na ka\u017ed\u00e9ho nov\u00e9ho \u010dlena.",
+    "address": "wss://gannet-literate-ape.ngrok-free.app",
+    "discord": "9S55h6KcgT",
+    "createdAt": "2025-08-30T18:05:29.141Z",
+    "updatedAt": "2025-08-30T18:05:29.141Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:47:17.815Z",
+    "tags": [
+      "SURVIVAL",
+      "PVP",
+      "MINIGAMES",
+      "MISCELLANEOUS"
+    ],
+    "votes": 0,
+    "votifier": false
+  }
+}

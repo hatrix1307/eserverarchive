@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "db4fa36e-fd62-4fe7-98f3-2358f2849d77",
+      "id": 47584,
+      "username": "bsbhsnsv",
+      "avatar": "https://cdn.discordapp.com/avatars/1445611918751432705/null.png"
+    },
+    "uuid": "9507d96b-56b5-4892-b2fc-0d23f34ddac2",
+    "name": "jasonSMP",
+    "description": "A Student SMP server",
+    "address": "wss://jasonsmp.eagler.host",
+    "discord": null,
+    "createdAt": "2025-12-13T15:51:02.755Z",
+    "updatedAt": "2025-12-13T15:51:02.755Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:47:21.624Z",
+    "tags": [
+      "PVP",
+      "SURVIVAL"
+    ],
+    "votes": 1,
+    "votifier": false
+  }
+}

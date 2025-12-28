@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "63ef7ea6-aba4-47b8-ad4e-db15d8e89e2f",
+      "id": 4366,
+      "username": "kinitonarp",
+      "avatar": "https://cdn.discordapp.com/avatars/1280531798664810497/06da6d670fbf4ede9970f44f095ae934.png"
+    },
+    "uuid": "791695ec-7af3-4906-b8ee-0d6c1017b302",
+    "name": "MLMC Season 2 | Modded Survival",
+    "description": "MLMC Season 2 (formerly known as MoonlightMC) is a survival server but not your average boring survival server!\n Its 1.20 (yes yes.. this means theres netherite), java support and the most tuff thing, custom world generation & slimefun! \nJoin today and tell us (i mean me) what you think about this server!\nThe server is still in its beta stage, so there will be alot of bugs.. (Note for haters: the \"bots\" are not even ingame, they just keep the server online forever. this is how ddnodes works)",
+    "address": "wss://31095.ddnod.es",
+    "discord": "nd9U97RRQv",
+    "createdAt": "2025-07-12T15:55:13.044Z",
+    "updatedAt": "2025-08-20T19:38:19.158Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:47:21.638Z",
+    "tags": [
+      "MISCELLANEOUS",
+      "SURVIVAL",
+      "PVP",
+      "RPG",
+      "PVE",
+      "FACTIONS"
+    ],
+    "votes": 0,
+    "votifier": false
+  }
+}

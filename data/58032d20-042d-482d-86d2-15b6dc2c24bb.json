@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "0468c530-a19b-4e30-b4a7-53073f7d1f30",
+      "id": 205,
+      "username": "ponkstars",
+      "avatar": "https://cdn.discordapp.com/avatars/1184273208703209472/614ce6252881b53a40619fcf60b25767.png"
+    },
+    "uuid": "58032d20-042d-482d-86d2-15b6dc2c24bb",
+    "name": "RitalinMC",
+    "description": "# A cool server",
+    "address": "wss://eagler.ritalinmc.club",
+    "discord": "9eTWgXU7NG",
+    "createdAt": "2025-09-15T21:41:47.659Z",
+    "updatedAt": "2025-09-16T02:35:36.541Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:46:14.932Z",
+    "tags": [
+      "SURVIVAL"
+    ],
+    "votes": 0,
+    "votifier": true
+  }
+}

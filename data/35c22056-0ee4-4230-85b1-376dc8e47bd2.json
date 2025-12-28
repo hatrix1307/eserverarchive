@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "75c253cf-d00f-4dda-82a7-b28b3f2d8299",
+      "id": 3990,
+      "username": "Matthew",
+      "avatar": "https://cdn.discordapp.com/avatars/778722739552518185/31ec4f35b06eb5700ac2beff72380a4e.png"
+    },
+    "uuid": "35c22056-0ee4-4230-85b1-376dc8e47bd2",
+    "name": "SuckMyCraft",
+    "description": "Welcome to SuckMyCraft, where adventure never ends! Jump into Skyblock for the challenge of building from nothing, team up in Survival to explore and thrive with friends, or test your skills in Bedwars, our fast-paced PvP minigame where only the strongest survive. Whether you\u2019re into grinding, chilling, or battling it out, we\u2019ve got something for you. Join the fun and start your adventure today!",
+    "address": "wss://eagler.suckmycraft.online/",
+    "discord": "gEkdyHXQZ3",
+    "createdAt": "2024-09-24T00:49:50.267Z",
+    "updatedAt": "2025-05-27T21:43:17.347Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:42:49.549Z",
+    "tags": [
+      "SURVIVAL",
+      "SKYBLOCK",
+      "MISCELLANEOUS"
+    ],
+    "votes": 0,
+    "votifier": false
+  }
+}

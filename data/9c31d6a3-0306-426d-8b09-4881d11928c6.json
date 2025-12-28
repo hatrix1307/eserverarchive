@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "0987f067-885f-48d4-8c5d-26a44fce989e",
+      "id": 2807,
+      "username": "tlochsta",
+      "avatar": "https://cdn.discordapp.com/avatars/795039947656134728/919a91831880664d6e9ff4ff677d9595.png"
+    },
+    "uuid": "9c31d6a3-0306-426d-8b09-4881d11928c6",
+    "name": "eagworld",
+    "description": "eagworld is a eaglercraft network server featuring game modes such as CAKEWARS and LIFESTEAL",
+    "address": "wss://play.eagworld.net",
+    "discord": "WDEepc7ygg",
+    "createdAt": "2025-01-27T23:55:57.813Z",
+    "updatedAt": "2025-01-27T23:55:57.813Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:46:08.522Z",
+    "tags": [
+      "MINIGAMES",
+      "SURVIVAL",
+      "PVP",
+      "MISCELLANEOUS"
+    ],
+    "votes": 0,
+    "votifier": true
+  }
+}

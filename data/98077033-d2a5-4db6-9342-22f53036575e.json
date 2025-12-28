@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "0db7295c-7834-4446-a9b6-c68eeae8a093",
+      "id": 45664,
+      "username": "aquaishere",
+      "avatar": "https://cdn.discordapp.com/avatars/1442819866473140294/null.png"
+    },
+    "uuid": "98077033-d2a5-4db6-9342-22f53036575e",
+    "name": "LightSMP",
+    "description": "A good pvp server and a survival community! find strong players! and dominate the server",
+    "address": "wss://lightsmp.eagler.host",
+    "discord": null,
+    "createdAt": "2025-12-13T18:51:30.774Z",
+    "updatedAt": "2025-12-13T18:51:30.774Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:42:54.110Z",
+    "tags": [
+      "SURVIVAL",
+      "MISCELLANEOUS",
+      "MINIGAMES",
+      "PVP"
+    ],
+    "votes": 1,
+    "votifier": false
+  }
+}

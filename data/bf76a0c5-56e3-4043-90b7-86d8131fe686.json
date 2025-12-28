@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "bc311a09-6d8b-4f84-8d0d-90f33289670e",
+      "id": 46316,
+      "username": "\u24c0\u24d4\u24e1\u24d1\u24d8\u24d0\u24dd\u24c8\u02d7\u02cb\u02cf \u2661 \u02ce\u02ca\u02d7",
+      "avatar": "https://cdn.discordapp.com/avatars/1431110237187870867/ed6caf56b782ae3d2b1fac09d876b457.png"
+    },
+    "uuid": "bf76a0c5-56e3-4043-90b7-86d8131fe686",
+    "name": "KerCraft",
+    "description": "KerCraft server!",
+    "address": "wss://eagler.kercraft.workers.dev/",
+    "discord": "BjjVb55pX",
+    "createdAt": "2025-12-03T09:31:08.670Z",
+    "updatedAt": "2025-12-03T09:31:08.670Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": "{\"name\":\"EaglercraftXBungee Server\",\"hasIcon\":false,\"motd\":[\"\u00a76KerCraft\"],\"players\":[],\"online\":1,\"max\":60,\"ping\":615}",
+    "online": true,
+    "lastPinged": "2025-12-28T16:42:49.816Z",
+    "tags": [
+      "SURVIVAL"
+    ],
+    "votes": 8,
+    "votifier": false
+  }
+}

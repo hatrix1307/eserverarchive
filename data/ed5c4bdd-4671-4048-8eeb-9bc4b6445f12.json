@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "7899d7c2-6332-4008-b3da-29c50d2f2166",
+      "id": 13962,
+      "username": "luva",
+      "avatar": "https://cdn.discordapp.com/avatars/1188939332908765185/ace91986b1e3a58dcee85f4211ca65ef.png"
+    },
+    "uuid": "ed5c4bdd-4671-4048-8eeb-9bc4b6445f12",
+    "name": "AvernusMC",
+    "description": "Welcome to AvernusMC! We support Eagler, Bedrock, Java, and Cracked from 1.8 to 1.21.4. We have tons of cool and creative features, from 1.18 caves with eagler-supportive, buffed diamond spawns in Survival, to a full on custom gamemode called Monarchy, which is basically an INFINITE Minecraft Manhunt, inside an economy server! We'd love for you to join us at AvernusMC and play, invite, and make memories with your friends! *Server owned by LuvaWhy, hosted by ggkloven, developed by ayunami2000*",
+    "address": "wss://play.avernusmc.net",
+    "discord": "fYhRsQZGvM",
+    "createdAt": "2025-04-12T02:28:33.588Z",
+    "updatedAt": "2025-04-12T02:30:29.555Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:45:07.869Z",
+    "tags": [
+      "PVP",
+      "SURVIVAL",
+      "MISCELLANEOUS",
+      "MINIGAMES"
+    ],
+    "votes": 0,
+    "votifier": false
+  }
+}

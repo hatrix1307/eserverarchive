@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "75273c5f-cfa1-436d-8619-a5dba747a066",
+      "id": 13022,
+      "username": "mctcp.ovh",
+      "avatar": "https://cdn.discordapp.com/avatars/964523588101218314/ffe71316921d037c67906a6cd72cfe1e.png"
+    },
+    "uuid": "3bd79a9d-dacd-4f47-b572-99cbabcefce5",
+    "name": "TeamHolyTOP",
+    "description": "\ud83c\udf1f Welcome to TeamHoly.NET/TeamHoly.TOP \u2013 The Ultimate Minecraft Network for Non-Premium Bedrock and Premium Players! \ud83c\udf1f\n\n\ud83d\udd39 Unique Gaming Experience \ud83d\udd39\nJoin us for exciting game modes like MLGRush, Bedwars, and KnockbackFFA. Whether you're an experienced player or new to Minecraft, there's something for everyone!\n\n\ud83d\udde1\ufe0f MLGRush \u2013 Prove Your Skills \ud83d\udde1\ufe0f\nChallenge yourself in 1vs1 PvP battles in MLGRush. Fast-paced duels await where only the best will stand victorious!\n\n\ud83c\udff0 Bedwars \u2013 Teamwork Is Key \ud83c\udff0\nProtect your base and work with your team to defeat opponents in Bedwars. Strategy and coordination lead to victory!\n\n\ud83d\udca5 KnockbackFFA \u2013 Action-Packed Combat \ud83d\udca5\nFor thrill-seekers, KnockbackFFA offers intense action. Fight in the arena and knock your enemies out of the ring!\n\n\ud83d\udc65 Friendly Community & Supportive Team \ud83d\udc65\nWhether you're on Non-Premium Bedrock or Premium, you'll find a warm, welcoming community. Our team is always available to assist with any questions!\n\n\ud83d\udcab Why TeamHoly.NET?\n\n    Play on both Bedrock and Premium versions of Minecraft.\n    Enjoy exclusive game modes for endless fun.\n    Be part of a supportive, active community!\n\nWhat are you waiting for? Dive into the TeamHoly.NET world and experience Minecraft like never before! \ud83c\udf1f",
+    "address": "wss://eagle.teamholy.top",
+    "discord": "SNPyvGjkVP",
+    "createdAt": "2025-01-04T23:53:51.011Z",
+    "updatedAt": "2025-01-04T23:53:51.011Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:45:04.060Z",
+    "tags": [
+      "MINIGAMES",
+      "PVP",
+      "SURVIVAL",
+      "MISCELLANEOUS"
+    ],
+    "votes": 0,
+    "votifier": false
+  }
+}

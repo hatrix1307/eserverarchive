@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "69a11c31-17d4-4daa-8fcc-522556673ebf",
+      "id": 22726,
+      "username": "$setWebUser(\ud835\udea0\ud835\ude9b\ud835\ude8a\ud835\ude99.)",
+      "avatar": "https://cdn.discordapp.com/avatars/1158032044442534039/a_5c9e7d70a793a5fcd342811ad9451c6e.png"
+    },
+    "uuid": "5884a6bd-d247-4332-ba80-6ccc9f96acca",
+    "name": "NullCraft FACTIONS",
+    "description": "New, up-and-coming SMP and Factions server built for builders! You can claim land, sell land, and interact creatively with other players! Join NullCraft now and gain access to a community of survival builders.",
+    "address": "wss://eag.xapktech.xyz/",
+    "discord": "nsg9k9EpK6",
+    "createdAt": "2025-04-07T05:31:04.846Z",
+    "updatedAt": "2025-04-07T05:31:04.846Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:47:18.017Z",
+    "tags": [
+      "FACTIONS",
+      "SURVIVAL",
+      "PVP",
+      "MISCELLANEOUS"
+    ],
+    "votes": 1,
+    "votifier": false
+  }
+}

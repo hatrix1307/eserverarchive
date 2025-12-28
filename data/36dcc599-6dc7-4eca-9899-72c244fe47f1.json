@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "ed342b55-0d32-40b9-816f-461c11256bd0",
+      "id": 8,
+      "username": "les",
+      "avatar": "https://cdn.discordapp.com/avatars/1125578028248989817/0f338a56113086add83399d792784b2a.png"
+    },
+    "uuid": "36dcc599-6dc7-4eca-9899-72c244fe47f1",
+    "name": "TimeLegacy",
+    "description": "Join for a really different experience for a minecraft server. I don't mean in a good way. We can have the most goofy people and nerd like alike.\n\n\nSkyblock, Survival, and Lifesteal [WIP]",
+    "address": "wss://mc.time-legacy.net/",
+    "discord": "9dR6KC27eZ",
+    "createdAt": "2024-06-03T21:39:36.225Z",
+    "updatedAt": "2024-09-28T23:56:22.850Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:45:07.952Z",
+    "tags": [
+      "SKYBLOCK",
+      "RPG",
+      "PVP",
+      "PVE",
+      "SURVIVAL"
+    ],
+    "votes": 0,
+    "votifier": true
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "ceacb71e-a571-4dd2-aef9-ee7d02c0b71d",
+      "id": 47732,
+      "username": "V",
+      "avatar": "https://cdn.discordapp.com/avatars/1175208168788332707/384d9614c0c8b13be28b8a7ec2f640ca.png"
+    },
+    "uuid": "e828af24-63e7-4ade-bca6-c9ee68d5ec13",
+    "name": "HighSkies SMP",
+    "description": "idk",
+    "address": "wss://highskies-smp.eagler.host",
+    "discord": "pC8p2f538a",
+    "createdAt": "2025-12-14T16:02:37.956Z",
+    "updatedAt": "2025-12-14T16:02:37.956Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:42:54.238Z",
+    "tags": [
+      "PVE",
+      "PVP",
+      "SURVIVAL"
+    ],
+    "votes": 0,
+    "votifier": false
+  }
+}

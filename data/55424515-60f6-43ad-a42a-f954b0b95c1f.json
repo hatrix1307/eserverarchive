@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "d8b281b3-bfef-4101-943b-d3fca764363a",
+      "id": 93,
+      "username": ".pato",
+      "avatar": "https://cdn.discordapp.com/avatars/1223065928850473091/53a6cbc661a4a1c1aabba6c0eb00cc32.png"
+    },
+    "uuid": "55424515-60f6-43ad-a42a-f954b0b95c1f",
+    "name": "CheeseBurger Network",
+    "description": "# Cheeseburger Network\nCheeseburger network is a newer starting minecraft server! We hope you'll check us out!\n\nWhat do we have?\nLifesteal - This is our primary gamemode right now, So come check us out if you like lifesteal!\nPVP will be our next game mode that has been released! Skyblock still in the making.\n\n*Why should you join?*\nCheeseburger Network has an amazing community as well as amazing staff members to moderate the server, We also take input from our community!\n\nCome check us out! ",
+    "address": "wss://play.cburger.net",
+    "discord": "4hnBQrDyMt",
+    "createdAt": "2025-03-20T21:25:51.862Z",
+    "updatedAt": "2025-12-04T00:07:03.785Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": "{\"name\":\"Cburger.net\",\"hasIcon\":true,\"motd\":[\"\u00a7e\u00a7lC\u00a7r\u00a7eheese\u00a76\u00a7lB\u00a7r\u00a76urger\u00a7r \u00a76Ne\u00a7et\u00a7bW\u00a73o\u00a79r\u00a71k \u00a78\u00a7l[\u00a791.8 \u00a77- \u00a791.21.10\u00a78\u00a7l] \u00a7a\u00a7lS\u00a7aurvival \u00a7b\u00a7lO\u00a7bneblock \u00a7a\u00a7lS\u00a7akyblock \u00a7c\u00a7lL\u00a7cifesteal\"],\"players\":[],\"online\":7,\"max\":500,\"ping\":1014,\"iconURI\":\"data:image/png;base64,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\"}",
+    "online": true,
+    "lastPinged": "2025-12-28T16:42:48.651Z",
+    "tags": [
+      "PVP",
+      "SURVIVAL",
+      "MISCELLANEOUS",
+      "SKYBLOCK"
+    ],
+    "votes": 40,
+    "votifier": true
+  }
+}

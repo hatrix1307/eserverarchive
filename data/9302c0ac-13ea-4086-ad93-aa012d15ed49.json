@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "ab5015f7-61e6-4f89-b3e3-54386ffb624f",
+      "id": 28380,
+      "username": "999Kxzl",
+      "avatar": "https://cdn.discordapp.com/avatars/1356049402879279164/00ea6c0be9646cc2a507aa0035fb329e.png"
+    },
+    "uuid": "9302c0ac-13ea-4086-ad93-aa012d15ed49",
+    "name": "Lune Network",
+    "description": "Welcome to Lune, the ultimate Minecraft server where factions and community collide! Whether you're a Java Edition veteran or an eager Eaglercraft adventurer, Lune welcomes you to a vibrant world of competitive gameplay, strategic alliances, and endless fun. Build your base, form powerful factions, and conquer your rivals in a dynamic environment designed for both casual players and seasoned veterans. Join Lune today and experience the thrill of faction warfare like never before!",
+    "address": "wss://lunenet.galacticnet.cfd",
+    "discord": "kUgEUGu6xa",
+    "createdAt": "2025-05-24T03:11:05.494Z",
+    "updatedAt": "2025-05-24T03:31:03.714Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:45:07.941Z",
+    "tags": [
+      "PVP",
+      "FACTIONS",
+      "SURVIVAL"
+    ],
+    "votes": 0,
+    "votifier": false
+  }
+}

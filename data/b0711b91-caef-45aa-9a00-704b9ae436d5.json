@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "90fac7ab-c461-4da0-a0c1-66097c796787",
+      "id": 618,
+      "username": "kloven",
+      "avatar": "https://cdn.discordapp.com/avatars/147493822908071937/3d845763df209eb3f82bec5296b40776.png"
+    },
+    "uuid": "b0711b91-caef-45aa-9a00-704b9ae436d5",
+    "name": "CrackedPvP",
+    "description": "CrackedPvP is a Minecraft Network with Survival, Practice, BoxPvP & More! Come join us today :)",
+    "address": "wss://play.crackedpvp.club",
+    "discord": "crackedpvp",
+    "createdAt": "2025-08-26T15:42:47.000Z",
+    "updatedAt": "2025-12-19T17:20:46.087Z",
+    "disabled": false,
+    "approved": true,
+    "verified": true,
+    "motd": "{\"name\":\"CrackedNET\",\"hasIcon\":false,\"motd\":[\"\u00a7d\u00a7lCrackedPvP \u00a77| \u00a7fNA \u00a77[1.8 - 1.21.11]\",\"\u00a75\u2694 New BoxPvP! | \u00a7fdiscord.gg/crackedpvp\"],\"players\":[],\"online\":65,\"max\":1000,\"ping\":474}",
+    "online": true,
+    "lastPinged": "2025-12-28T16:46:11.127Z",
+    "tags": [
+      "PVP",
+      "SURVIVAL",
+      "MISCELLANEOUS"
+    ],
+    "votes": 11,
+    "votifier": false
+  }
+}

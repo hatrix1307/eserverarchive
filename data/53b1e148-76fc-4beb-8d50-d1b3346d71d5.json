@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "9a4e6703-fc40-4366-95a0-bd6c71799266",
+      "id": 30106,
+      "username": "\u1d20\u1d0f\u026a\u1d05\u1d21\u1d00\u029f\u1d0b\u1d07\u0280",
+      "avatar": "https://cdn.discordapp.com/avatars/1360665843113136129/b920a41369181634d07f483426095388.png"
+    },
+    "uuid": "53b1e148-76fc-4beb-8d50-d1b3346d71d5",
+    "name": "Valhalla RPG",
+    "description": "Valhalla RPG is a unique Eaglercraft and Minecraft survival RPG server created by a passionate 15-year-old developer. Experience classic survival enhanced with over 50 custom RPG enchantments, custom mobs, and powerful new bosses that bring fresh excitement and challenge to every adventure. Whether you enjoy upgrading your gear, exploring diverse biomes, fighting tough enemies, or building with friends, Valhalla RPG offers a dynamic world where every player can grow and thrive.\n\n\nJoin our growing community and discover a new way to enjoy survival \u2014 your journey starts now in Valhalla RPG!",
+    "address": "wss://valhalla.eagler.host",
+    "discord": "XQy9vfxvaA",
+    "createdAt": "2025-10-28T16:26:06.062Z",
+    "updatedAt": "2025-12-12T09:00:14.190Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:45:07.794Z",
+    "tags": [
+      "PVP",
+      "SURVIVAL",
+      "FACTIONS"
+    ],
+    "votes": 2,
+    "votifier": true
+  }
+}

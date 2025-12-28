@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "82c38313-1b17-4dfc-851d-14c6a0462e3b",
+      "id": 8244,
+      "username": "Beni",
+      "avatar": "https://cdn.discordapp.com/avatars/801162422580019220/671dcf03377274db3494348e0ada8bab.png"
+    },
+    "uuid": "7b33a606-1649-45a6-ab4b-3fb24bc1d922",
+    "name": "Huntools",
+    "description": "A Nice little server with bedwars and thebridge to play with your friends.",
+    "address": "wss://craft.huntools-bot.xyz",
+    "discord": "huntools",
+    "createdAt": "2024-10-25T07:49:58.584Z",
+    "updatedAt": "2024-10-25T12:17:38.340Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T16:43:57.014Z",
+    "tags": [
+      "PVP",
+      "MINIGAMES",
+      "MISCELLANEOUS"
+    ],
+    "votes": 0,
+    "votifier": false
+  }
+}
