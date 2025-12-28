@@ -14,7 +14,7 @@
 <meta property="og:description" content="Check out all of the servers on the site. Why not sign up and add your own?"/>
 <link rel="icon" href="/favicon.ico">
 
-<!-- Font Preloads (make sure these exist) -->
+<!-- Font Preloads -->
 <link rel="preload" href="/_next/static/media/eafabf029ad39a43-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" href="/_next/static/media/8888a3826f4a3af4-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" href="/_next/static/media/0484562807a97172-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -31,7 +31,6 @@
 <body>
 <div id="__next">
     <div>
-        <!-- HTTrack-like page wrapper -->
         <main class="__className_cc80f9">
             <div class="Notification_notificationWrapper__8XfQo"></div>
             <main class="Home_appContainer__0oIwU" style="opacity: 1;">
@@ -54,7 +53,7 @@
                   <h1>Servers</h1>
                   <p>View a list of available servers.</p>
 
-                  <!-- Server List Container (HTTrack layout) -->
+                  <!-- Server List Container -->
                   <div id="dynamic-server-container"></div>
 
                   <!-- Pagination -->
@@ -76,15 +75,24 @@
 <script>
 let allPages = [];
 let currentPage = 0;
-function getDisplayAddress(addr) { return addr?.startsWith("wss://") ? addr : "wss://" + addr; }
-function getApiAddress(addr) { return addr.replace("wss://",""); }
+
+function getDisplayAddress(addr) {
+  return addr?.startsWith("wss://") ? addr : "wss://" + addr;
+}
+
+function getApiAddress(addr) {
+  // Strip wss:// if present
+  return addr?.replace(/^wss:\/\//, "");
+}
 
 async function init() {
   try {
     const res = await fetch('./serverlistjson.txt');
     const raw = await res.text();
     const parts = raw.split(/}\s*{/).map((str,i,arr)=>{
-      if(i===0) return str+"}"; if(i===arr.length-1) return "{"+str; return "{"+str+"}";
+      if(i===0) return str+"}"; 
+      if(i===arr.length-1) return "{"+str; 
+      return "{"+str+"}";
     });
     parts.forEach(s=>{
       try { const p=JSON.parse(s); if(p.success && Array.isArray(p.data)) allPages.push(p.data); } catch(e){}
@@ -131,7 +139,7 @@ function renderPage(idx) {
 
 async function refreshCurrentPageStatus() {
   document.querySelectorAll('.Server_box__TMsXv').forEach(async card => {
-    const api = card.getAttribute('data-api-address');
+    const api = card.getAttribute('data-api-address'); // Already stripped of wss://
     const dot = card.querySelector('.StatusIndicator_status__pidlp');
     const meta = card.querySelector('.status-meta');
     try {
@@ -149,10 +157,8 @@ async function refreshCurrentPageStatus() {
 }
 
 function updateButtons() {
-  const p = document.getElementById('btn-prev');
-  const n = document.getElementById('btn-next');
-  p.disabled = (currentPage===0);
-  n.disabled = (currentPage===allPages.length-1);
+  document.getElementById('btn-prev').disabled = (currentPage===0);
+  document.getElementById('btn-next').disabled = (currentPage===allPages.length-1);
 }
 
 document.addEventListener('DOMContentLoaded', init);
