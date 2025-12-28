@@ -14,6 +14,9 @@
 <link rel="stylesheet" href="/_next/static/css/801a346d713e02dc.css">
 <link rel="stylesheet" href="/_next/static/css/77845debe7d9c992.css">
 <link rel="stylesheet" href="/_next/static/css/dc7d422723254cb5.css">
+
+<!-- Marked.js for Markdown parsing -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
@@ -94,14 +97,14 @@
     </div>
   `;
 
-  // DESCRIPTION CARD
+  // DESCRIPTION CARD with Markdown rendering
   document.getElementById("description").innerHTML = `
     <div class="Card_card__dlNs0">
       <div class="Card_header__ZfKiq">
         <p>Description</p>
       </div>
       <div class="Card_content__D0RDr">
-        ${s.description || "<p>No description available.</p>"}
+        ${marked.parse(s.description || "No description available.")}
       </div>
     </div>
   `;
