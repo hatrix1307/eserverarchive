@@ -5,51 +5,193 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eagler Server List | Home</title>
 
-<!-- Emotion CSS from inspect element -->
-<style data-emotion="css 1r0mie8 animation-61bdi0">
-.css-1r0mie8{display:inline-block;color:#FB8464;-webkit-animation:animation-61bdi0 1.4s linear infinite;animation:animation-61bdi0 1.4s linear infinite;}
-@-webkit-keyframes animation-61bdi0{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}}
-@keyframes animation-61bdi0{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg);}}
+<!-- Local CSS files -->
+<link rel="stylesheet" href="./Eagler Server List _ Home_files/7b2b4dd7ecbe86d1.css">
+<link rel="stylesheet" href="./Eagler Server List _ Home_files/76289acd00d625c1.css">
+<link rel="stylesheet" href="./Eagler Server List _ Home_files/dc7d422723254cb5.css">
+<link rel="stylesheet" href="./Eagler Server List _ Home_files/801a346d713e02de.css">
+<link rel="stylesheet" href="./Eagler Server List _ Home_files/2be4c86ae301c45c.css">
+
+<!-- Custom inline styles -->
+<style>
+  #dynamic-server-container { min-height: 50vh; }
+  .loading-text { color: #fff; text-align: center; padding: 20px; font-size: 1.2rem; }
+  button:not([disabled]) svg { color: #fb8464 !important; }
+  button[disabled] svg { color: rgb(170, 170, 170) !important; }
+  .player-count { font-weight: bold; color: rgb(70, 227, 147); }
+  .status-dot { transition: background-color 0.4s ease; box-shadow: 0 0 5px rgba(0,0,0,0.5); }
 </style>
-
-<style data-emotion="css 13o7eu2">
-.css-13o7eu2{display:block;}
-</style>
-
-<style data-emotion="css 14891ef animation-1p2h4ri">
-.css-14891ef{stroke:currentColor;stroke-dasharray:80px,200px;stroke-dashoffset:0;-webkit-animation:animation-1p2h4ri 1.4s ease-in-out infinite;animation:animation-1p2h4ri 1.4s ease-in-out infinite;}
-@-webkit-keyframes animation-1p2h4ri{0%{stroke-dasharray:1px,200px;stroke-dashoffset:0;}50%{stroke-dasharray:100px,200px;stroke-dashoffset:-15px;}100%{stroke-dasharray:100px,200px;stroke-dashoffset:-125px;}}
-@keyframes animation-1p2h4ri{0%{stroke-dasharray:1px,200px;stroke-dashoffset:0;}50%{stroke-dasharray:100px,200px;stroke-dashoffset:-15px;}100%{stroke-dasharray:100px,200px;stroke-dashoffset:-125px;}}
-</style>
-
-<!-- Preloaded fonts -->
-<link rel="preload" href="/_next/static/media/eafabf029ad39a43-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="/_next/static/media/8888a3826f4a3af4-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="/_next/static/media/0484562807a97172-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-
-<!-- Main CSS files -->
-<link rel="stylesheet" href="/_next/static/css/7b2b4dd7ecbe86d1.css">
-<link rel="stylesheet" href="/_next/static/css/76289acd00d625c1.css">
-<link rel="stylesheet" href="/_next/static/css/dc7d422723254cb5.css">
-<link rel="stylesheet" href="/_next/static/css/801a346d713e02de.css">
-<link rel="stylesheet" href="/_next/static/css/2be4c86ae301c45c.css">
-
 </head>
-<body>
+
+<body style="background-color: #111; color: #fff;">
 <div id="__next">
-    <!-- Paste your <div> structure from inspect element here -->
-    <!-- All your server boxes, navbars, badges, etc. -->
+  <div>
+    <main class="Home_appContainer__0oIwU" style="opacity: 1;">
+      <nav class="Navbar_root__hs6un">
+        <div class="Navbar_logo__eioWt">
+          <img src="./Eagler Server List _ Home_files/eagler.png" alt="Logo">
+          <h1>Eagler Server List</h1>
+        </div>
+        <div class="Navbar_spacer__t53No"></div>
+        <ul class="Navbar_navElements__a5nON">
+          <li class="Navbar_active__OcRhr"><a href="#">Home</a></li>
+        </ul>
+      </nav>
+
+      <div class="Home_homeRoot__D6YiM">
+        <h1>Servers</h1>
+        <div id="dynamic-server-container">
+          <p class="loading-text">Loading server data...</p>
+        </div>
+
+        <div class="Home_pages__jwp2L" style="margin-top: 20px;">
+          <button id="btn-prev" class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary Mui-disabled" type="button" disabled>
+            <span class="MuiButton-icon MuiButton-startIcon">
+              <svg viewBox="0 0 24 24" height="1em" width="1em"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>
+            </span>
+            Previous Page
+          </button>
+
+          <button id="btn-next" class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary" type="button">
+            Next Page
+            <span class="MuiButton-icon MuiButton-endIcon">
+              <svg viewBox="0 0 24 24" height="1em" width="1em"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
 </div>
 
-<!-- Required scripts for Next.js / interactive functionality -->
-<script defer nomodule src="/_next/static/chunks/polyfills-42372ed130431b0a.js"></script>
-<script defer src="/_next/static/chunks/webpack-d5afa18c9c25e2a1.js"></script>
-<script defer src="/_next/static/chunks/framework-840cff9d6bb95703.js"></script>
-<script defer src="/_next/static/chunks/main-766a4d45844abc12.js"></script>
-<script defer src="/_next/static/chunks/pages/_app-7c8605b2116a2ed1.js"></script>
-<script defer src="/_next/static/chunks/pages/index-033e20d615a60f0f.js"></script>
-<script defer src="/_next/static/hJpbaLrBKit4VHta70bG-/_buildManifest.js"></script>
-<script defer src="/_next/static/hJpbaLrBKit4VHta70bG-/_ssgManifest.js"></script>
+<script>
+let allPages = [];
+let currentPage = 0;
+
+function getDisplayAddress(addr) {
+  if (!addr) return "";
+  return addr.startsWith("wss://") ? addr : "wss://" + addr;
+}
+
+function getApiAddress(addr) {
+  return addr.replace("wss://", "");
+}
+
+async function init() {
+  try {
+    const response = await fetch('./serverlistjson.txt');
+    const rawText = await response.text();
+
+    const pageStrings = rawText.split(/}\s*{/).map((str, i, arr) => {
+      if (i === 0) return str + "}";
+      if (i === arr.length - 1) return "{" + str;
+      return "{" + str + "}";
+    });
+
+    pageStrings.forEach(jsonStr => {
+      try {
+        const parsed = JSON.parse(jsonStr);
+        if (parsed.success && Array.isArray(parsed.data)) allPages.push(parsed.data);
+      } catch (e) {}
+    });
+
+    if (allPages.length > 0) renderPage(0);
+
+    document.getElementById('btn-prev').addEventListener('click', () => changePage(-1));
+    document.getElementById('btn-next').addEventListener('click', () => changePage(1));
+
+    setInterval(() => refreshCurrentPageStatus(), 20000);
+  } catch (err) {
+    console.error("Failed to load server list:", err);
+  }
+}
+
+function changePage(direction) {
+  const newPage = currentPage + direction;
+  if (newPage >= 0 && newPage < allPages.length) {
+    currentPage = newPage;
+    renderPage(currentPage);
+    window.scrollTo(0, 0);
+  }
+}
+
+function renderPage(pageIndex) {
+  const container = document.getElementById('dynamic-server-container');
+  container.innerHTML = '';
+  const servers = allPages[pageIndex];
+
+  servers.forEach(server => {
+    const displayIP = getDisplayAddress(server.address);
+    const apiIP = getApiAddress(server.address);
+
+    const card = document.createElement('div');
+    card.className = "Server_box__TMsXv";
+    card.setAttribute('data-api-address', apiIP);
+
+    card.innerHTML = `
+      <h2 style="display: flex; justify-content: space-between; align-items: center;">
+        ${server.name} 
+        <div class="status-dot" style="background-color: #444; width: 14px; height: 14px; border-radius: 50%; border: 2px solid #222;"></div>
+      </h2>
+      <h3 style="color: rgb(170, 170, 170); margin: 5px 0;">
+        Votes: <span style="color: rgb(70, 227, 147);">${server.votes}</span>
+      </h3>
+      <div class="Server_tagListContainer__tAO2z" style="display: flex; gap: 5px; flex-wrap: wrap; margin: 10px 0;">
+        ${server.tags.map(tag => `<div class="Badge_inlineBadge__h8Mo1" style="color: #fb8464; border: 1px solid #fb8464; padding: 2px 8px; border-radius: 12px; font-size: 0.8em;">${tag}</div>`).join('')}
+      </div>
+      <h3>IP: <span style="color: #fb8464; font-family: monospace;">${displayIP}</span></h3>
+      <div class="status-meta" style="font-size: 0.85em; color: #aaa; margin-top: 10px; border-top: 1px solid #333; padding-top: 8px;">
+        Pinging status...
+      </div>
+    `;
+    container.appendChild(card);
+  });
+
+  updateButtons();
+  refreshCurrentPageStatus();
+}
+
+async function refreshCurrentPageStatus() {
+  const serverCards = document.querySelectorAll('.Server_box__TMsXv');
+
+  serverCards.forEach(async (card) => {
+    const apiAddr = card.getAttribute('data-api-address');
+    const dot = card.querySelector('.status-dot');
+    const meta = card.querySelector('.status-meta');
+
+    try {
+      const res = await fetch(`https://topeaglerservers.com/api/status/${encodeURIComponent(apiAddr)}`);
+      const data = await res.json();
+
+      if (data.success && data.server && data.server.online === true) {
+        dot.style.backgroundColor = '#4caf50';
+        const online = data.server.players.online;
+        const max = data.server.players.max;
+        meta.innerHTML = `Players: <span class="player-count">${online}</span> / ${max}`;
+      } else {
+        dot.style.backgroundColor = '#f44336';
+        meta.innerHTML = `<span style="color: #f44336;">Offline</span>`;
+      }
+    } catch (err) {
+      dot.style.backgroundColor = '#444';
+      meta.innerHTML = `<span style="color: #666;">Status Error</span>`;
+    }
+  });
+}
+
+function updateButtons() {
+  const prevBtn = document.getElementById('btn-prev');
+  const nextBtn = document.getElementById('btn-next');
+
+  prevBtn.disabled = (currentPage === 0);
+  currentPage === 0 ? prevBtn.classList.add('Mui-disabled') : prevBtn.classList.remove('Mui-disabled');
+
+  nextBtn.disabled = (currentPage === allPages.length - 1);
+  currentPage === allPages.length - 1 ? nextBtn.classList.add('Mui-disabled') : nextBtn.classList.remove('Mui-disabled');
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
 
 </body>
 </html>
