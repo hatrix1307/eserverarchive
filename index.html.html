@@ -67,7 +67,6 @@ function getDisplayAddress(addr) {
 }
 
 function getApiAddress(addr) {
-  // Strip wss:// and any leading protocol
   return addr?.replace(/^wss:\/\//, "").replace(/^ws:\/\//, "");
 }
 
@@ -81,7 +80,10 @@ async function init() {
       return "{"+str+"}";
     });
     chunks.forEach(s => {
-      try { const p = JSON.parse(s); if (p.success && Array.isArray(p.data)) allPages.push(p.data); } catch(e) {}
+      try { 
+        const p = JSON.parse(s); 
+        if (p.success && Array.isArray(p.data)) allPages.push(p.data); 
+      } catch(e) {}
     });
     if (allPages.length>0) renderPage(0);
     document.getElementById('btn-prev').addEventListener('click', ()=>changePage(-1));
@@ -111,6 +113,7 @@ function renderPage(idx) {
     const card = document.createElement("div");
     card.className = "Server_box__TMsXv";
     card.dataset.apiAddress = apiIP;
+    card.style.cursor = "pointer";
 
     card.innerHTML = `
       <h2 style="overflow:hidden;">
@@ -122,9 +125,14 @@ function renderPage(idx) {
       <div class="Server_tagListContainer__tAO2z">
         ${server.tags.map(tag => `<div class="Badge_inlineBadge__h8Mo1">${tag}</div>`).join('')}
       </div>
-      <h3>IP: <span style="font-weight:600;cursor:pointer;">${displayIP}</span></h3>
+      <h3>IP: <span style="font-weight:600;">${displayIP}</span></h3>
       <div class="status-meta"></div>
     `;
+
+    // Make the entire card clickable
+    card.addEventListener('click', () => {
+      window.location.href = `/servers/${server.uuid}.html`;
+    });
 
     container.appendChild(card);
   });
