@@ -8,12 +8,12 @@
 
 <link rel="icon" href="/favicon.ico"/>
 
-<!-- Font preloads -->
+<!-- Fonts -->
 <link rel="preload" href="/_next/static/media/eafabf029ad39a43-s.p.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/_next/static/media/8888a3826f4a3af4-s.p.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/_next/static/media/0484562807a97172-s.p.woff2" as="font" type="font/woff2" crossorigin>
 
-<!-- CSS (ORDER MATTERS — this matches original load order) -->
+<!-- CSS -->
 <link rel="stylesheet" href="/_next/static/css/2be4c86ae301c45c.css">
 <link rel="stylesheet" href="/_next/static/css/4d58c923eeda897e.css">
 <link rel="stylesheet" href="/_next/static/css/7b2b4dd7ecbe86d1.css">
@@ -39,7 +39,7 @@
       </ul>
     </nav>
 
-    <!-- PAGE ROOT -->
+    <!-- CONTENT -->
     <div class="Server_root__SeWV0">
       <div class="Server_container__vKJ1B" id="server-root">
         <h1>Loading server…</h1>
@@ -47,13 +47,14 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="Footer_root__mJQ9K">
+    <footer class="Footer_footer__yUjxG">
       <p>Copyright © Eagler Server List 2025</p>
-      <div class="Footer_links__2sP9P">
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
-        <a href="https://discord.gg/eaglercraft" target="_blank">Discord Server</a>
-      </div>
+      <br>
+      <ul>
+        <li><a href="/privacy"><b>Privacy Policy</b></a></li>
+        <li><a href="/tos"><b>Terms of Service</b></a></li>
+        <li><a href="https://discord.gg/jT7YZxDarC"><b>Discord Server</b></a></li>
+      </ul>
     </footer>
 
   </main>
@@ -61,56 +62,52 @@
 
 <script>
 (async () => {
-  const params = new URLSearchParams(location.search);
+  const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
   const root = document.getElementById("server-root");
 
   if (!id) {
-    root.innerHTML = "<h1>Invalid server</h1>";
+    root.innerHTML = "<h1>Invalid server ID</h1>";
     return;
   }
 
   try {
-    const res = await fetch(`/servers/${id}.json`);
+    // ✅ CORRECT PATH
+    const res = await fetch(`/data/${id}.json`);
     if (!res.ok) throw new Error("Not found");
 
     const json = await res.json();
-    const s = json.data;
+    const s = json.data || json;
 
     document.title = `Eagler Server List | ${s.name}`;
 
     root.innerHTML = `
-      <div class="Server_header__MZcZx">
-        <h1 class="Server_name__M1pA9">${s.name}</h1>
-        <div class="Server_status__CqK8J">
-          <span class="${s.online ? "Server_online__g9H7K" : "Server_offline__qP8J2"}">
-            ${s.online ? "Online" : "Offline"}
-          </span>
+      <h1>${s.name}</h1>
+
+      <div class="Server_cardsRow__ulRw7">
+        <div class="Card_card__dlNs0">
+          <div class="Card_header__ZfKiq">
+            <p>Server Info</p>
+          </div>
+          <div class="Card_content__D0RDr">
+            <p><b>Address:</b> ${s.address || "N/A"}</p>
+            <p><b>Votes:</b> ${s.votes ?? "0"}</p>
+          </div>
         </div>
       </div>
 
-      <div class="Server_metaGrid__W1A8M">
-        <div class="Server_metaBox__GJz8D">
-          <h3>Votes</h3>
-          <p>${s.votes}</p>
+      <div class="Server_cardsRow__ulRw7">
+        <div class="Card_card__dlNs0">
+          <div class="Card_header__ZfKiq">
+            <p>Description</p>
+          </div>
+          <div class="Card_content__D0RDr">
+            ${s.description ? s.description.replace(/\n/g, "<br>") : "No description"}
+          </div>
         </div>
-        <div class="Server_metaBox__GJz8D">
-          <h3>Address</h3>
-          <p>${s.address}</p>
-        </div>
-      </div>
-
-      <div class="Server_tagListContainer__tAO2z">
-        ${s.tags.map(tag =>
-          `<div class="Badge_inlineBadge__h8Mo1">${tag}</div>`
-        ).join("")}
-      </div>
-
-      <div class="Server_description__k8J2A">
-        ${s.description ? s.description.replace(/\n/g, "<br>") : ""}
       </div>
     `;
-  } catch (e) {
+  } catch (err) {
     root.innerHTML = "<h1>Server not found</h1>";
   }
 })();
