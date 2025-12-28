@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "e23649f5-c944-423b-8d89-732f397ff235",
+      "id": 34204,
+      "username": "Korvold",
+      "avatar": "https://cdn.discordapp.com/avatars/1402708145025056820/aecdde8777093ef1c4355bd0f067c8bf.png"
+    },
+    "uuid": "20bf16b9-101c-4834-93d3-7e5e1b75372d",
+    "name": "DuckyMC",
+    "description": "Duckymc has the best survival server to this date play with us today!",
+    "address": "wss://eagler.duckymc.xyz",
+    "discord": "MqCEh5d94c",
+    "createdAt": "2025-10-08T00:38:49.916Z",
+    "updatedAt": "2025-10-08T00:38:49.916Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": "{\"name\":\"DuckyMC\",\"hasIcon\":false,\"motd\":[\"§e§lDuckyMC §7| §fSurvival §7• §fBoxPvP\"],\"players\":[],\"online\":9,\"max\":1000,\"ping\":366}",
+    "online": true,
+    "lastPinged": "2025-12-28T15:31:28.720Z",
+    "tags": [
+      "SURVIVAL"
+    ],
+    "votes": 11,
+    "votifier": false
+  }
+}

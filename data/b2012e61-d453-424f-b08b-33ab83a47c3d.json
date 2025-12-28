@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "f7fdf6e4-0358-4d17-acff-85188028400e",
+      "id": 45,
+      "username": "Colbster937™",
+      "avatar": "https://cdn.discordapp.com/avatars/1061098091626897458/3eea9f53c87e52c9b6a3208c84da15c4.png"
+    },
+    "uuid": "b2012e61-d453-424f-b08b-33ab83a47c3d",
+    "name": "WebMC",
+    "description": "# WebMC\n\n## ❓ | What is WebMC\n> ``*`` WebMC is a custom oneblock server with mechanics inspired by DeblokMC.\n\n## ⭐️ | Why play here\n> ``-`` Unique oneblock gamemode only available on WebMC\\\n> ``-`` Java, EaglercraftX, and Bedrock crossplay support\\\n> ``-`` Active, welcoming community for all ages\\\n> ``-`` QOL features to make things easier\n\n## 🌐 | Server Info\n> ``-`` Java: **play.webmc.fun**\\\n> ``-`` Eagler: **wss://play.webmc.fun**\\\n> ``-`` Bedrock: **br.webmc.fun** : **19132** : **WebMCOB**\\\n> ``-`` Discord: **<https://dsc.webmc.fun>**",
+    "address": "wss://play.webmc.fun",
+    "discord": "zwcJGuABME",
+    "createdAt": "2024-06-26T22:30:28.817Z",
+    "updatedAt": "2025-10-06T18:48:29.060Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": "{\"name\":\"EaglercraftXServer\",\"hasIcon\":true,\"motd\":[\"§a§o§lWebMC§r §8| §7[1.5 - 1.21]§r\",\"§6The official WebMC Network! §8| §9dsc.webmc.fun\"],\"players\":[],\"online\":12,\"max\":1000,\"iconURI\":\"data:image/png;base64,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\",\"ping\":758}",
+    "online": true,
+    "lastPinged": "2025-12-28T15:31:28.420Z",
+    "tags": [
+      "SKYBLOCK",
+      "SURVIVAL",
+      "PVE",
+      "PVP",
+      "MISCELLANEOUS",
+      "CREATIVE"
+    ],
+    "votes": 42,
+    "votifier": true
+  }
+}

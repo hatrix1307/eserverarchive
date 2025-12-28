@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "558f9b2a-f544-44a8-a039-efb73c4184dc",
+      "id": 143,
+      "username": "PythonScratcher",
+      "avatar": "https://cdn.discordapp.com/avatars/766324649411608589/a26c7e4d998e12e75f8fd30074b30f60.png"
+    },
+    "uuid": "5d510413-6bb5-4a58-82c9-a76b9abd3c11",
+    "name": "Communist MC",
+    "description": "# ☭ CommunistMC ☭  \n***IP: `wss://cmc.tf`***  \n***Java IP: `java.cmc.tf`***    \n🌐 https://cmc.tf  \nVote for us for free Social Credits (currency) and Crate keys in-game on the [Eagler Server List!!](<https://servers.eaglercraft.com/servers/5d510413-6bb5-4a58-82c9-a76b9abd3c11>)\n\n**Join Communist MC today and have fun with dozens of Comrades!**\nWelcome to CommunistMC, Comrade!\nCommunistMC is the only communist 1.12.2 Eaglercraft and Java Server and has the most friendly community there is!\nCreate or join a clan and build awesome builds, explore or fight other clans! **Join today! **\n**On Communist MC everything is possible - it's up to your imagination and liking!**\n\n**NEW!** Communist Guild Tag!\n\nSo join today! \nhttps://discord.gg/nk4zgWJfEX",
+    "address": "wss://cmc.tf",
+    "discord": "j99gkyrTBg",
+    "createdAt": "2024-07-05T16:12:12.627Z",
+    "updatedAt": "2025-07-04T17:40:22.988Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": "{\"name\":\"EaglercraftXServer\",\"hasIcon\":false,\"motd\":[\"§6§k!A1§r §4*§r §1CommunistMC §r§4*§r§1 Season 4 §4*§r§1 Join us today! §4*§r §6§k1A!§r§r\",\"§4*§r §c§lMerry Christmas! §r§e§l§k!§r §c§lJoin the Xmas Event! §4*§r§r\"],\"players\":[],\"online\":13,\"max\":67,\"ping\":219}",
+    "online": true,
+    "lastPinged": "2025-12-28T15:31:28.734Z",
+    "tags": [
+      "SURVIVAL"
+    ],
+    "votes": 427,
+    "votifier": true
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "2b6fb9ee-feeb-4d22-b4a9-4297f7b0b252",
+      "id": 11310,
+      "username": "Fyre Network Official",
+      "avatar": "https://cdn.discordapp.com/avatars/1150189150759289004/bf63240e574642a2e3f92e097ccfc668.png"
+    },
+    "uuid": "a58f6482-c90b-4e3a-932f-edf3242a520c",
+    "name": "Fyre Network (BACK ONLINE!!)",
+    "description": "Currently we just have box gamemode, more are coming soon",
+    "address": "wss://fyrecraft.imcalledfyre.com/eagler",
+    "discord": "paSrfFM3qP",
+    "createdAt": "2024-12-08T14:32:11.025Z",
+    "updatedAt": "2025-12-20T00:28:52.193Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": "{\"name\":\"EaglercraftXServer\",\"hasIcon\":false,\"motd\":[\"§6FYRE NETWORK IS BACK!!\"],\"players\":[],\"online\":1,\"max\":6741,\"ping\":864}",
+    "online": true,
+    "lastPinged": "2025-12-28T15:31:26.622Z",
+    "tags": [
+      "PVP",
+      "MINIGAMES",
+      "SURVIVAL",
+      "CREATIVE",
+      "PRISON",
+      "MISCELLANEOUS"
+    ],
+    "votes": 18,
+    "votifier": true
+  }
+}

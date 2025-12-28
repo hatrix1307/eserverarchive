@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "7779723d-1417-47ff-820c-384dc101858e",
+      "id": 14,
+      "username": "dauts",
+      "avatar": "https://cdn.discordapp.com/avatars/378292233515958274/be03aa0e74c722276aaf4ec2505e0c15.png"
+    },
+    "uuid": "ed613a31-3fb7-4ff3-9487-a758f59248af",
+    "name": "Zentic Network ⚡ ​​🇩​​🇺​​🇪​​🇱​​🇸​ ﹢ ​🇸​​🇰​​🇾​​🇼​​🇦​​🇷​​🇸​ ﹢ ​🇧​​🇪​​🇩​​🇼​​🇦​​🇷​​🇸​",
+    "description": "Zentic is a Minecraft server network which has gamemodes such as Practice, Duels, Skywars, Bedwars, and Crystal FFA.\nZentic runs on dedicated hardware to ensure a lag free experience for you. Climb our leaderboard on our practice game mode and become the best player! Unlock special kill effects and participate in exciting events!\nSkywars offers fun kits to duel in the sky! Climb leaderboard and unlock unique rewards and kits. Bedwars offers stat tracking, exciting maps, and leveling for a classic experience. Enjoy crystal duels brought to 1.8 with \nkillstreak rewards. Join zentic using our IP, zentic.cc! \n\n🛏️  BEDWARS:\n📈 Leveling\n🌎 Popular Maps\n🏟️  Stat Tracking\n\n🏝️ SKYWARS:\n🏆 Leaderboards\n⛑️ Balanced Kits & Loot\n🔥 Cosmetics\n📈 Leveling\n\n⚔️  Practice:\n📍 Many Duel Arenas\n🏆 Leaderboards & Stats\n🤖 Bot fights, solo training\n🎟️  Unique Duels (Boxing, MLG Rush, Webfight & MORE)\n\n💠 Crystal FFA\nFeaturing:\n🧨 Killstreak Rewards\n🔥  Lightning Rods, Instant TNT, & NUKES\n\n⚡ Powerful Hardware\n🧪 New Content Coming Soon!\n\n𝗣𝗿𝗶𝗺𝗮𝗿𝘆 𝗜𝗣: zentic.cc\n𝗔𝗹𝘁𝗲𝗿𝗻𝗮𝘁𝗶𝘃𝗲 𝗜𝗣: cobaltcraft.net\n✨ Supports Java & Web",
+    "address": "wss://zentic.cc",
+    "discord": "kxGx93c8ST",
+    "createdAt": "2024-06-04T04:30:02.309Z",
+    "updatedAt": "2024-06-25T04:24:42.120Z",
+    "disabled": false,
+    "approved": true,
+    "verified": true,
+    "motd": "{\"name\":\"Zentic Network\",\"hasIcon\":true,\"motd\":[\"§5§lZentic\",\"§d§lBEDWARS §7+ §d§lPRACTICE §7+ §d§lSKYWARS §7+ §d§lCRYSTAL FFA\"],\"players\":[],\"online\":23,\"max\":-1,\"ping\":896,\"iconURI\":\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAACwklEQVR4nO2aP2gUQRSHv4kxoImKEkSJCIkRqwi5RbCwUAhYmiqgdhbptTCpbPVqQdDaShsFsYl2YpUzoKCIXopA/IMhwQgxUczP4u4Y423I7d7szV1uPlgYbnbevH2/2TdzMwuBQCAQCAQC7YZ0E6mvw7cfHpkDfvl2IhBoGaQjSItIrxM1iyRFcsIFSZSuEVeP1Zng3gVgDFittYGGNADAqTSuVTNji7NuLCYJgDGrwLOE1ksB6E/sVyxz1hdnAch2GjTlAPTVb+qHLS7Vb82SbQDEfgB66jf11hYL9VuzJMkBaSiwziRrDDJD39duepd62Bt34/FlBnbATgaArur6R7b4MEuHvaBhjSiSlI/P/vM2+xdd990cS2HDBACj8dW3bTHfII8ah0/1aYoRENT3pz61zgKKdA7o3aS6aArmVarem0B9U8tNOqE9dG0SrC7WTMGsJO1YwxqhgynGgOvV9Z/s+mkWY44ltd/0KKcpRZLexw//STv8x3376pxmePcr+JkFDLcAuBhfvb0zf07jiiTd968+DfgvUE0l85+Pr85Mfemsl+fd4EOTqd9wFKmoSNK3dsz8HtVXpEuubaZxoqT+h/LVturPS3oT3v02VT9k/qB+UL911JdGkR4gHU3VvOXVlw4hRUi7UjVvafXrZCv139mHn/btayZspX4Wx9xpqWlPMAnKaRzDXa4Cl6vrV4DnQOc6v/u/xB9zL3az/H0fC9MwfwM+AgWMSXYy7YvN9vr+lId+EvJ2pExk5a/7LbHKkfiBjT//BK4576x+stgTLAXgv1OEbuBpQkMvbdHpkfi/OA2AhlT6HiDVysEPbkdAJxEAp92Ye1wpVBKg1IM0jfTETQ+thrS7vDq949uVwHbBUFq5nQEOp2j/2RTMC/duBQKBQGB7oZzuaVhXfPvhDZ3UQQ0q9jPZQMAffwFvPjl4cZGmlQAAAABJRU5ErkJggg==\"}",
+    "online": true,
+    "lastPinged": "2025-12-28T15:31:27.315Z",
+    "tags": [
+      "PVP",
+      "PVE",
+      "MINIGAMES",
+      "SURVIVAL",
+      "MISCELLANEOUS"
+    ],
+    "votes": 2,
+    "votifier": false
+  }
+}

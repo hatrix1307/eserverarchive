@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "e444d8ec-458f-4ba2-a49c-6f23b5849027",
+      "id": 31188,
+      "username": "ChinmayM_3600",
+      "avatar": "https://cdn.discordapp.com/avatars/1369127446640722000/null.png"
+    },
+    "uuid": "b0a8951a-110d-4099-9cc3-667fdd389b3e",
+    "name": "Bus SMP",
+    "description": "A fun survival SMP",
+    "address": "wss://bus-smp.eagler.host",
+    "discord": "XHQuWrvF5d",
+    "createdAt": "2025-06-23T23:03:37.775Z",
+    "updatedAt": "2025-12-13T14:45:33.719Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": null,
+    "online": false,
+    "lastPinged": "2025-12-28T15:31:32.341Z",
+    "tags": [
+      "SURVIVAL",
+      "PVP",
+      "MISCELLANEOUS"
+    ],
+    "votes": 3,
+    "votifier": false
+  }
+}

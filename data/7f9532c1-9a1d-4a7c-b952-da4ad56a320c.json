@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "45dfd81c-d6bc-4ef2-a815-88a0b48d6799",
+      "id": 29176,
+      "username": "Calimarri",
+      "avatar": "https://cdn.discordapp.com/avatars/1072273205911363584/9d6a0438f7e67dfe20efdc7be24e07fe.png"
+    },
+    "uuid": "7f9532c1-9a1d-4a7c-b952-da4ad56a320c",
+    "name": "EB Bridging",
+    "description": "The best eaglercraft bridging server out there with many more gamemodes planned for the future, we do plenty of giveaways and fun events all the time.\nWe currently offer these following game modes:\nBridging practice,\nSkywars (not the Arch buggy ahh mini skywars),\nPvP Practice\nDiscord:\ndsc.gg/ebeagler\n\nVisit our website:\nwww.eb-bridging.pro",
+    "address": "wss://ec.eb-bridging.pro",
+    "discord": "RaGYEwgRUP",
+    "createdAt": "2025-08-23T01:33:10.170Z",
+    "updatedAt": "2025-08-27T15:18:34.415Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": "{\"name\":\"EB\",\"hasIcon\":true,\"motd\":[\"§f§m---§7§m---§5§m---§d§m---§d MC.EB-BRIDGING.PRO §d§m---§5§m---§7§m---§f§m---§r    §aDUELS §7 ✦  §aBRIDGING §7 ✦  §aSKYWARS §7 ✦  §aSUMO FFA\"],\"players\":[],\"online\":2,\"max\":400,\"ping\":660,\"iconURI\":\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAADvElEQVR4nO2ZzUvjWhTAz23S21ZjOtbUgeIsfDBrNwoijoiLx9vO4D/g5iEFQfwf3Iq4cO3ezdu5ePAYcSsIrmSYgrjooIzRNCQxnfSet9DptGk6PWnUqcz9QRdJzse955577kcBJBKJRCKRSCQSiUQi+e1gcYR1XUfOOQAAcM7fV6vVf1q/j42NYevz0tKSur+/3wjLCCG+McZ80zRHErX+ualUKtjK4uKi+v2bruufsR1xdHQ0GrbR8r3R4WDQub29xW4dyGazX9t6LwSenJy8CtsYtACkqILpdBrz+XzX70KIttFmjIFt2+mE7XtyVIIMAADkcrm2Z0RMLS8vi0wmAwAAQRAwRATGfpSVnZ2dq6mpKQAAqNVq4DgOhGVeDOPj45gEIUT4WfzqPkGcKeB5XqIGD+qokwMghCDLUhiUgJBrgOM4DADeAkAeALIAoDz8vgcmbo+QICORPDFx0raB+KhZKxhjzX3Cw8Yoqj3dnLbJzszMsOPj49iFhVwDDMNIPcMaHmWc5LBUKvXlkFzZC4VCXw6ei4mJiad1MD8/n2gjFEHbWQARG0mM2baNl5eXtmVZFcuyKgsLC/9R+kWeAl0ijLu7u/9SbbTSaPQ+C21vb3/knNd7yZXL5T81TQNN0zQA0OB+5/pHP+3qysbGRkfU6/X6t8eyH5UBKysrbyi6vu/Xwrrr6+ukik3OgLm5uY53pmlCtVp9103n4uLi0+zs7CXVR5jp6em/Njc3zwiiJgC0Xa4MDw/36zaaw8PD2PPy7OxsmWo/aQ1ooYGIjYODA9J9AzkDJicnqaJNSqXSl9hKfeJ5HhiGcee6bo4g3oS8DN7Xl3iMjIwEsZX6JJfLASJm4+qRAsAYw9HRjuu9npyensbWSYLruiCEQCEEuq5do+iQdlmapqFt2x3vV1dXzb29Pa+LWtr3/dcU+/BjK9w2IJxzM5VKdbPfpFwua1tbWx33dZlMBur1evKtaz6fj6w25+fnHx4az/r5hQMQtk+xDfeXtX9HtW9oaKjnUkiKTrFYxKurq473QRDYiNjvPEfO+VjzISID7u7u6oqiOL0MMcYyqqoOhd8bhiGur6+Vn+mSVoEgiO6jqqpJ/tjoecWWzWY5AHCqwbW1teZhTVEUcJyesaNlgK7rwrKsxz4GCsZYc3SiMiAuhUIBbm5uYrWT5ND3/RdxfeX7fmwdUgAU5afTaGBAxNg316Qa4LquUiwWHzULwquAYRgs6WWL53kvY6QkEolEIpFIJBKJRCKRSCSSX8f/2XuGN1jwRYoAAAAASUVORK5CYII=\"}",
+    "online": true,
+    "lastPinged": "2025-12-28T15:31:29.021Z",
+    "tags": [
+      "MINIGAMES",
+      "PVP",
+      "MISCELLANEOUS"
+    ],
+    "votes": 3,
+    "votifier": false
+  }
+}

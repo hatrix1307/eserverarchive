@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "data": {
+    "user": {
+      "uuid": "40d84fbd-8bed-4068-a6a5-a0bdd3bb9f2c",
+      "id": 29850,
+      "username": "🌌 Food 🌌",
+      "avatar": "https://cdn.discordapp.com/avatars/1193997445412176016/2969fdcc2397d00fcddf106edef7d6e1.png"
+    },
+    "uuid": "62c5b216-d9e5-4bd9-9af4-636f66c4b8c2",
+    "name": "Voidsent MC",
+    "description": "# Voidsent MC | Season 3 Survival RELEASED\n## Gamemodes:\nFactions | RPG |\nSurvival | \nPractice | Duels |\nVanilla Survival SMP |\nVanilla CPvP\n\nJoin the Adventure:\n📌 VoidsentMC Discord: discord.voidsent.net\n\n## IP Addresses:\nJava & Bedrock:\n\nplay.voidsent.net\n\nEaglercraft:\n\nwss://mc.voidsent.net",
+    "address": "wss://mc.voidsent.net",
+    "discord": "98J5vEzC2V",
+    "createdAt": "2025-06-08T22:30:11.586Z",
+    "updatedAt": "2025-11-02T20:18:33.182Z",
+    "disabled": false,
+    "approved": false,
+    "verified": true,
+    "motd": "{\"name\":\"&5Voidsent MC &dFactions|Practice|Vanilla]\",\"hasIcon\":true,\"motd\":[\"§l   §r §5§lVOIDSENT§d§lMC§5§o §5§l§k|§b 1.8-1.21.8 §5§l§k|§5§l DAILY UPDATES§r\\n§l §7        Join our Discord! §d§ndiscord.voidsent.net\"],\"players\":[],\"online\":36,\"max\":200,\"ping\":1091,\"iconURI\":\"data:image/png;base64,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\"}",
+    "online": true,
+    "lastPinged": "2025-12-28T15:31:26.949Z",
+    "tags": [
+      "PVP",
+      "PVE",
+      "FACTIONS",
+      "MINIGAMES",
+      "SURVIVAL",
+      "RPG",
+      "MISCELLANEOUS"
+    ],
+    "votes": 1257,
+    "votifier": true
+  }
+}
