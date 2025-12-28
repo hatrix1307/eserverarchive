@@ -18,43 +18,47 @@
 
 <body>
 <div id="__next">
-  <main class="__className_cc80f9">
+<main class="__className_cc80f9">
 
-    <!-- NAVBAR -->
-    <nav class="Navbar_root__hs6un">
-      <div class="Navbar_logo__eioWt">
-        <img src="/eagler.png" alt="Logo">
-        <h1>Eagler Server List</h1>
-      </div>
-      <div class="Navbar_spacer__t53No"></div>
-      <ul class="Navbar_navElements__a5nON">
-        <li><a href="/">Home</a></li>
-        <li><a href="/news">Site News</a></li>
-      </ul>
-    </nav>
+<!-- Navbar -->
+<nav class="Navbar_root__hs6un">
+  <div class="Navbar_logo__eioWt">
+    <img src="/eagler.png" alt="Logo">
+    <h1>Eagler Server List</h1>
+  </div>
+  <div class="Navbar_spacer__t53No"></div>
+  <ul class="Navbar_navElements__a5nON">
+    <li><a href="/">Home</a></li>
+    <li><a href="/news">Site News</a></li>
+  </ul>
+</nav>
 
-    <!-- PAGE -->
-    <div class="Server_root__SeWV0">
-      <div class="Server_flexCenter__mnne6" id="header"></div>
+<!-- Page Content -->
+<div class="Server_root__SeWV0">
 
-      <div class="Server_cardsRow__ulRw7" id="info"></div>
-      <div class="Server_cardsRow__ulRw7" id="description"></div>
-    </div>
+  <!-- Header (Dynamic) -->
+  <div class="Server_flexCenter__mnne6" id="header"></div>
 
-    <!-- FOOTER -->
-    <footer class="Footer_footer__yUjxG">
-      <p>Copyright © Eagler Server List 2025</p>
-      <br>
-      <ul>
-        <li><a href="/privacy"><b>Privacy Policy</b></a></li>
-        <li><a href="/tos"><b>Terms of Service</b></a></li>
-        <li><a href="https://discord.gg/jT7YZxDarC"><b>Discord Server</b></a></li>
-      </ul>
-    </footer>
+  <!-- Server Info Cards (Dynamic) -->
+  <div class="Server_cardsRow__ulRw7" id="info"></div>
+  <div class="Server_cardsRow__ulRw7" id="description"></div>
 
-  </main>
 </div>
 
+<!-- Footer -->
+<footer class="Footer_footer__yUjxG">
+  <p>Copyright © Eagler Server List 2025</p>
+  <ul>
+    <li><a href="/privacy"><b>Privacy Policy</b></a></li>
+    <li><a href="/tos"><b>Terms of Service</b></a></li>
+    <li><a href="https://discord.gg/jT7YZxDarC"><b>Discord Server</b></a></li>
+  </ul>
+</footer>
+
+</main>
+</div>
+
+<!-- Dynamic Server Data Script -->
 <script>
 (async () => {
   const id = new URLSearchParams(location.search).get("id");
@@ -71,37 +75,32 @@
 
   document.title = `Eagler Server List | ${s.name}`;
 
-  // HEADER
+  // Header
   document.getElementById("header").innerHTML = `
     <h1>${s.name}</h1>
     <div class="Server_ownerAvatar__k3zpv">
       <img src="${s.user?.avatar || ""}" alt="Owner Avatar">
       <a href="#">${s.user?.username || "Unknown"}</a>
     </div>
-    <h3>Created at: ${s.created_at ? new Date(s.created_at).toLocaleString() : "Unknown"}</h3>
   `;
 
-  // INFO CARD
+  // Server Info Card
   document.getElementById("info").innerHTML = `
     <div class="Card_card__dlNs0">
-      <div class="Card_header__ZfKiq">
-        <p>Server Info</p>
-      </div>
+      <div class="Card_header__ZfKiq"><p>Server Info</p></div>
       <div class="Card_content__D0RDr">
-        <p><b>Address:</b> ${s.address || "Unknown"}</p>
-        <p><b>Votes:</b> ${s.votes || 0}</p>
+        <p><b>Address:</b> ${s.address}</p>
+        <p><b>Votes:</b> ${s.votes}</p>
       </div>
     </div>
   `;
 
-  // DESCRIPTION CARD
+  // Description Card
   document.getElementById("description").innerHTML = `
     <div class="Card_card__dlNs0">
-      <div class="Card_header__ZfKiq">
-        <p>Description</p>
-      </div>
+      <div class="Card_header__ZfKiq"><p>Description</p></div>
       <div class="Card_content__D0RDr">
-        ${s.description || "<p>No description available.</p>"}
+        ${s.description || "No description"}
       </div>
     </div>
   `;
