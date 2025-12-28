@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="utf-8"/>
 <title>Eagler Server List | Home</title>
@@ -13,26 +13,22 @@
 <meta property="og:type" content="website"/>
 <meta property="og:description" content="Check out all of the servers on the site. Why not sign up and add your own?"/>
 <meta property="og:image" content="eagler.png"/>
-<meta name="twitter:description" content="Check out all of the servers on the site. Why not sign up and add your own?"/>
-<meta name="keywords" content="eaglercraft servers, eaglercraft server list, eagler server list, archmc ip, clever teaching ip, eaglercraft server ip, eaglercraft repl, repl, gitpod, github, codespaces, repl.it, eaglercraft, eaglercraftx, eaglercraftx servers, eaglercraftx server, eaglercraft server list unblocked, eaglercraftx unblocked, eagler server list new"/>
 <link rel="icon" href="favicon.ico"/>
-<link rel="preload" href="_next/static/css/7b2b4dd7ecbe86d1.css" as="style"/>
-<link rel="stylesheet" href="_next/static/css/7b2b4dd7ecbe86d1.css" data-n-g=""/>
-<link rel="preload" href="_next/static/css/76289acd00d625c1.css" as="style"/>
-<link rel="stylesheet" href="_next/static/css/76289acd00d625c1.css" data-n-p=""/>
+<link rel="stylesheet" href="_next/static/css/7b2b4dd7ecbe86d1.css"/>
+<link rel="stylesheet" href="_next/static/css/76289acd00d625c1.css"/>
 <style>
   body { background-color: #111; color: #fff; }
-  #dynamic-server-container { min-height: 50vh; display: flex; flex-direction: column; gap: 16px; }
+  #dynamic-server-container { min-height: 50vh; padding: 20px; }
   .loading-text { color: #fff; text-align: center; padding: 20px; font-size: 1.2rem; }
-  .Server_card { background: #1a1a1a; padding: 16px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.5); }
-  .status-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid #222; transition: background-color 0.4s ease; box-shadow: 0 0 5px rgba(0,0,0,0.5); }
   .player-count { font-weight: bold; color: rgb(70, 227, 147); }
+  .status-dot { transition: background-color 0.4s ease; box-shadow: 0 0 5px rgba(0,0,0,0.5); width: 14px; height: 14px; border-radius: 50%; border: 2px solid #222; }
+  .Server_box__TMsXv { border: 1px solid #333; padding: 15px; margin-bottom: 15px; border-radius: 8px; }
 </style>
 </head>
 <body>
 <div id="__next">
-  <div class="__className_cc80f9" style="opacity:0">
-    <div class="Loading_root__JOnM8">
+  <div class="__className_cc80f9">
+    <div class="Loading_root__JOnM8" style="text-align:center; padding: 100px;">
       <span class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1r0mie8" style="width:40px;height:40px" role="progressbar">
         <svg class="MuiCircularProgress-svg css-13o7eu2" viewBox="22 22 44 44">
           <circle class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-14891ef" cx="44" cy="44" r="20.2" fill="none" stroke-width="3.6"></circle>
@@ -42,15 +38,12 @@
     </div>
   </div>
 
-  <main class="Home_appContainer__0oIwU" style="opacity: 1;">
+  <main class="Home_appContainer__0oIwU" style="opacity:0;">
     <nav class="Navbar_root__hs6un">
       <div class="Navbar_logo__eioWt">
-        <img src="./Eagler Server List _ Home_files/eagler.png" alt="Logo">
+        <img src="./eagler.png" alt="Logo" style="height:40px; margin-right:10px;">
         <h1>Eagler Server List</h1>
       </div>
-      <ul class="Navbar_navElements__a5nON">
-        <li class="Navbar_active__OcRhr"><a href="#">Home</a></li>
-      </ul>
     </nav>
 
     <div class="Home_homeRoot__D6YiM">
@@ -58,6 +51,7 @@
       <div id="dynamic-server-container">
         <p class="loading-text">Loading server data...</p>
       </div>
+
       <div class="Home_pages__jwp2L" style="margin-top: 20px;">
         <button id="btn-prev" disabled>Previous Page</button>
         <button id="btn-next">Next Page</button>
@@ -70,51 +64,70 @@
 let allPages = [];
 let currentPage = 0;
 
-function getDisplayAddress(addr){ return addr.startsWith("wss://") ? addr : "wss://" + addr; }
-function getApiAddress(addr){ return addr.replace("wss://",""); }
+function getDisplayAddress(addr) { return addr.startsWith("wss://") ? addr : "wss://" + addr; }
+function getApiAddress(addr) { return addr.replace("wss://", ""); }
 
-async function init(){
-  try{
+async function init() {
+  try {
     const response = await fetch('./serverlistjson.txt');
     const rawText = await response.text();
     const pageStrings = rawText.split(/}\s*{/).map((str,i,arr)=>{
       if(i===0) return str+"}"; if(i===arr.length-1) return "{"+str; return "{"+str+"}";
     });
-    pageStrings.forEach(jsonStr=>{ try{ const parsed=JSON.parse(jsonStr); if(parsed.success && Array.isArray(parsed.data)) allPages.push(parsed.data); } catch(e){} });
+    pageStrings.forEach(jsonStr => { 
+      try{ 
+        const parsed = JSON.parse(jsonStr); 
+        if(parsed.success && Array.isArray(parsed.data)) allPages.push(parsed.data); 
+      } catch(e){}
+    });
+
+    // Hide loader, show main content
+    const loader = document.querySelector('.__className_cc80f9');
+    if(loader) loader.style.display = 'none';
+    const main = document.querySelector('.Home_appContainer__0oIwU');
+    if(main) main.style.opacity = 1;
+
     if(allPages.length>0) renderPage(0);
+
     document.getElementById('btn-prev').addEventListener('click',()=>changePage(-1));
     document.getElementById('btn-next').addEventListener('click',()=>changePage(1));
-    setInterval(refreshCurrentPageStatus,20000);
-  }catch(err){ console.error("Failed to load server list:",err); }
+
+    setInterval(refreshCurrentPageStatus, 20000);
+  } catch(err){ console.error("Failed to load server list:", err); }
 }
 
-function changePage(direction){
-  const newPage=currentPage+direction;
-  if(newPage>=0 && newPage<allPages.length){
-    currentPage=newPage;
+function changePage(direction) {
+  const newPage = currentPage + direction;
+  if(newPage >=0 && newPage < allPages.length) {
+    currentPage = newPage;
     renderPage(currentPage);
     window.scrollTo(0,0);
   }
 }
 
-function renderPage(pageIndex){
-  const container=document.getElementById('dynamic-server-container');
-  container.innerHTML='';
-  const servers=allPages[pageIndex];
-  servers.forEach(server=>{
-    const displayIP=getDisplayAddress(server.address);
-    const apiIP=getApiAddress(server.address);
-    const card=document.createElement('div');
-    card.className='Server_card';
-    card.setAttribute('data-api-address',apiIP);
-    card.innerHTML=`
-      <h2 style="display:flex;justify-content:space-between;align-items:center;">
-        ${server.name} <div class="status-dot" style="background-color:#444;"></div>
+function renderPage(pageIndex) {
+  const container = document.getElementById('dynamic-server-container');
+  container.innerHTML = '';
+  const servers = allPages[pageIndex];
+  servers.forEach(server => {
+    const displayIP = getDisplayAddress(server.address);
+    const apiIP = getApiAddress(server.address);
+    const card = document.createElement('div');
+    card.className = "Server_box__TMsXv";
+    card.setAttribute('data-api-address', apiIP);
+    card.innerHTML = `
+      <h2 style="display:flex; justify-content:space-between; align-items:center;">
+        ${server.name}
+        <div class="status-dot" style="background-color:#444;"></div>
       </h2>
-      <h3 style="color:#aaa;">Votes: <span style="color:#46e393;">${server.votes}</span></h3>
-      <div>Tags: ${server.tags.map(tag=>`<span style="color:#fb8464;margin-right:4px;">${tag}</span>`).join('')}</div>
-      <h3>IP: <span style="color:#fb8464;font-family:monospace;">${displayIP}</span></h3>
-      <div class="status-meta" style="color:#aaa;margin-top:5px;">Pinging status...</div>
+      <h3 style="color: #aaa;">Votes: <span style="color:#46e393;">${server.votes}</span></h3>
+      <div style="display:flex; gap:5px; flex-wrap:wrap; margin:10px 0;">
+        ${server.tags.map(tag => `<div style="color:#fb8464; border:1px solid #fb8464; padding:2px 8px; border-radius:12px; font-size:0.8em;">${tag}</div>`).join('')}
+      </div>
+      <h3>IP: <span style="color:#fb8464; font-family:monospace;">${displayIP}</span></h3>
+      <div class="status-meta" style="font-size:0.85em; color:#aaa; margin-top:10px; border-top:1px solid #333; padding-top:8px;">
+        Pinging status...
+      </div>
     `;
     container.appendChild(card);
   });
@@ -122,35 +135,39 @@ function renderPage(pageIndex){
   refreshCurrentPageStatus();
 }
 
-async function refreshCurrentPageStatus(){
-  const cards=document.querySelectorAll('.Server_card');
-  cards.forEach(async card=>{
-    const apiAddr=card.getAttribute('data-api-address');
-    const dot=card.querySelector('.status-dot');
-    const meta=card.querySelector('.status-meta');
-    try{
-      const res=await fetch(`https://topeaglerservers.com/api/status/${encodeURIComponent(apiAddr)}`);
-      const data=await res.json();
-      if(data.success && data.server && data.server.online){
-        dot.style.backgroundColor='#4caf50';
-        meta.innerHTML=`Players: <span class="player-count">${data.server.players.online}</span> / ${data.server.players.max}`;
-      }else{
-        dot.style.backgroundColor='#f44336';
-        meta.innerHTML=`<span style="color:#f44336;">Offline</span>`;
+async function refreshCurrentPageStatus() {
+  const serverCards = document.querySelectorAll('.Server_box__TMsXv');
+  serverCards.forEach(async card => {
+    const apiAddr = card.getAttribute('data-api-address');
+    const dot = card.querySelector('.status-dot');
+    const meta = card.querySelector('.status-meta');
+    try {
+      const res = await fetch(`https://topeaglerservers.com/api/status/${encodeURIComponent(apiAddr)}`);
+      const data = await res.json();
+      if(data.success && data.server && data.server.online) {
+        dot.style.backgroundColor = '#4caf50';
+        const online = data.server.players.online;
+        const max = data.server.players.max;
+        meta.innerHTML = `Players: <span class="player-count">${online}</span> / ${max}`;
+      } else {
+        dot.style.backgroundColor = '#f44336';
+        meta.innerHTML = '<span style="color:#f44336;">Offline</span>';
       }
-    }catch(err){
-      dot.style.backgroundColor='#444';
-      meta.innerHTML=`<span style="color:#666;">Status Error</span>`;
+    } catch(err) {
+      dot.style.backgroundColor = '#444';
+      meta.innerHTML = '<span style="color:#666;">Status Error</span>';
     }
   });
 }
 
-function updateButtons(){
-  document.getElementById('btn-prev').disabled=(currentPage===0);
-  document.getElementById('btn-next').disabled=(currentPage===allPages.length-1);
+function updateButtons() {
+  const prevBtn = document.getElementById('btn-prev');
+  const nextBtn = document.getElementById('btn-next');
+  prevBtn.disabled = (currentPage === 0);
+  nextBtn.disabled = (currentPage === allPages.length-1);
 }
 
-document.addEventListener('DOMContentLoaded',init);
+document.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
 </html>
