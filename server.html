@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Server</title>
+
+<!-- KEEP YOUR EXISTING CSS -->
+<link rel="stylesheet" href="/_next/static/css/7b2b4dd7ecbe86d1.css">
+<link rel="stylesheet" href="/_next/static/css/76289acd00d625c1.css">
+
+</head>
+<body>
+
+<div id="__next">
+  <main style="max-width:1200px;margin:auto;padding:32px">
+    <h1 id="name">Loading…</h1>
+    <p id="description"></p>
+
+    <h3>Server Info</h3>
+    <ul>
+      <li><strong>Address:</strong> <span id="address"></span></li>
+      <li><strong>Votes:</strong> <span id="votes"></span></li>
+      <li><strong>Tags:</strong> <span id="tags"></span></li>
+      <li><strong>Verified:</strong> <span id="verified"></span></li>
+    </ul>
+
+    <h3>Owner</h3>
+    <div id="owner"></div>
+  </main>
+</div>
+
+<script>
+const params = new URLSearchParams(location.search);
+const uuid = params.get("id");
+
+if (!uuid) {
+  document.body.innerHTML = "<h1>Oops! No server specified.</h1>";
+  throw new Error("No UUID");
+}
+
+fetch(`/data/${uuid}.json`)
+  .then(res => {
+    if (!res.ok) throw new Error("JSON not found");
+    return res.json();
+  })
+  .then(json => {
+    const d = json.data;
+
+    document.title = d.name + " | Eagler Servers";
+    document.getElementById("name").textContent = d.name;
+    document.getElementById("description").innerHTML = d.description.replace(/\n/g, "<br>");
+    document.getElementById("address").textContent = d.address;
+    document.getElementById("votes").textContent = d.votes;
+    document.getElementById("tags").textContent = d.tags.join(", ");
+    document.getElementById("verified").textContent = d.verified ? "Yes" : "No";
+
+    document.getElementById("owner").innerHTML = `
+      <img src="${d.user.avatar}" width="48" style="border-radius:50%">
+      <span>${d.user.username}</span>
+    `;
+  })
+  .catch(err => {
+    document.body.innerHTML = "<h1>Oops! Server not found.</h1>";
+    console.error(err);
+  });
+</script>
+
+</body>
+</html>
