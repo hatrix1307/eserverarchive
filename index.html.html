@@ -7,11 +7,6 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge"/>
 <meta name="twitter:card" content="summary"/>
 <meta property="theme-color" content="#FB8464"/>
-<meta property="og:url" content="index.html"/>
-<meta property="og:title" content="Eagler Server List | Home"/>
-<meta property="og:site_name" content="Eagler Server List"/>
-<meta property="og:type" content="website"/>
-<meta property="og:description" content="Check out all of the servers on the site. Why not sign up and add your own?"/>
 <link rel="icon" href="/favicon.ico">
 
 <!-- Font Preloads -->
@@ -27,49 +22,40 @@
 <link rel="stylesheet" href="/_next/static/css/801a346d713e02de.css">
 <link rel="stylesheet" href="/_next/static/css/2be4c86ae301c45c.css">
 </head>
-
 <body>
 <div id="__next">
-    <div>
-        <main class="__className_cc80f9">
-            <div class="Notification_notificationWrapper__8XfQo"></div>
-            <main class="Home_appContainer__0oIwU" style="opacity: 1;">
+  <div>
+    <main class="__className_cc80f9">
+      <main class="Home_appContainer__0oIwU" style="opacity: 1;">
 
-                <!-- Desktop Navbar -->
-                <nav class="Navbar_root__hs6un">
-                  <div class="Navbar_logo__eioWt">
-                    <img src="/eagler.png" alt="Logo">
-                    <h1>Eagler Server List</h1>
-                  </div>
-                  <div class="Navbar_spacer__t53No"></div>
-                  <ul class="Navbar_navElements__a5nON">
-                    <li class="Navbar_active__OcRhr"><a href="/">Home</a></li>
-                    <li><a href="/news">Site News</a></li>
-                  </ul>
-                </nav>
+        <!-- Navbar -->
+        <nav class="Navbar_root__hs6un">
+          <div class="Navbar_logo__eioWt">
+            <img src="/eagler.png" alt="Logo">
+            <h1>Eagler Server List</h1>
+          </div>
+          <div class="Navbar_spacer__t53No"></div>
+          <ul class="Navbar_navElements__a5nON">
+            <li class="Navbar_active__OcRhr"><a href="/">Home</a></li>
+            <li><a href="/news">Site News</a></li>
+          </ul>
+        </nav>
 
-                <!-- Main Content -->
-                <div class="Home_homeRoot__D6YiM">
-                  <h1>Servers</h1>
-                  <p>View a list of available servers.</p>
+        <div class="Home_homeRoot__D6YiM">
+          <h1>Servers</h1>
+          <p>View a list of available servers.</p>
 
-                  <!-- Server List Container -->
-                  <div id="dynamic-server-container"></div>
+          <div id="dynamic-server-container"></div>
 
-                  <!-- Pagination -->
-                  <div class="Home_pages__jwp2L" style="margin-top: 20px;">
-                    <button id="btn-prev" disabled>
-                      Previous Page
-                    </button>
-                    <button id="btn-next">
-                      Next Page
-                    </button>
-                  </div>
-                </div>
+          <div class="Home_pages__jwp2L" style="margin-top:20px;">
+            <button id="btn-prev" disabled>Previous Page</button>
+            <button id="btn-next">Next Page</button>
+          </div>
+        </div>
 
-            </main>
-        </main>
-    </div>
+      </main>
+    </main>
+  </div>
 </div>
 
 <script>
@@ -81,44 +67,52 @@ function getDisplayAddress(addr) {
 }
 
 function getApiAddress(addr) {
-  // Strip wss:// if present
-  return addr?.replace(/^wss:\/\//, "");
+  // Strip wss:// and any leading protocol
+  return addr?.replace(/^wss:\/\//, "").replace(/^ws:\/\//, "");
 }
 
 async function init() {
   try {
     const res = await fetch('./serverlistjson.txt');
-    const raw = await res.text();
-    const parts = raw.split(/}\s*{/).map((str,i,arr)=>{
-      if(i===0) return str+"}"; 
-      if(i===arr.length-1) return "{"+str; 
+    const text = await res.text();
+    const chunks = text.split(/}\s*{/).map((str,i,arr) => {
+      if (i===0) return str+"}";
+      if (i===arr.length-1) return "{"+str;
       return "{"+str+"}";
     });
-    parts.forEach(s=>{
-      try { const p=JSON.parse(s); if(p.success && Array.isArray(p.data)) allPages.push(p.data); } catch(e){}
+    chunks.forEach(s => {
+      try { const p = JSON.parse(s); if (p.success && Array.isArray(p.data)) allPages.push(p.data); } catch(e) {}
     });
-    if(allPages.length>0) renderPage(0);
-    document.getElementById('btn-prev').addEventListener('click',()=>changePage(-1));
-    document.getElementById('btn-next').addEventListener('click',()=>changePage(1));
-    setInterval(refreshCurrentPageStatus,20000);
-  } catch(err){ console.error(err); }
+    if (allPages.length>0) renderPage(0);
+    document.getElementById('btn-prev').addEventListener('click', ()=>changePage(-1));
+    document.getElementById('btn-next').addEventListener('click', ()=>changePage(1));
+    setInterval(refreshCurrentPageStatus, 20000);
+  } catch (e) {
+    console.error("List load failed:", e);
+  }
 }
 
 function changePage(dir) {
   const np = currentPage + dir;
-  if(np>=0 && np<allPages.length){ currentPage=np; renderPage(np); window.scrollTo(0,0); }
+  if (np>=0 && np<allPages.length) {
+    currentPage = np;
+    renderPage(np);
+    window.scrollTo(0,0);
+  }
 }
 
 function renderPage(idx) {
-  const cont = document.getElementById('dynamic-server-container');
-  cont.innerHTML = '';
+  const container = document.getElementById('dynamic-server-container');
+  container.innerHTML = "";
   allPages[idx].forEach(server => {
-    const ip = getDisplayAddress(server.address);
-    const api = getApiAddress(server.address);
-    const div = document.createElement('div');
-    div.className = 'Server_box__TMsXv';
-    div.dataset.apiAddress = api;
-    div.innerHTML = `
+    const displayIP = getDisplayAddress(server.address);
+    const apiIP = getApiAddress(server.address);
+
+    const card = document.createElement("div");
+    card.className = "Server_box__TMsXv";
+    card.dataset.apiAddress = apiIP;
+
+    card.innerHTML = `
       <h2 style="overflow:hidden;">
         ${server.name} <div class="StatusIndicator_status__pidlp"></div>
       </h2>
@@ -126,33 +120,38 @@ function renderPage(idx) {
         Votes: <span style="color: rgb(70,227,147);">${server.votes}</span>
       </h3>
       <div class="Server_tagListContainer__tAO2z">
-        ${server.tags.map(tag=>`<div class="Badge_inlineBadge__h8Mo1">${tag}</div>`).join('')}
+        ${server.tags.map(tag => `<div class="Badge_inlineBadge__h8Mo1">${tag}</div>`).join('')}
       </div>
-      <h3>IP: <span style="font-weight:600;cursor:pointer;">${ip}</span></h3>
+      <h3>IP: <span style="font-weight:600;cursor:pointer;">${displayIP}</span></h3>
       <div class="status-meta"></div>
     `;
-    cont.appendChild(div);
+
+    container.appendChild(card);
   });
   updateButtons();
   refreshCurrentPageStatus();
 }
 
 async function refreshCurrentPageStatus() {
-  document.querySelectorAll('.Server_box__TMsXv').forEach(async card => {
-    const api = card.getAttribute('data-api-address'); // Already stripped of wss://
+  document.querySelectorAll('.Server_box__TMsXv').forEach(async (card) => {
+    const apiAddr = card.dataset.apiAddress; 
     const dot = card.querySelector('.StatusIndicator_status__pidlp');
     const meta = card.querySelector('.status-meta');
+
     try {
-      const r = await fetch(`https://topeaglerservers.com/api/status/${encodeURIComponent(api)}`);
-      const json = await r.json();
-      if(json.success && json.server && json.server.online) {
-        dot.style.backgroundColor = '#4caf50';
-        meta.textContent = `Players: ${json.server.players.online}/${json.server.players.max}`;
+      const res = await fetch(`https://topeaglerservers.com/api/status/${encodeURIComponent(apiAddr)}`);
+      const data = await res.json();  
+      if (data && data.success && data.server && data.server.online) {
+        dot.style.backgroundColor = "#4caf50";
+        meta.textContent = `Players: ${data.server.players.online}/${data.server.players.max}`;
       } else {
-        dot.style.backgroundColor = '#f44336';
-        meta.textContent = 'Offline';
+        dot.style.backgroundColor = "#f44336";
+        meta.textContent = "Offline";
       }
-    } catch(e){ dot.style.backgroundColor='#444'; meta.textContent='Status Error'; }
+    } catch (error) {
+      dot.style.backgroundColor = "#444";
+      meta.textContent = "Status Error";
+    }
   });
 }
 
