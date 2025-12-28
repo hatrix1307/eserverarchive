@@ -18,40 +18,41 @@
 
 <body>
 <div id="__next">
-<main class="__className_cc80f9">
+  <main class="__className_cc80f9">
 
-<!-- NAVBAR -->
-<nav class="Navbar_root__hs6un">
-  <div class="Navbar_logo__eioWt">
-    <img src="/eagler.png">
-    <h1>Eagler Server List</h1>
-  </div>
-  <div class="Navbar_spacer__t53No"></div>
-  <ul class="Navbar_navElements__a5nON">
-    <li><a href="/">Home</a></li>
-    <li><a href="/news">Site News</a></li>
-  </ul>
-</nav>
+    <!-- NAVBAR -->
+    <nav class="Navbar_root__hs6un">
+      <div class="Navbar_logo__eioWt">
+        <img src="/eagler.png" alt="Logo">
+        <h1>Eagler Server List</h1>
+      </div>
+      <div class="Navbar_spacer__t53No"></div>
+      <ul class="Navbar_navElements__a5nON">
+        <li><a href="/">Home</a></li>
+        <li><a href="/news">Site News</a></li>
+      </ul>
+    </nav>
 
-<!-- PAGE -->
-<div class="Server_root__SeWV0">
-  <div class="Server_flexCenter__mnne6" id="header"></div>
+    <!-- PAGE -->
+    <div class="Server_root__SeWV0">
+      <div class="Server_flexCenter__mnne6" id="header"></div>
 
-  <div class="Server_cardsRow__ulRw7" id="info"></div>
-  <div class="Server_cardsRow__ulRw7" id="description"></div>
-</div>
+      <div class="Server_cardsRow__ulRw7" id="info"></div>
+      <div class="Server_cardsRow__ulRw7" id="description"></div>
+    </div>
 
-<footer class="Footer_footer__yUjxG">
-  <p>Copyright © Eagler Server List 2025</p>
-  <br>
-  <ul>
-    <li><a href="/privacy"><b>Privacy Policy</b></a></li>
-    <li><a href="/tos"><b>Terms of Service</b></a></li>
-    <li><a href="https://discord.gg/jT7YZxDarC"><b>Discord Server</b></a></li>
-  </ul>
-</footer>
+    <!-- FOOTER -->
+    <footer class="Footer_footer__yUjxG">
+      <p>Copyright © Eagler Server List 2025</p>
+      <br>
+      <ul>
+        <li><a href="/privacy"><b>Privacy Policy</b></a></li>
+        <li><a href="/tos"><b>Terms of Service</b></a></li>
+        <li><a href="https://discord.gg/jT7YZxDarC"><b>Discord Server</b></a></li>
+      </ul>
+    </footer>
 
-</main>
+  </main>
 </div>
 
 <script>
@@ -74,9 +75,10 @@
   document.getElementById("header").innerHTML = `
     <h1>${s.name}</h1>
     <div class="Server_ownerAvatar__k3zpv">
-      <img src="${s.user?.avatar || ""}">
+      <img src="${s.user?.avatar || ""}" alt="Owner Avatar">
       <a href="#">${s.user?.username || "Unknown"}</a>
     </div>
+    <h3>Created at: ${s.created_at ? new Date(s.created_at).toLocaleString() : "Unknown"}</h3>
   `;
 
   // INFO CARD
@@ -86,8 +88,8 @@
         <p>Server Info</p>
       </div>
       <div class="Card_content__D0RDr">
-        <p><b>Address:</b> ${s.address}</p>
-        <p><b>Votes:</b> ${s.votes}</p>
+        <p><b>Address:</b> ${s.address || "Unknown"}</p>
+        <p><b>Votes:</b> ${s.votes || 0}</p>
       </div>
     </div>
   `;
@@ -99,7 +101,7 @@
         <p>Description</p>
       </div>
       <div class="Card_content__D0RDr">
-        ${s.description || "No description"}
+        ${s.description || "<p>No description available.</p>"}
       </div>
     </div>
   `;
