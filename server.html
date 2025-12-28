@@ -4,103 +4,174 @@
 <meta charset="utf-8">
 <title>Eagler Server List</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="twitter:card" content="summary">
+<meta property="theme-color" content="#FB8464">
 <link rel="icon" href="/favicon.ico">
 
-<!-- CSS ORDER (IMPORTANT) -->
-<link rel="stylesheet" href="/_next/static/css/2be4c86ae301c45c.css">
-<link rel="stylesheet" href="/_next/static/css/4d58c923eeda897e.css">
+<!-- Styles -->
 <link rel="stylesheet" href="/_next/static/css/7b2b4dd7ecbe86d1.css">
-<link rel="stylesheet" href="/_next/static/css/801a346d713e02dc.css">
-<link rel="stylesheet" href="/_next/static/css/77845debe7d9c992.css">
+<link rel="stylesheet" href="/_next/static/css/4d58c923eeda897e.css">
 <link rel="stylesheet" href="/_next/static/css/dc7d422723254cb5.css">
+<link rel="stylesheet" href="/_next/static/css/801a346d713e02de.css">
+<link rel="stylesheet" href="/_next/static/css/77845debe7d9c992.css">
+<link rel="stylesheet" href="/_next/static/css/2be4c86ae301c45c.css">
+
+<!-- Dynamic CSS Animations -->
+<style data-emotion="css 1r0mie8 animation-61bdi0">.css-1r0mie8{display:inline-block;color:#FB8464;animation:animation-61bdi0 1.4s linear infinite;}@keyframes animation-61bdi0{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}</style>
+<style data-emotion="css 14891ef animation-1p2h4ri">.css-14891ef{stroke:currentColor;stroke-dasharray:80px,200px;stroke-dashoffset:0;animation:animation-1p2h4ri 1.4s ease-in-out infinite;}@keyframes animation-1p2h4ri{0%{stroke-dasharray:1px,200px;stroke-dashoffset:0;}50%{stroke-dasharray:100px,200px;stroke-dashoffset:-15px;}100%{stroke-dasharray:100px,200px;stroke-dashoffset:-125px;}}</style>
 </head>
 
 <body>
 <div id="__next">
-<main class="__className_cc80f9">
+  <main class="__className_cc80f9">
+    <div class="Notification_notificationWrapper__8XfQo"></div>
+    <main class="Home_appContainer__0oIwU" style="opacity: 1;">
+      <div class="Server_root__SeWV0">
 
-<!-- Navbar -->
-<nav class="Navbar_root__hs6un">
-  <div class="Navbar_logo__eioWt">
-    <img src="/eagler.png" alt="Logo">
-    <h1>Eagler Server List</h1>
-  </div>
-  <div class="Navbar_spacer__t53No"></div>
-  <ul class="Navbar_navElements__a5nON">
-    <li><a href="/">Home</a></li>
-    <li><a href="/news">Site News</a></li>
-  </ul>
-</nav>
+        <!-- Navbar -->
+        <nav class="Navbar_mobileRoot__uUZ_C">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-top:12px;">
+            <div class="Navbar_logo__eioWt">
+              <img src="/eagler.png" alt="Logo">
+              <h1>Eagler Server List</h1>
+            </div>
+            <div class="Navbar_hamburger__Uw_zj false">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em">
+                <path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path>
+              </svg>
+            </div>
+          </div>
+        </nav>
 
-<!-- Page Content -->
-<div class="Server_root__SeWV0">
+        <nav class="Navbar_root__hs6un">
+          <div class="Navbar_logo__eioWt">
+            <img src="/eagler.png" alt="Logo">
+            <h1>Eagler Server List</h1>
+          </div>
+          <div class="Navbar_spacer__t53No"></div>
+          <ul class="Navbar_navElements__a5nON">
+            <li><a href="/">Home</a></li>
+            <li><a href="/news">Site News</a></li>
+          </ul>
+          <div style="margin:0px 30px 0px 0px;">
+            <button class="Button_button__0wJmc" style="background-color:#5865F2;">
+              <div style="color:#fff;transition:0.2s ease-in-out;">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="24" width="24">
+                  <path d="..."></path>
+                </svg>
+                Login with Discord
+              </div>
+            </button>
+          </div>
+        </nav>
 
-  <!-- Header (Dynamic) -->
-  <div class="Server_flexCenter__mnne6" id="header"></div>
+        <!-- Server Header -->
+        <div class="Server_flexCenter__mnne6" id="serverHeader"></div>
 
-  <!-- Server Info Cards (Dynamic) -->
-  <div class="Server_cardsRow__ulRw7" id="info"></div>
-  <div class="Server_cardsRow__ulRw7" id="description"></div>
+        <!-- Server Badges -->
+        <div class="Server_badgeContainer__M_vZx" id="serverBadges"></div>
 
+        <!-- Server Cards Rows -->
+        <div class="Server_cardsRow__ulRw7" id="serverInfo"></div>
+        <div class="Server_cardsRow__ulRw7" id="serverVotes"></div>
+        <div class="Server_cardsRow__ulRw7" id="serverDescription"></div>
+        <div class="Server_cardsRow__ulRw7" id="serverComments"></div>
+
+      </div>
+
+      <!-- Footer -->
+      <footer class="Footer_footer__yUjxG">
+        <p>Copyright © Eagler Server List 2025</p>
+        <ul>
+          <li><a href="/privacy"><b>Privacy Policy</b></a></li>
+          <li><a href="/tos"><b>Terms of Service</b></a></li>
+          <li><a href="https://discord.gg/jT7YZxDarC"><b>Discord Server</b></a></li>
+        </ul>
+      </footer>
+
+    </main>
+  </main>
 </div>
 
-<!-- Footer -->
-<footer class="Footer_footer__yUjxG">
-  <p>Copyright © Eagler Server List 2025</p>
-  <ul>
-    <li><a href="/privacy"><b>Privacy Policy</b></a></li>
-    <li><a href="/tos"><b>Terms of Service</b></a></li>
-    <li><a href="https://discord.gg/jT7YZxDarC"><b>Discord Server</b></a></li>
-  </ul>
-</footer>
-
-</main>
-</div>
-
-<!-- Dynamic Server Data Script -->
+<!-- Dynamic Server Script -->
 <script>
 (async () => {
   const id = new URLSearchParams(location.search).get("id");
   if (!id) return;
 
   const res = await fetch(`/data/${id}.json`);
-  if (!res.ok) {
-    document.getElementById("header").innerHTML = "<h1>Server not found</h1>";
-    return;
-  }
+  if (!res.ok) return;
 
-  const json = await res.json();
-  const s = json.data || json;
-
-  document.title = `Eagler Server List | ${s.name}`;
+  const s = await res.json();
 
   // Header
-  document.getElementById("header").innerHTML = `
-    <h1>${s.name}</h1>
+  document.getElementById("serverHeader").innerHTML = `
+    <h1 style="overflow:hidden;">${s.name}</h1>
     <div class="Server_ownerAvatar__k3zpv">
-      <img src="${s.user?.avatar || ""}" alt="Owner Avatar">
-      <a href="#">${s.user?.username || "Unknown"}</a>
+      <img src="${s.owner?.avatar || '/placeholder.png'}" alt="Owner Avatar">
+      <a href="/users/${s.owner?.id || '#'}">${s.owner?.username || 'Unknown'}</a>
     </div>
+    <h3>Created at <time class="" timestamp="${s.createdAt}">${new Date(s.createdAt).toLocaleString()}</time></h3>
   `;
 
+  // Badges
+  document.getElementById("serverBadges").innerHTML = s.badges.map(b => `
+    <div class="Badge_inlineBadge__h8Mo1" style="color:${b.color};">
+      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em">
+        <path d="${b.icon}"></path>
+      </svg>${b.name}
+    </div>
+  `).join('');
+
   // Server Info Card
-  document.getElementById("info").innerHTML = `
+  document.getElementById("serverInfo").innerHTML = `
     <div class="Card_card__dlNs0">
       <div class="Card_header__ZfKiq"><p>Server Info</p></div>
       <div class="Card_content__D0RDr">
-        <p><b>Address:</b> ${s.address}</p>
-        <p><b>Votes:</b> ${s.votes}</p>
+        <div class="Server_flexRow__QI0YZ" style="gap:25px;align-items:stretch;">
+          <div class="Server_flexColumn__K63FH">
+            <h3>Address</h3>
+            <span aria-label="Copy Address" style="font-weight:600;cursor:pointer;">${s.address}</span>
+          </div>
+          <div class="Server_flexColumn__K63FH">
+            <h3>Discord Server</h3>
+            <button class="MuiButton-root">Join Discord</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Votes Card
+  document.getElementById("serverVotes").innerHTML = `
+    <div class="Card_card__dlNs0">
+      <div class="Card_header__ZfKiq"><p>Votes</p></div>
+      <div class="Card_content__D0RDr">
+        <p>This server has <span style="color: #46E393;">${s.votes}</span> votes.</p>
+        <div class="Server_flexRow__QI0YZ" style="gap:10px;">
+          <p style="color:#FF6565;">You must login to be able to vote.</p>
+        </div>
       </div>
     </div>
   `;
 
   // Description Card
-  document.getElementById("description").innerHTML = `
+  document.getElementById("serverDescription").innerHTML = `
     <div class="Card_card__dlNs0">
       <div class="Card_header__ZfKiq"><p>Description</p></div>
       <div class="Card_content__D0RDr">
-        ${s.description || "No description"}
+        ${s.description || ''}
+      </div>
+    </div>
+  `;
+
+  // Comments Card
+  document.getElementById("serverComments").innerHTML = `
+    <div class="Card_card__dlNs0">
+      <div class="Card_header__ZfKiq"><p>Comments</p></div>
+      <div class="Card_content__D0RDr">
+        <p style="color:#FF6565;">You must login to be able to post comments.</p>
       </div>
     </div>
   `;
