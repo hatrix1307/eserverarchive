@@ -1,51 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <title>Eagler Server List | Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="UTF-8">
+<title>Eagler Server List</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.ico">
 
-  <link rel="icon" href="favicon.ico"/>
-
-  <!-- Original styles from mirrored site -->
-  <link rel="stylesheet" href="_next/static/css/7b2b4dd7ecbe86d1.css"/>
-  <link rel="stylesheet" href="_next/static/css/76289acd00d625c1.css"/>
-
-  <style>
-    body { background:#0e0e10; color:#fff; }
-    main { max-width:1200px; margin:auto; padding:20px; }
-    #server-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
-      gap:16px;
-    }
-  </style>
+<style>
+body {
+  margin: 0;
+  background: #0e0e10;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+header {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+#servers {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: #18181b;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
+}
+.card h2 {
+  margin: 0 0 6px 0;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.status {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0;
+}
+.tag {
+  background: #2a2a2e;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.ip {
+  font-family: monospace;
+  color: #fb8464;
+}
+.meta {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+</style>
 </head>
 
 <body>
-<div id="__next">
-  <main>
-    <div id="server-grid"></div>
-  </main>
-</div>
+<header>Eagler Server List</header>
+<div id="servers"></div>
 
 <script>
 const LOCAL_JSON = "serverlistjson.txt";
 const API_BASE = "https://topeaglerservers.com/api/status/";
 
-function cleanAddress(addr) {
-  return addr.replace(/^wss:\/\//, "").replace(/^ws:\/\//, "");
+function stripProtocol(addr) {
+  return addr.replace(/^wss?:\/\//, "");
 }
 
-async function loadLocalServers() {
-  const res = await fetch(LOCAL_JSON);
-  const json = await res.json();
-  return json.data || [];
-}
-
-async function fetchLiveStatus(address) {
+async function fetchLive(addr) {
   try {
-    const res = await fetch(API_BASE + address);
+    const res = await fetch(API_BASE + addr);
     const json = await res.json();
     return json.success ? json.server : null;
   } catch {
@@ -53,63 +91,47 @@ async function fetchLiveStatus(address) {
   }
 }
 
-function renderServer(server, live) {
+function createCard(server, live) {
   const online = live?.online ?? server.online;
-  const playersOnline = live?.players?.online ?? server.motd?.online ?? "?";
-  const playersMax = live?.players?.max ?? "?";
-  const pingQuality = live?.ping?.quality ?? "unknown";
+  const players = live?.players?.online ?? server.motd?.online ?? "?";
+  const max = live?.players?.max ?? "?";
 
   const card = document.createElement("div");
-  card.className = "Server_box__TMsXv";
+  card.className = "card";
 
   card.innerHTML = `
-    <h2 style="display:flex;justify-content:space-between;align-items:center;">
+    <h2>
       ${server.name}
-      <span style="
-        width:12px;height:12px;border-radius:50%;
-        background:${online ? '#46E393' : '#f44336'};
-      "></span>
+      <span class="status" style="background:${online ? '#46E393' : '#f44336'}"></span>
     </h2>
 
-    <div style="color:#aaa;margin:6px 0;">
-      Votes: <b style="color:#46E393">${server.votes ?? 0}</b>
+    <div class="meta">Votes: <b style="color:#46E393">${server.votes ?? 0}</b></div>
+
+    <div class="tags">
+      ${(server.tags || []).map(t => `<span class="tag">${t}</span>`).join("")}
     </div>
 
-    <div class="Server_tagListContainer__tAO2z"
-         style="display:flex;gap:6px;flex-wrap:wrap;margin:10px 0;">
-      ${(server.tags || []).map(t =>
-        `<div class="Badge_inlineBadge__h8Mo1">${t}</div>`
-      ).join("")}
-    </div>
+    <div class="ip">${server.address}</div>
 
-    <div style="font-family:monospace;color:#fb8464;">
-      ${server.address}
-    </div>
-
-    <div style="margin-top:8px;font-size:0.9em;color:#aaa;">
-      Players: <b style="color:#46E393">${playersOnline}</b> / ${playersMax}
-    </div>
-
-    <div style="margin-top:4px;font-size:0.8em;color:#888;">
-      Ping: ${pingQuality}
+    <div class="meta">
+      Players: <b style="color:#46E393">${players}</b> / ${max}
     </div>
   `;
   return card;
 }
 
 (async function init() {
-  const grid = document.getElementById("server-grid");
-  grid.innerHTML = "";
+  const container = document.getElementById("servers");
 
-  const servers = await loadLocalServers();
+  const res = await fetch(LOCAL_JSON);
+  const json = await res.json();
 
-  for (const server of servers) {
-    const addr = cleanAddress(server.address);
-    const live = await fetchLiveStatus(addr);
-    grid.appendChild(renderServer(server, live));
+  for (const server of json.data) {
+    const cleanAddr = stripProtocol(server.address);
+    const live = await fetchLive(cleanAddr);
+    container.appendChild(createCard(server, live));
   }
 })();
 </script>
-
 </body>
 </html>
