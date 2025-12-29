@@ -20,7 +20,7 @@
   .Server_header__custom {
     text-align: center;
     margin-bottom: 20px;
-    padding-top: 15px; /* more spacing from top */
+    padding-top: 15px;
   }
   .Server_ownerAvatar__custom img {
     width: 50px;
@@ -63,6 +63,18 @@
   .Server_header__custom h1 {
     margin-bottom: 10px;
   }
+  .Server_infoBelowTags__custom p {
+    margin: 5px 0;
+    font-size: 0.95em;
+  }
+  .Server_infoBelowTags__custom .address {
+    color: orange;
+    cursor: pointer;
+  }
+  .Server_infoBelowTags__custom a {
+    color: #00aaff;
+    text-decoration: underline;
+  }
 </style>
 </head>
 
@@ -88,8 +100,8 @@
       <!-- HEADER -->
       <div class="Server_header__custom" id="header"></div>
 
-      <!-- INFO CARD -->
-      <div class="Server_cardsRow__ulRw7" id="info"></div>
+      <!-- INFO BELOW TAGS -->
+      <div class="Server_cardsRow__ulRw7" id="infoBelowTags"></div>
       <!-- DESCRIPTION CARD -->
       <div class="Server_cardsRow__ulRw7" id="description"></div>
     </div>
@@ -108,6 +120,7 @@
   </main>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
 (async () => {
   const id = new URLSearchParams(location.search).get("id");
@@ -145,18 +158,14 @@
     <div class="Server_tags__custom">${tagsHTML}</div>
   `;
 
-  // INFO CARD
-  document.getElementById("info").innerHTML = `
-    <div class="Card_card__dlNs0">
-      <div class="Card_header__ZfKiq">
-        <p>Server Info</p>
-      </div>
+  // INFO BELOW TAGS
+  document.getElementById("infoBelowTags").innerHTML = `
+    <div class="Card_card__dlNs0 Server_infoBelowTags__custom">
+      <div class="Card_header__ZfKiq"><p>Server Info</p></div>
       <div class="Card_content__D0RDr">
-        <p><b>Address:</b> ${s.address || "Unknown"}</p>
+        <p><b>Address:</b> <span class="address" onclick="navigator.clipboard.writeText('${s.address || ''}'); alert('Copied!');">${s.address || "Unknown"}</span></p>
+        ${s.discord ? `<p><b>Discord:</b> <a href="https://discord.gg/${s.discord}" target="_blank">Join Discord</a></p>` : ''}
         <p><b>Votes:</b> ${s.votes || 0}</p>
-        ${s.discord ? `<p><b>Discord:</b> <a href="https://discord.gg/${s.discord}">Join Discord</a></p>` : ''}
-        ${s.online !== undefined ? `<p><b>Online:</b> ${s.online ? "Yes" : "No"}</p>` : ''}
-        ${s.votifier !== undefined ? `<p><b>Votifier:</b> ${s.votifier ? "Enabled" : "Disabled"}</p>` : ''}
       </div>
     </div>
   `;
@@ -174,7 +183,6 @@
   `;
 })();
 </script>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 </body>
 </html>
