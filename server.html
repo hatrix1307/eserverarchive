@@ -15,8 +15,52 @@
 <link rel="stylesheet" href="/_next/static/css/77845debe7d9c992.css">
 <link rel="stylesheet" href="/_next/static/css/dc7d422723254cb5.css">
 
-<!-- Marked.js for Markdown parsing -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+  /* HEADER CUSTOM STYLES */
+  .Server_header__custom {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .Server_ownerAvatar__custom img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  .Server_ownerAvatar__custom a {
+    color: orange;
+    font-weight: bold;
+    vertical-align: middle;
+    font-size: 1.1em;
+    text-decoration: none;
+  }
+  .Server_createdAt__custom {
+    color: gray;
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  .Server_tags__custom {
+    margin-top: 10px;
+  }
+  .Server_tags__custom span {
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 3px;
+    border-radius: 9999px;
+    font-size: 0.85em;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+  }
+  .Server_tags__custom span.PVP,
+  .Server_tags__custom span.PVE {
+    background-color: black;
+  }
+  .Server_header__custom h1 {
+    margin-bottom: 10px;
+  }
+</style>
 </head>
 
 <body>
@@ -38,9 +82,12 @@
 
     <!-- PAGE -->
     <div class="Server_root__SeWV0">
-      <div class="Server_flexCenter__mnne6" id="header"></div>
+      <!-- HEADER -->
+      <div class="Server_header__custom" id="header"></div>
 
+      <!-- INFO CARD -->
       <div class="Server_cardsRow__ulRw7" id="info"></div>
+      <!-- DESCRIPTION CARD -->
       <div class="Server_cardsRow__ulRw7" id="description"></div>
     </div>
 
@@ -75,12 +122,24 @@
   document.title = `Eagler Server List | ${s.name}`;
 
   // HEADER
+  const createdAt = s.createdAt ? new Date(s.createdAt) : null;
+  const createdAtFormatted = createdAt
+    ? createdAt.toLocaleString('en-US', { day: '2-digit', month: 'short', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true })
+    : "Unknown";
+
+  const tagsHTML = (s.tags || []).map(tag => {
+    const cls = (tag === "PVP" || tag === "PVE") ? tag : "";
+    return `<span class="${cls}">${tag}</span>`;
+  }).join('');
+
   document.getElementById("header").innerHTML = `
     <h1>${s.name}</h1>
-    <div class="Server_ownerAvatar__k3zpv">
+    <div class="Server_ownerAvatar__custom">
       <img src="${s.user?.avatar || ""}" alt="Owner Avatar">
       <a href="#">${s.user?.username || "Unknown"}</a>
     </div>
+    <div class="Server_createdAt__custom">Created at ${createdAtFormatted}</div>
+    <div class="Server_tags__custom">${tagsHTML}</div>
   `;
 
   // INFO CARD
@@ -90,26 +149,26 @@
         <p>Server Info</p>
       </div>
       <div class="Card_content__D0RDr">
-        <p><b>Address:</b> ${s.address || "N/A"}</p>
+        <p><b>Address:</b> ${s.address || "Unknown"}</p>
         <p><b>Votes:</b> ${s.votes || 0}</p>
-        <p><b>Discord:</b> ${s.discord ? `<a href="https://discord.gg/${s.discord}" target="_blank">Join Discord</a>` : "N/A"}</p>
       </div>
     </div>
   `;
 
-  // DESCRIPTION CARD with Markdown rendering
+  // DESCRIPTION CARD
   document.getElementById("description").innerHTML = `
     <div class="Card_card__dlNs0">
       <div class="Card_header__ZfKiq">
         <p>Description</p>
       </div>
       <div class="Card_content__D0RDr">
-        ${marked.parse(s.description || "No description available.")}
+        ${s.description ? marked(s.description) : "<p>No description available.</p>"}
       </div>
     </div>
   `;
 })();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 </body>
 </html>
