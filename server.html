@@ -30,7 +30,7 @@
     margin-right: 10px;
   }
   .Server_ownerAvatar__custom a {
-    color: orange;
+    color: #FF8C00; /* darker vibrant orange */
     font-weight: bold;
     vertical-align: middle;
     font-size: 1.1em;
@@ -54,7 +54,7 @@
     background-color: black;
   }
   .Server_tags__custom span.normal {
-    color: green;
+    color: #00FF00; /* more vibrant green */
   }
   .Server_tags__custom span.PVP,
   .Server_tags__custom span.PVE {
@@ -68,7 +68,7 @@
     font-size: 0.95em;
   }
   .Server_infoBelowTags__custom .address {
-    color: orange;
+    color: #FF8C00; /* darker vibrant orange */
     cursor: pointer;
   }
   .Server_infoBelowTags__custom a {
@@ -163,7 +163,7 @@
     <div class="Card_card__dlNs0 Server_infoBelowTags__custom">
       <div class="Card_header__ZfKiq"><p>Server Info</p></div>
       <div class="Card_content__D0RDr">
-        <p><b>Address:</b> <span class="address" onclick="navigator.clipboard.writeText('${s.address || ''}'); alert('Copied!');">${s.address || "Unknown"}</span></p>
+        <p><b>Address:</b> <span class="address" onclick="navigator.clipboard.writeText('${s.address || ''}');">${s.address || "Unknown"}</span></p>
         ${s.discord ? `<p><b>Discord:</b> <a href="https://discord.gg/${s.discord}" target="_blank">Join Discord</a></p>` : ''}
         <p><b>Votes:</b> ${s.votes || 0}</p>
       </div>
@@ -171,13 +171,23 @@
   `;
 
   // DESCRIPTION CARD
+  // Use try/catch to ensure marked does not fail silently
+  let descriptionHTML = "<p>No description available.</p>";
+  try {
+    if (s.description) {
+      descriptionHTML = marked.parse(s.description);
+    }
+  } catch (err) {
+    console.error("Markdown parsing failed:", err);
+  }
+
   document.getElementById("description").innerHTML = `
     <div class="Card_card__dlNs0">
       <div class="Card_header__ZfKiq">
         <p>Description</p>
       </div>
       <div class="Card_content__D0RDr">
-        ${s.description ? marked(s.description) : "<p>No description available.</p>"}
+        ${descriptionHTML}
       </div>
     </div>
   `;
