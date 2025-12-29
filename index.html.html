@@ -73,7 +73,7 @@ function getApiAddress(addr) {
 
 async function init() {
   try {
-    const res = await fetch('./serverlistjson.txt');
+    const res = await fetch(`/api/status/${encodeURIComponent(apiAddr)}`);
     const text = await res.text();
     const chunks = text.split(/}\s*{/).map((str,i,arr) => {
       if (i===0) return str+"}";
