@@ -20,6 +20,7 @@
   .Server_header__custom {
     text-align: center;
     margin-bottom: 20px;
+    padding-top: 15px; /* more spacing from top */
   }
   .Server_ownerAvatar__custom img {
     width: 50px;
@@ -50,12 +51,14 @@
     border-radius: 9999px;
     font-size: 0.85em;
     font-weight: bold;
-    background-color: green;
-    color: white;
+    background-color: black;
+  }
+  .Server_tags__custom span.normal {
+    color: green;
   }
   .Server_tags__custom span.PVP,
   .Server_tags__custom span.PVE {
-    background-color: black;
+    color: red;
   }
   .Server_header__custom h1 {
     margin-bottom: 10px;
@@ -128,7 +131,7 @@
     : "Unknown";
 
   const tagsHTML = (s.tags || []).map(tag => {
-    const cls = (tag === "PVP" || tag === "PVE") ? tag : "";
+    const cls = (tag === "PVP" || tag === "PVE") ? tag : "normal";
     return `<span class="${cls}">${tag}</span>`;
   }).join('');
 
@@ -151,6 +154,9 @@
       <div class="Card_content__D0RDr">
         <p><b>Address:</b> ${s.address || "Unknown"}</p>
         <p><b>Votes:</b> ${s.votes || 0}</p>
+        ${s.discord ? `<p><b>Discord:</b> <a href="https://discord.gg/${s.discord}">Join Discord</a></p>` : ''}
+        ${s.online !== undefined ? `<p><b>Online:</b> ${s.online ? "Yes" : "No"}</p>` : ''}
+        ${s.votifier !== undefined ? `<p><b>Votifier:</b> ${s.votifier ? "Enabled" : "Disabled"}</p>` : ''}
       </div>
     </div>
   `;
