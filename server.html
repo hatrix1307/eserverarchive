@@ -68,18 +68,15 @@
   .Server_cardsRow__ulRw7 {
     margin-bottom: 15px;
   }
-  .Card_card__dlNs0 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
   .Server_infoSplit__custom {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    gap: 15px;
+    margin: 0 10px;
+    flex-wrap: wrap;
   }
   .Server_infoLeft__custom, .Server_infoRight__custom {
     flex: 1;
+    min-width: 250px;
   }
   .Server_infoLeft__custom h4, .Server_infoRight__custom h4 {
     margin: 5px 0;
@@ -92,6 +89,12 @@
   .Server_infoLeft__custom a {
     color: #00aaff;
     text-decoration: underline;
+  }
+  .copiedMessage {
+    font-size: 0.8em;
+    color: #FF4500;
+    margin-top: 3px;
+    display: none;
   }
 
   /* DESCRIPTION CARD */
@@ -124,7 +127,7 @@
       <div class="Server_header__custom" id="header"></div>
 
       <!-- INFO BELOW TAGS -->
-      <div class="Server_cardsRow__ulRw7" id="infoBelowTags"></div>
+      <div class="Server_cardsRow__ulRw7 Server_infoSplit__custom" id="infoBelowTags"></div>
 
       <!-- DESCRIPTION CARD -->
       <div class="Server_cardsRow__ulRw7" id="description"></div>
@@ -184,18 +187,26 @@
 
   // INFO BELOW TAGS (split box)
   document.getElementById("infoBelowTags").innerHTML = `
-    <div class="Card_card__dlNs0 Server_infoSplit__custom">
-      <div class="Server_infoLeft__custom">
-        <h4>Address</h4>
-        <p class="address" onclick="navigator.clipboard.writeText('${s.address || ''}');">${s.address || "Unknown"}</p>
-        ${s.discord ? `<h4>Discord Server</h4><p><a href="https://discord.gg/${s.discord}" target="_blank">Join Discord</a></p>` : ''}
-      </div>
-      <div class="Server_infoRight__custom">
-        <h4>Votes</h4>
-        <p>${s.votes || 0}</p>
-      </div>
+    <div class="Server_infoLeft__custom Card_card__dlNs0">
+      <h4>Address</h4>
+      <p class="address" id="serverAddress">${s.address || ''}</p>
+      <div class="copiedMessage" id="copiedMsg">Copied!</div>
+      ${s.discord ? `<h4>Discord Server</h4><p><a href="https://discord.gg/${s.discord}" target="_blank">Join Discord</a></p>` : ''}
+    </div>
+    <div class="Server_infoRight__custom Card_card__dlNs0">
+      <h4>Votes</h4>
+      <p>${s.votes || 0}</p>
     </div>
   `;
+
+  // Click-to-copy with message
+  const addressEl = document.getElementById("serverAddress");
+  const copiedMsg = document.getElementById("copiedMsg");
+  addressEl.addEventListener("click", () => {
+    navigator.clipboard.writeText(addressEl.textContent);
+    copiedMsg.style.display = "inline";
+    setTimeout(() => copiedMsg.style.display = "none", 1500);
+  });
 
   // DESCRIPTION CARD
   let descriptionHTML = "<p>No description available.</p>";
