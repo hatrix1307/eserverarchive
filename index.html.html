@@ -101,14 +101,16 @@ function changePage(dir) {
   }
 }
 
-// Helper to determine tag color
+// Helper to determine tag color (Now Case Insensitive)
 function getTagColor(tagName) {
-  const t = tagName.trim(); // ensure no extra spaces
-  const redTags = ["PVP", "PVE", "Factions", "Prison"];
-  const yellowTags = ["Minigames"];
+  // Convert tag to lowercase for comparison
+  const t = tagName.trim().toLowerCase();
+  
+  const redTags = ["pvp", "pve", "factions", "prison"];
   
   if (redTags.includes(t)) return "#ff5252"; // Red
-  if (yellowTags.includes(t)) return "#ffeb3b"; // Yellow
+  if (t === "minigames") return "#ffeb3b";   // Yellow
+  
   return "#46e393"; // Default Green
 }
 
