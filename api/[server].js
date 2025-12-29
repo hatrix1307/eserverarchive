@@ -1,11 +1,11 @@
 export default async function handler(req, res) {
-  const { server } = req.query; // gets the server from the URL
+  const { server } = req.query;
+
   try {
-    const response = await fetch(`https://topeaglerservers.com/api/status/${encodeURIComponent(server)}`);
-    const data = await response.json();
-    res.setHeader('Access-Control-Allow-Origin', '*'); // optional if frontend is same domain
+    const r = await fetch(`https://topeaglerservers.com/api/status/${server}`);
+    const data = await r.json();
     res.status(200).json(data);
-  } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch server status' });
+  } catch (e) {
+    res.status(500).json({ success: false, error: e.message });
   }
 }
