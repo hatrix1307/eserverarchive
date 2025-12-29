@@ -10,12 +10,10 @@
 <link rel="icon" type="image/png" href="/eagler.png">
 <link rel="shortcut icon" type="image/png" href="/eagler.png">
 
-<!-- Font Preloads -->
 <link rel="preload" href="/_next/static/media/eafabf029ad39a43-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" href="/_next/static/media/8888a3826f4a3af4-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" href="/_next/static/media/0484562807a97172-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
-<!-- All Original CSS -->
 <link rel="stylesheet" href="/_next/static/css/7b2b4dd7ecbe86d1.css">
 <link rel="stylesheet" href="/_next/static/css/76289acd00d625c1.css">
 <link rel="stylesheet" href="/_next/static/css/4d58c923eeda897e.css">
@@ -29,7 +27,6 @@
     <main class="__className_cc80f9">
       <main class="Home_appContainer__0oIwU" style="opacity: 1;">
 
-        <!-- Navbar -->
         <nav class="Navbar_root__hs6un">
           <div class="Navbar_logo__eioWt" style="cursor:pointer" onclick="location.href='/'">
             <img src="/eagler.png" alt="Logo">
@@ -116,27 +113,27 @@ function renderPage(idx) {
     card.dataset.apiAddress = apiAddr;
     card.style.cursor = "pointer";
 
+    // UPDATED LAYOUT HERE
     card.innerHTML = `
-      <h2 style="overflow:hidden;">
+      <h2 style="overflow:hidden; margin-bottom: 2px;">
         ${server.name} <div class="StatusIndicator_status__pidlp"></div>
       </h2>
+      
+      <div style="font-size: 0.9rem; color: #aaa; margin-bottom: 10px;">
+         Votes: <span style="color:#46e393; font-weight:bold;">${server.votes}</span>
+      </div>
+
       <div class="Server_tagListContainer__tAO2z">
         ${server.tags.map(tag => `<div class="Badge_inlineBadge__h8Mo1">${tag}</div>`).join('')}
       </div>
-      <div style="display:flex; justify-content: space-between; flex-wrap: wrap; margin-top:8px;">
+
+      <div style="margin-top:8px;">
         <div>
           <h3 style="color:#fff; margin-bottom:4px;">Address</h3>
           <span style="color:#FF8A65; font-weight:600;">${displayIP}</span>
         </div>
-        <div>
-          <h3 style="color:#fff; margin-bottom:4px;">Discord</h3>
-          <a href="${server.discord ? `https://discord.gg/${server.discord}`:'#'}" target="_blank" style="color:#FF8A65;">Join Discord</a>
-        </div>
-        <div>
-          <h3 style="color:#fff; margin-bottom:4px;">Votes</h3>
-          <span style="color:#46e393;">${server.votes}</span>
-        </div>
       </div>
+      
       <div class="status-meta" style="margin-top:4px; font-size:0.9em; color:#ccc;"></div>
     `;
 
