@@ -19,8 +19,8 @@
   /* HEADER CUSTOM STYLES */
   .Server_header__custom {
     text-align: center;
-    margin-bottom: 20px;
-    padding-top: 15px;
+    margin-bottom: 25px;
+    padding-top: 25px;
   }
   .Server_ownerAvatar__custom img {
     width: 50px;
@@ -30,7 +30,7 @@
     margin-right: 10px;
   }
   .Server_ownerAvatar__custom a {
-    color: #FF8C00; /* darker vibrant orange */
+    color: #FF4500; /* orange-red */
     font-weight: bold;
     vertical-align: middle;
     font-size: 1.1em;
@@ -54,7 +54,7 @@
     background-color: black;
   }
   .Server_tags__custom span.normal {
-    color: #00FF00; /* more vibrant green */
+    color: #00FF00; /* vibrant green */
   }
   .Server_tags__custom span.PVP,
   .Server_tags__custom span.PVE {
@@ -63,17 +63,40 @@
   .Server_header__custom h1 {
     margin-bottom: 10px;
   }
-  .Server_infoBelowTags__custom p {
-    margin: 5px 0;
-    font-size: 0.95em;
+
+  /* SERVER INFO SPLIT BOX */
+  .Server_cardsRow__ulRw7 {
+    margin-bottom: 15px;
   }
-  .Server_infoBelowTags__custom .address {
-    color: #FF8C00; /* darker vibrant orange */
+  .Card_card__dlNs0 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .Server_infoSplit__custom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .Server_infoLeft__custom, .Server_infoRight__custom {
+    flex: 1;
+  }
+  .Server_infoLeft__custom h4, .Server_infoRight__custom h4 {
+    margin: 5px 0;
+    color: #FF4500; /* orange-red */
+  }
+  .Server_infoLeft__custom .address {
+    font-weight: bold;
     cursor: pointer;
   }
-  .Server_infoBelowTags__custom a {
+  .Server_infoLeft__custom a {
     color: #00aaff;
     text-decoration: underline;
+  }
+
+  /* DESCRIPTION CARD */
+  .Card_content__D0RDr p, .Card_content__D0RDr li {
+    margin-bottom: 8px;
   }
 </style>
 </head>
@@ -102,6 +125,7 @@
 
       <!-- INFO BELOW TAGS -->
       <div class="Server_cardsRow__ulRw7" id="infoBelowTags"></div>
+
       <!-- DESCRIPTION CARD -->
       <div class="Server_cardsRow__ulRw7" id="description"></div>
     </div>
@@ -158,20 +182,22 @@
     <div class="Server_tags__custom">${tagsHTML}</div>
   `;
 
-  // INFO BELOW TAGS
+  // INFO BELOW TAGS (split box)
   document.getElementById("infoBelowTags").innerHTML = `
-    <div class="Card_card__dlNs0 Server_infoBelowTags__custom">
-      <div class="Card_header__ZfKiq"><p>Server Info</p></div>
-      <div class="Card_content__D0RDr">
-        <p><b>Address:</b> <span class="address" onclick="navigator.clipboard.writeText('${s.address || ''}');">${s.address || "Unknown"}</span></p>
-        ${s.discord ? `<p><b>Discord:</b> <a href="https://discord.gg/${s.discord}" target="_blank">Join Discord</a></p>` : ''}
-        <p><b>Votes:</b> ${s.votes || 0}</p>
+    <div class="Card_card__dlNs0 Server_infoSplit__custom">
+      <div class="Server_infoLeft__custom">
+        <h4>Address</h4>
+        <p class="address" onclick="navigator.clipboard.writeText('${s.address || ''}');">${s.address || "Unknown"}</p>
+        ${s.discord ? `<h4>Discord Server</h4><p><a href="https://discord.gg/${s.discord}" target="_blank">Join Discord</a></p>` : ''}
+      </div>
+      <div class="Server_infoRight__custom">
+        <h4>Votes</h4>
+        <p>${s.votes || 0}</p>
       </div>
     </div>
   `;
 
   // DESCRIPTION CARD
-  // Use try/catch to ensure marked does not fail silently
   let descriptionHTML = "<p>No description available.</p>";
   try {
     if (s.description) {
