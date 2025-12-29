@@ -101,6 +101,17 @@ function changePage(dir) {
   }
 }
 
+// Helper to determine tag color
+function getTagColor(tagName) {
+  const t = tagName.trim(); // ensure no extra spaces
+  const redTags = ["PVP", "PVE", "Factions", "Prison"];
+  const yellowTags = ["Minigames"];
+  
+  if (redTags.includes(t)) return "#ff5252"; // Red
+  if (yellowTags.includes(t)) return "#ffeb3b"; // Yellow
+  return "#46e393"; // Default Green
+}
+
 function renderPage(idx) {
   const container = document.getElementById('dynamic-server-container');
   container.innerHTML = "";
@@ -113,28 +124,30 @@ function renderPage(idx) {
     card.dataset.apiAddress = apiAddr;
     card.style.cursor = "pointer";
 
-    // UPDATED LAYOUT HERE
     card.innerHTML = `
-      <h2 style="overflow:hidden; margin-bottom: 2px;">
+      <h2 style="overflow:hidden; margin-bottom: 4px; font-size: 1.6rem;">
         ${server.name} <div class="StatusIndicator_status__pidlp"></div>
       </h2>
       
-      <div style="font-size: 0.9rem; color: #aaa; margin-bottom: 10px;">
+      <div style="font-size: 1.1rem; color: #aaa; margin-bottom: 12px;">
          Votes: <span style="color:#46e393; font-weight:bold;">${server.votes}</span>
       </div>
 
       <div class="Server_tagListContainer__tAO2z">
-        ${server.tags.map(tag => `<div class="Badge_inlineBadge__h8Mo1">${tag}</div>`).join('')}
+        ${server.tags.map(tag => {
+            const color = getTagColor(tag);
+            return `<div class="Badge_inlineBadge__h8Mo1" style="color:${color}; font-size: 1rem; border-color:${color}40;">${tag}</div>`;
+        }).join('')}
       </div>
 
-      <div style="margin-top:8px;">
+      <div style="margin-top:10px;">
         <div>
-          <h3 style="color:#fff; margin-bottom:4px;">Address</h3>
-          <span style="color:#FF8A65; font-weight:600;">${displayIP}</span>
+          <h3 style="color:#fff; margin-bottom:4px; font-size: 1.2rem;">Address</h3>
+          <span style="color:#FF8A65; font-weight:600; font-size: 1.1rem;">${displayIP}</span>
         </div>
       </div>
       
-      <div class="status-meta" style="margin-top:4px; font-size:0.9em; color:#ccc;"></div>
+      <div class="status-meta" style="margin-top:6px; font-size:1rem; color:#ccc;"></div>
     `;
 
     card.addEventListener('click', () => {
