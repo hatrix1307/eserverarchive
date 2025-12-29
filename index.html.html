@@ -31,7 +31,7 @@
 
         <!-- Navbar -->
         <nav class="Navbar_root__hs6un">
-          <div class="Navbar_logo__eioWt" style="cursor:pointer;" onclick="window.location='/'">
+          <div class="Navbar_logo__eioWt">
             <img src="/eagler.png" alt="Logo">
             <h1>Eagler Server List</h1>
           </div>
@@ -89,7 +89,9 @@ async function init() {
     if (allPages.length>0) renderPage(0);
     document.getElementById('btn-prev').addEventListener('click', ()=>changePage(-1));
     document.getElementById('btn-next').addEventListener('click', ()=>changePage(1));
-    setInterval(refreshCurrentPageStatus, 20000);
+
+    // Refresh every 30 seconds
+    setInterval(refreshCurrentPageStatus, 30000);
   } catch (e) {
     console.error("List load failed:", e);
   }
@@ -120,26 +122,17 @@ function renderPage(idx) {
       <h2 style="overflow:hidden;">
         ${server.name} <div class="StatusIndicator_status__pidlp"></div>
       </h2>
-      <div style="display:flex; justify-content:space-between; margin:5px 0;">
-        <div style="flex:1; margin-right:10px;">
-          <h3 style="color:white; font-size:1.1em;">Address</h3>
-          <span style="color:#FF8A65; font-weight:600; font-size:1em; cursor:pointer;" class="server-address">${displayIP}</span>
-        </div>
-        <div style="flex:1;">
-          <h3 style="color:white; font-size:1.1em;">Discord</h3>
-          <span style="color:#FF8A65; font-weight:600; font-size:1em;">${server.discord ? `<a href="https://discord.gg/${server.discord}" target="_blank">Join Discord</a>` : "N/A"}</span>
-        </div>
-        <div style="flex:0; margin-left:10px;">
-          <h3 style="color:white; font-size:1.1em;">Votes</h3>
-          <span style="color:rgb(70,227,147); font-weight:600; font-size:1em;">${server.votes}</span>
-        </div>
-      </div>
+      <h3 style="color: rgb(170,170,170);">
+        Votes: <span style="color: rgb(70,227,147);">${server.votes}</span>
+      </h3>
       <div class="Server_tagListContainer__tAO2z">
-        ${server.tags.map(tag => `<div class="Badge_inlineBadge__h8Mo1" style="color:${["PVP","PVE"].includes(tag) ? "red" : "lime"}">${tag}</div>`).join('')}
+        ${server.tags.map(tag => `<div class="Badge_inlineBadge__h8Mo1">${tag}</div>`).join('')}
       </div>
-      <div class="status-meta" style="margin-top:5px;"></div>
+      <h3>IP: <span style="font-weight:600;">${displayIP}</span></h3>
+      <div class="status-meta"></div>
     `;
 
+    // Make the entire card clickable
     card.addEventListener('click', () => {
       window.location.href = `/server.html?id=${server.uuid}`;
     });
@@ -157,16 +150,14 @@ async function refreshCurrentPageStatus() {
     const meta = card.querySelector('.status-meta');
 
     try {
-      const res = await fetch(`https://topeaglerservers.com/api/status/${encodeURIComponent(apiAddr)}`);
+      const res = await fetch(`/api/status/${encodeURIComponent(apiAddr)}`); // Use your Vercel CORS proxy
       const data = await res.json();  
-      if (data && data.success && data.server) {
-        dot.style.backgroundColor = data.server.online ? "#4caf50" : "#f44336";
-        meta.textContent = data.server.online
-          ? `Players: ${data.server.players.online}/${data.server.players.max}`
-          : "Offline";
+      if (data && data.success && data.server && data.server.online) {
+        dot.style.backgroundColor = "#4caf50";
+        meta.textContent = `Players: ${data.server.players.online}/${data.server.players.max}`;
       } else {
-        dot.style.backgroundColor = "#444";
-        meta.textContent = "Status Error";
+        dot.style.backgroundColor = "#f44336";
+        meta.textContent = "Offline";
       }
     } catch (error) {
       dot.style.backgroundColor = "#444";
