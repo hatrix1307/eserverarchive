@@ -31,7 +31,7 @@
 
         <!-- Navbar -->
         <nav class="Navbar_root__hs6un">
-          <div class="Navbar_logo__eioWt">
+          <div class="Navbar_logo__eioWt" style="cursor:pointer" onclick="location.href='/'">
             <img src="/eagler.png" alt="Logo">
             <h1>Eagler Server List</h1>
           </div>
@@ -73,7 +73,7 @@ function getApiAddress(addr) {
 
 async function init() {
   try {
-    const res = await fetch(`/api/status/${encodeURIComponent(apiAddr)}`);
+    const res = await fetch('./serverlistjson.txt');
     const text = await res.text();
     const chunks = text.split(/}\s*{/).map((str,i,arr) => {
       if (i===0) return str+"}";
@@ -89,9 +89,7 @@ async function init() {
     if (allPages.length>0) renderPage(0);
     document.getElementById('btn-prev').addEventListener('click', ()=>changePage(-1));
     document.getElementById('btn-next').addEventListener('click', ()=>changePage(1));
-
-    // Refresh every 30 seconds
-    setInterval(refreshCurrentPageStatus, 30000);
+    setInterval(refreshCurrentPageStatus, 30000); // refresh every 30s
   } catch (e) {
     console.error("List load failed:", e);
   }
@@ -111,28 +109,37 @@ function renderPage(idx) {
   container.innerHTML = "";
   allPages[idx].forEach(server => {
     const displayIP = getDisplayAddress(server.address);
-    const apiIP = getApiAddress(server.address);
+    const apiAddr = getApiAddress(server.address);
 
     const card = document.createElement("div");
     card.className = "Server_box__TMsXv";
-    card.dataset.apiAddress = apiIP;
+    card.dataset.apiAddress = apiAddr;
     card.style.cursor = "pointer";
 
     card.innerHTML = `
       <h2 style="overflow:hidden;">
         ${server.name} <div class="StatusIndicator_status__pidlp"></div>
       </h2>
-      <h3 style="color: rgb(170,170,170);">
-        Votes: <span style="color: rgb(70,227,147);">${server.votes}</span>
-      </h3>
       <div class="Server_tagListContainer__tAO2z">
         ${server.tags.map(tag => `<div class="Badge_inlineBadge__h8Mo1">${tag}</div>`).join('')}
       </div>
-      <h3>IP: <span style="font-weight:600;">${displayIP}</span></h3>
-      <div class="status-meta"></div>
+      <div style="display:flex; justify-content: space-between; flex-wrap: wrap; margin-top:8px;">
+        <div>
+          <h3 style="color:#fff; margin-bottom:4px;">Address</h3>
+          <span style="color:#FF8A65; font-weight:600;">${displayIP}</span>
+        </div>
+        <div>
+          <h3 style="color:#fff; margin-bottom:4px;">Discord</h3>
+          <a href="${server.discord ? `https://discord.gg/${server.discord}`:'#'}" target="_blank" style="color:#FF8A65;">Join Discord</a>
+        </div>
+        <div>
+          <h3 style="color:#fff; margin-bottom:4px;">Votes</h3>
+          <span style="color:#46e393;">${server.votes}</span>
+        </div>
+      </div>
+      <div class="status-meta" style="margin-top:4px; font-size:0.9em; color:#ccc;"></div>
     `;
 
-    // Make the entire card clickable
     card.addEventListener('click', () => {
       window.location.href = `/server.html?id=${server.uuid}`;
     });
@@ -150,7 +157,7 @@ async function refreshCurrentPageStatus() {
     const meta = card.querySelector('.status-meta');
 
     try {
-      const res = await fetch(`/api/status/${encodeURIComponent(apiAddr)}`); // Use your Vercel CORS proxy
+      const res = await fetch(`/api/status/${encodeURIComponent(apiAddr)}`);
       const data = await res.json();  
       if (data && data.success && data.server && data.server.online) {
         dot.style.backgroundColor = "#4caf50";
