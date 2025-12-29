@@ -1,130 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8"/>
 <title>Eagler Server List</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<meta name="twitter:card" content="summary"/>
+<meta property="theme-color" content="#FB8464"/>
+<link rel="icon" type="image/png" href="/eagler.png">
+<link rel="shortcut icon" type="image/png" href="/eagler.png">
 
-  <link rel="icon" type="image/png" href="/eagler.png">
-  <link rel="shortcut icon" type="image/png" href="/eagler.png">
-
-
-<!-- CSS ORDER (IMPORTANT) -->
-<link rel="stylesheet" href="/_next/static/css/2be4c86ae301c45c.css">
-<link rel="stylesheet" href="/_next/static/css/4d58c923eeda897e.css">
+<!-- All Original CSS -->
 <link rel="stylesheet" href="/_next/static/css/7b2b4dd7ecbe86d1.css">
-<link rel="stylesheet" href="/_next/static/css/801a346d713e02dc.css">
-<link rel="stylesheet" href="/_next/static/css/77845debe7d9c992.css">
+<link rel="stylesheet" href="/_next/static/css/76289acd00d625c1.css">
+<link rel="stylesheet" href="/_next/static/css/4d58c923eeda897e.css">
 <link rel="stylesheet" href="/_next/static/css/dc7d422723254cb5.css">
-
-<style>
-  /* HEADER CUSTOM STYLES */
-  .Server_header__custom {
-    text-align: center;
-    margin-bottom: 25px;
-    padding-top: 25px;
-  }
-  .Server_ownerAvatar__custom img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    vertical-align: middle;
-    margin-right: 10px;
-  }
-  .Server_ownerAvatar__custom a {
-    color: #FF4500; /* orange-red */
-    font-weight: bold;
-    vertical-align: middle;
-    font-size: 1.2em;
-    text-decoration: none;
-  }
-  .Server_createdAt__custom {
-    color: gray;
-    font-size: 0.9em;
-    margin-top: 5px;
-  }
-  .Server_tags__custom {
-    margin-top: 10px;
-  }
-  .Server_tags__custom span {
-    display: inline-block;
-    padding: 4px 10px;
-    margin: 3px;
-    border-radius: 9999px;
-    font-size: 0.85em;
-    font-weight: bold;
-    background-color: black;
-  }
-  .Server_tags__custom span.normal {
-    color: #00FF00; /* vibrant green */
-  }
-  .Server_tags__custom span.PVP,
-  .Server_tags__custom span.PVE {
-    color: red;
-  }
-  .Server_header__custom h1 {
-    margin-bottom: 10px;
-  }
-
-  /* SERVER INFO SPLIT BOX */
-  .Server_cardsRow__ulRw7 {
-    margin-bottom: 15px;
-  }
-  .Server_infoSplit__custom {
-    display: flex;
-    gap: 15px;
-    margin: 0 10px;
-    flex-wrap: wrap;
-  }
-  .Server_infoLeft__custom, .Server_infoRight__custom {
-    flex: 1;
-    min-width: 250px;
-  }
-
-  /* Left box (Address + Discord side by side) */
-  .Server_infoLeft__custom .row {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  .Server_infoLeft__custom .row div {
-    flex: 1;
-  }
-
-  .Server_infoLeft__custom h4, .Server_infoRight__custom h4 {
-    margin: 10px 0 8px 0;
-    color: white;
-    font-size: 1.2em;
-  }
-  .Server_infoLeft__custom .address, 
-  .Server_infoLeft__custom a, 
-  .Server_infoRight__custom p {
-    font-size: 1.1em;
-  }
-  .Server_infoLeft__custom .address {
-    font-weight: bold;
-    color: #FF8A65;
-    cursor: pointer;
-  }
-  .Server_infoLeft__custom a {
-    color: #00aaff;
-    text-decoration: underline;
-  }
-  .copiedMessage {
-    font-size: 0.8em;
-    color: #FF8A65;
-    margin-top: 3px;
-    display: none;
-  }
-
-  /* Description card */
-  #description {
-    margin: 20px 10px 20px 10px; /* added vertical spacing */
-  }
-  .Card_content__D0RDr p, .Card_content__D0RDr li {
-    margin-bottom: 8px;
-  }
-</style>
+<link rel="stylesheet" href="/_next/static/css/801a346d713e02de.css">
+<link rel="stylesheet" href="/_next/static/css/2be4c86ae301c45c.css">
 </head>
 
 <body>
@@ -132,30 +24,22 @@
   <main class="__className_cc80f9">
 
     <!-- NAVBAR -->
-<nav class="Navbar_root__hs6un">
-  <div class="Navbar_logo__eioWt">
-    <a href="/" style="display:flex; align-items:center; text-decoration:none; color:inherit;">
-      <img src="/eagler.png" alt="Logo">
-      <h1> Eagler Server List</h1>
-    </a>
-  </div>
-  <div class="Navbar_spacer__t53No"></div>
-  <ul class="Navbar_navElements__a5nON">
-    <li><a href="/">Home</a></li>
-    <li><a href="/news">Site News</a></li>
-  </ul>
-</nav>
-
+    <nav class="Navbar_root__hs6un">
+      <div class="Navbar_logo__eioWt">
+        <a href="/"><img src="/eagler.png" alt="Logo"></a>
+        <h1>Eagler Server List</h1>
+      </div>
+      <div class="Navbar_spacer__t53No"></div>
+      <ul class="Navbar_navElements__a5nON">
+        <li><a href="/">Home</a></li>
+        <li><a href="/news">Site News</a></li>
+      </ul>
+    </nav>
 
     <!-- PAGE -->
     <div class="Server_root__SeWV0">
-      <!-- HEADER -->
-      <div class="Server_header__custom" id="header"></div>
-
-      <!-- INFO BELOW TAGS -->
-      <div class="Server_cardsRow__ulRw7 Server_infoSplit__custom" id="infoBelowTags"></div>
-
-      <!-- DESCRIPTION CARD -->
+      <div class="Server_flexCenter__mnne6" id="header"></div>
+      <div class="Server_cardsRow__ulRw7" id="info"></div>
       <div class="Server_cardsRow__ulRw7" id="description"></div>
     </div>
 
@@ -173,7 +57,6 @@
   </main>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
 (async () => {
   const id = new URLSearchParams(location.search).get("id");
@@ -191,76 +74,87 @@
   document.title = `Eagler Server List | ${s.name}`;
 
   // HEADER
-  const createdAt = s.createdAt ? new Date(s.createdAt) : null;
-  const createdAtFormatted = createdAt
-    ? createdAt.toLocaleString('en-US', { day: '2-digit', month: 'short', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true })
-    : "Unknown";
-
-  const tagsHTML = (s.tags || []).map(tag => {
-    const cls = (tag === "PVP" || tag === "PVE") ? tag : "normal";
-    return `<span class="${cls}">${tag}</span>`;
-  }).join('');
-
   document.getElementById("header").innerHTML = `
-    <h1>${s.name}</h1>
-    <div class="Server_ownerAvatar__custom">
-      <img src="${s.user?.avatar || ""}" alt="Owner Avatar">
-      <a href="#">${s.user?.username || "Unknown"}</a>
+    <h1 style="margin-top:10px;">${s.name}</h1>
+    <div class="Server_ownerAvatar__k3zpv" style="text-align:center;">
+      <img src="${s.user?.avatar || ""}" alt="Owner Avatar" style="width:50px;height:50px;border-radius:50%;margin-right:10px;">
+      <span style="color:orange;font-weight:bold;">${s.user?.username || "Unknown"}</span>
     </div>
-    <div class="Server_createdAt__custom">Created at ${createdAtFormatted}</div>
-    <div class="Server_tags__custom">${tagsHTML}</div>
+    <h3 style="color: gray;text-align:center;">Created at: ${new Date(s.createdAt).toLocaleString('en-GB', { day:'2-digit', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit' })}</h3>
+    <div style="text-align:center;margin-top:5px;">
+      ${s.tags.map(tag => `<span style="display:inline-block;background:black;color:${tag==='PVP'||tag==='PVE'?'red':'#4caf50'};padding:2px 8px;margin:2px;border-radius:12px;font-size:0.9em;">${tag}</span>`).join('')}
+    </div>
   `;
 
-  // INFO BELOW TAGS (split box)
-  document.getElementById("infoBelowTags").innerHTML = `
-    <div class="Server_infoLeft__custom Card_card__dlNs0">
-      <div class="row">
+  // INFO CARDS
+  document.getElementById("info").innerHTML = `
+    <div class="Card_card__dlNs0" style="margin-right:10px;display:inline-block;width:48%;vertical-align:top;">
+      <div class="Card_header__ZfKiq"><p>Server Info</p></div>
+      <div class="Card_content__D0RDr" style="display:flex;justify-content:space-between;">
         <div>
-          <h4>Address</h4>
-          <p class="address" id="serverAddress">${s.address || ''}</p>
-          <div class="copiedMessage" id="copiedMsg">Copied!</div>
+          <h3 style="color:white;font-size:1.1em;">Address</h3>
+          <p id="server-address" style="color:#FF8A65;font-weight:bold;cursor:pointer;">${s.address || "N/A"}</p>
         </div>
-        ${s.discord ? `<div>
-          <h4>Discord Server</h4>
-          <p><a href="https://discord.gg/${s.discord}" target="_blank">Join Discord</a></p>
-        </div>` : ''}
+        <div>
+          <h3 style="color:white;font-size:1.1em;">Discord Server</h3>
+          <p><a href="https://discord.gg/${s.discord}" target="_blank" style="color:#FF8A65;">Join Discord</a></p>
+        </div>
       </div>
     </div>
-    <div class="Server_infoRight__custom Card_card__dlNs0">
-      <h4>Votes</h4>
-      <p>${s.votes || 0}</p>
+    <div class="Card_card__dlNs0" style="display:inline-block;width:48%;vertical-align:top;">
+      <div class="Card_header__ZfKiq"><p>Votes</p></div>
+      <div class="Card_content__D0RDr">
+        <h3 style="color:#4caf50;font-weight:bold;font-size:1.2em;">${s.votes || 0}</h3>
+      </div>
     </div>
   `;
-
-  // Click-to-copy with message
-  const addressEl = document.getElementById("serverAddress");
-  const copiedMsg = document.getElementById("copiedMsg");
-  addressEl.addEventListener("click", () => {
-    navigator.clipboard.writeText(addressEl.textContent);
-    copiedMsg.style.display = "inline";
-    setTimeout(() => copiedMsg.style.display = "none", 1500);
-  });
 
   // DESCRIPTION CARD
-  let descriptionHTML = "<p>No description available.</p>";
-  try {
-    if (s.description) {
-      descriptionHTML = marked.parse(s.description);
-    }
-  } catch (err) {
-    console.error("Markdown parsing failed:", err);
-  }
-
   document.getElementById("description").innerHTML = `
-    <div class="Card_card__dlNs0">
-      <div class="Card_header__ZfKiq">
-        <p>Description</p>
-      </div>
+    <div class="Card_card__dlNs0" style="margin-top:15px;">
+      <div class="Card_header__ZfKiq"><p>Description</p></div>
       <div class="Card_content__D0RDr">
-        ${descriptionHTML}
+        ${s.description || "<p>No description available.</p>"}
+        <p id="server-status" style="margin-top:10px;font-weight:bold;">Loading server status...</p>
       </div>
     </div>
   `;
+
+  // Copy address click
+  const addrEl = document.getElementById("server-address");
+  addrEl.addEventListener("click", () => {
+    navigator.clipboard.writeText(addrEl.textContent);
+    let copied = document.createElement("span");
+    copied.textContent = "Copied!";
+    copied.style.color = "#FF8A65";
+    copied.style.marginLeft = "10px";
+    addrEl.parentNode.appendChild(copied);
+    setTimeout(() => copied.remove(), 2000);
+  });
+
+  // Fetch server status
+  async function updateStatus() {
+    try {
+      const apiAddr = s.address.replace(/^wss:\/\//, "");
+      const statusRes = await fetch(`/api/status/${encodeURIComponent(apiAddr)}`);
+      const statusJson = await statusRes.json();
+      if (statusJson.success && statusJson.server) {
+        const server = statusJson.server;
+        const statusText = server.online
+          ? `Online - Players: ${server.players.online}/${server.players.max}`
+          : "Offline";
+        document.getElementById("server-status").textContent = statusText;
+      } else {
+        document.getElementById("server-status").textContent = "Status unavailable";
+      }
+    } catch(e) {
+      document.getElementById("server-status").textContent = "Status error";
+    }
+  }
+
+  updateStatus();
+  setInterval(updateStatus, 30000); // refresh every 30 seconds
+
 })();
 </script>
 
